@@ -65,7 +65,7 @@ export const services = [
 export const stats = [
   { id: 1, number: '12+', label: 'سنة خبرة', labelEn: 'Years Experience' },
   { id: 2, number: '50+', label: 'مشروع منجز', labelEn: 'Completed Projects' },
-  { id: 3, number: '213', label: 'موظف', labelEn: 'Employees' },
+  { id: 3, number: '233', label: 'موظف', labelEn: 'Employees' },
   { id: 4, number: '100%', label: 'رضا العملاء', labelEn: 'Client Satisfaction' }
 ];
 
