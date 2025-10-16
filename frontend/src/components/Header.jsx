@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, User } from 'lucide-react';
-import { navigationItems } from '../data/mockData';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [language, setLanguage] = useState('ar');
+  const { language, toggleLanguage, dir } = useLanguage();
+  const t = translations[language];
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'ar' ? 'en' : 'ar');
-  };
+  const navigationItems = [
+    { id: 1, label: t.home, path: '/' },
+    { id: 2, label: t.about, path: '/#about' },
+    { id: 3, label: t.services, path: '/#services' },
+    { id: 4, label: t.projects, path: '/#projects' },
+    { id: 5, label: t.contact, path: '/#contact' }
+  ];
 
   const scrollToSection = (path) => {
     if (path.startsWith('/#')) {
@@ -25,21 +31,21 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b-2 border-[#5d9cc3]">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Right side - Language and User */}
+        <div className={`flex items-center justify-between h-20 ${dir === 'rtl' ? 'flex-row' : 'flex-row-reverse'}`}>
+          {/* Language and User */}
           <div className="flex items-center gap-4">
             <button
               onClick={toggleLanguage}
               className="text-[#3e738f] text-sm hover:text-[#5d9cc3] transition-colors font-medium border border-[#3e738f] px-3 py-1 rounded hover:bg-[#3e738f] hover:text-white"
             >
-              {language === 'ar' ? 'English' : 'العربية'}
+              {t.language}
             </button>
             <button className="text-[#3e738f] hover:text-[#5d9cc3] transition-colors">
               <User size={22} />
             </button>
           </div>
 
-          {/* Center - Navigation (desktop) */}
+          {/* Navigation (desktop) */}
           <nav className="hidden md:flex items-center gap-8">
             {navigationItems.map((item) => (
               <button
@@ -52,7 +58,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Left side - Logo */}
+          {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
@@ -74,12 +80,12 @@ const Header = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-200">
+          <nav className={`md:hidden py-4 border-t border-gray-200 ${dir === 'rtl' ? 'text-right' : 'text-left'}`}>
             {navigationItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.path)}
-                className="block w-full text-right text-[#3e738f] text-sm py-2 hover:text-[#5d9cc3] hover:bg-gray-50 px-4 transition-colors font-medium"
+                className={`block w-full text-[#3e738f] text-sm py-2 hover:text-[#5d9cc3] hover:bg-gray-50 px-4 transition-colors font-medium ${dir === 'rtl' ? 'text-right' : 'text-left'}`}
               >
                 {item.label}
               </button>
