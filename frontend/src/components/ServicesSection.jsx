@@ -15,9 +15,9 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a3a52] mb-4">خدماتنا</h2>
-          <div className="w-24 h-1 bg-[#c9a961] mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">خدماتنا</h2>
+          <div className="w-24 h-1 bg-[#5d9cc3] mx-auto mb-6"></div>
+          <p className="text-lg text-[#696867] max-w-3xl mx-auto leading-relaxed">
             نحرص على تركيز اهتمامنا علعلى كل تفاصيل المشروع بداية من أعمال المساحة وتحديد المناسيب حتى الإنتهاء من التنفيذ وتسليم المشروع للعميل
           </p>
         </div>
@@ -29,26 +29,26 @@ const ServicesSection = () => {
             return (
               <div
                 key={service.id}
-                className="group bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[#c9a961]"
+                className="group bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[#5d9cc3]"
               >
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Icon className="text-[#c9a961]" size={32} />
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Icon className="text-white" size={32} />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#1a3a52] mb-3 group-hover:text-[#c9a961] transition-colors">
+                <h3 className="text-xl font-bold text-[#3e738f] mb-3 group-hover:text-[#5d9cc3] transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                <p className="text-[#696867] leading-relaxed">{service.description}</p>
               </div>
             );
           })}
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 bg-[#1a3a52] p-8 md:p-12 text-white text-center">
+        <div className="mt-16 bg-[#3e738f] p-8 md:p-12 text-white text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">خدمات البناء المتكاملة</h3>
-          <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed text-lg">
+          <p className="text-gray-100 max-w-3xl mx-auto leading-relaxed text-lg">
             فريق عمل متكامل من الأيدي العاملة الماهرة ومعدات البناء الحديثة مع ضمان تحقيق السلامة في المرتبة الأولى
           </p>
         </div>

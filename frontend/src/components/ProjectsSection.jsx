@@ -24,9 +24,9 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a3a52] mb-4">مشاريعنا</h2>
-          <div className="w-24 h-1 bg-[#c9a961] mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">مشاريعنا</h2>
+          <div className="w-24 h-1 bg-[#5d9cc3] mx-auto mb-6"></div>
+          <p className="text-lg text-[#696867] max-w-3xl mx-auto leading-relaxed">
             ساهمنا في تنفيذ العديد من المشاريع الخاصة والحكومية والمشاريع والعمائر السكنية والتجارية والخيرية
           </p>
         </div>
@@ -39,8 +39,8 @@ const ProjectsSection = () => {
               onClick={() => setFilter(cat.id)}
               className={`px-6 py-2 font-medium transition-all duration-300 ${
                 filter === cat.id
-                  ? 'bg-[#c9a961] text-white shadow-lg'
-                  : 'bg-white text-[#1a3a52] hover:bg-gray-100 shadow'
+                  ? 'bg-[#5d9cc3] text-white shadow-lg'
+                  : 'bg-white text-[#3e738f] hover:bg-gray-100 shadow border border-gray-200'
               }`}
             >
               {cat.label}
@@ -62,29 +62,29 @@ const ProjectsSection = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a52]/90 via-[#1a3a52]/50 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#3e738f]/90 via-[#3e738f]/50 to-transparent opacity-80 group-hover:opacity-95 transition-opacity"></div>
                 <div className="absolute top-4 right-4">
-                  <span className="bg-[#c9a961] text-white px-3 py-1 text-sm font-medium">
+                  <span className="bg-[#5d9cc3] text-white px-3 py-1 text-sm font-medium">
                     {project.status}
                   </span>
                 </div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-[#1a3a52] mb-2 group-hover:text-[#c9a961] transition-colors">
+                <h3 className="text-2xl font-bold text-[#3e738f] mb-2 group-hover:text-[#5d9cc3] transition-colors">
                   {project.title}
                 </h3>
-                <div className="flex items-center gap-2 text-gray-600 mb-2">
-                  <MapPin size={16} className="text-[#c9a961]" />
+                <div className="flex items-center gap-2 text-[#696867] mb-2">
+                  <MapPin size={16} className="text-[#5d9cc3]" />
                   <span className="text-sm">{project.location}</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600 mb-3">
-                  <Calendar size={16} className="text-[#c9a961]" />
+                <div className="flex items-center gap-2 text-[#696867] mb-3">
+                  <Calendar size={16} className="text-[#5d9cc3]" />
                   <span className="text-sm">{project.year}</span>
                 </div>
                 <div className="flex items-center justify-between pt-3 border-t border-gray-200">
-                  <span className="text-sm text-gray-600">{project.category}</span>
-                  <span className="text-lg font-bold text-[#c9a961]">{project.value}</span>
+                  <span className="text-sm text-[#696867]">{project.category}</span>
+                  <span className="text-lg font-bold text-[#5d9cc3]">{project.value}</span>
                 </div>
               </div>
             </div>
@@ -110,36 +110,36 @@ const ProjectsSection = () => {
                 />
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 left-4 bg-white text-[#1a3a52] w-10 h-10 flex items-center justify-center hover:bg-[#c9a961] hover:text-white transition-colors"
+                  className="absolute top-4 left-4 bg-white text-[#3e738f] w-10 h-10 flex items-center justify-center hover:bg-[#5d9cc3] hover:text-white transition-colors"
                 >
                   ×
                 </button>
               </div>
               <div className="p-8">
-                <h2 className="text-3xl font-bold text-[#1a3a52] mb-4">{selectedProject.title}</h2>
+                <h2 className="text-3xl font-bold text-[#3e738f] mb-4">{selectedProject.title}</h2>
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div>
-                    <p className="text-sm text-gray-500">الموقع</p>
-                    <p className="font-medium text-[#1a3a52]">{selectedProject.location}</p>
+                    <p className="text-sm text-[#696867]">الموقع</p>
+                    <p className="font-medium text-[#3e738f]">{selectedProject.location}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">المساحة</p>
-                    <p className="font-medium text-[#1a3a52]">{selectedProject.area}</p>
+                    <p className="text-sm text-[#696867]">المساحة</p>
+                    <p className="font-medium text-[#3e738f]">{selectedProject.area}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">السنة</p>
-                    <p className="font-medium text-[#1a3a52]">{selectedProject.year}</p>
+                    <p className="text-sm text-[#696867]">السنة</p>
+                    <p className="font-medium text-[#3e738f]">{selectedProject.year}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">القيمة</p>
-                    <p className="font-medium text-[#c9a961] text-xl">{selectedProject.value}</p>
+                    <p className="text-sm text-[#696867]">القيمة</p>
+                    <p className="font-medium text-[#5d9cc3] text-xl">{selectedProject.value}</p>
                   </div>
                 </div>
                 <div className="pt-4 border-t border-gray-200">
-                  <span className="inline-block bg-[#1a3a52] text-white px-4 py-2 text-sm">
+                  <span className="inline-block bg-[#3e738f] text-white px-4 py-2 text-sm">
                     {selectedProject.category}
                   </span>
-                  <span className="inline-block bg-[#c9a961] text-white px-4 py-2 text-sm mr-2">
+                  <span className="inline-block bg-[#5d9cc3] text-white px-4 py-2 text-sm mr-2">
                     {selectedProject.type}
                   </span>
                 </div>
