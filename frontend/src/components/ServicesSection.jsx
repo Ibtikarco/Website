@@ -1,6 +1,6 @@
 import React from 'react';
 import { services } from '../data/mockData';
-import { ClipboardList, Building2, Paintbrush, Road } from 'lucide-react';
+import { ClipboardList, Building2, Paintbrush, Construction } from 'lucide-react';
 
 const ServicesSection = () => {
   const iconMap = {
