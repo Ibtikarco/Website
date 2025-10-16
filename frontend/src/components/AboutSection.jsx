@@ -66,10 +66,11 @@ const AboutSection = () => {
               <div className="flex-1 text-center md:text-right">
                 <h3 className="text-2xl font-bold mb-2">{companyInfo.ceo.name}</h3>
                 <p className="text-white/90 mb-4 text-lg">{companyInfo.ceo.title}</p>
-                <p className="text-white leading-relaxed text-lg">
-                  بالابتكار ... نصنع الفرق<br />
-                  و بالالتزام بالتميز ... نبني مشاريعكم بإحسان<br />
-                  لنقدم لكم المعنى الحقيقي للبناء بأفضل جودة
+                <p className="text-white leading-relaxed text-lg mb-4">
+                  {companyInfo.slogan}
+                </p>
+                <p className="text-sm text-white/80 leading-relaxed">
+                  من خلال فريق عمل محترف من أصحاب الخبرة في مجال المشاريع والمقاولات لنضع مصلحة العميل في المرتبة الأولى
                 </p>
               </div>
             </div>
