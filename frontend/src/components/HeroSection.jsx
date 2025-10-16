@@ -16,7 +16,7 @@ const HeroSection = () => {
         >
           <source src="https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/gpa73m3c_copy_D2FD1FE2-6654-45F4-90EA-71EC2D931445%203.mov" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3e738f]/95 via-[#3e738f]/90 to-[#3e738f]/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800/90 via-gray-700/85 to-gray-600/70"></div>
       </div>
 
       {/* Content */}
