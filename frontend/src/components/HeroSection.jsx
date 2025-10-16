@@ -5,13 +5,17 @@ import { ArrowLeft } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center" dir="rtl">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80"
-          alt="Construction site"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/gpa73m3c_copy_D2FD1FE2-6654-45F4-90EA-71EC2D931445%203.mov" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-[#3e738f]/95 via-[#3e738f]/90 to-[#3e738f]/70"></div>
       </div>
 
