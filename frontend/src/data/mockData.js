@@ -111,7 +111,10 @@ export const projects = [
     year: 2025,
     status: 'قيد التنفيذ',
     type: 'استثماري',
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80'
+    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fbhjqeah_03_1.jpg',
+    images: [
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fbhjqeah_03_1.jpg'
+    ]
   },
   {
     id: 4,
