@@ -25,9 +25,9 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a3a52] mb-4">اتصل بنا</h2>
-          <div className="w-24 h-1 bg-[#c9a961] mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">اتصل بنا</h2>
+          <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto mb-6"></div>
+          <p className="text-lg text-[#696867] max-w-3xl mx-auto leading-relaxed">
             نسعد دائماً للتواصل معكم والإجابة على استفساراتكم
           </p>
         </div>
@@ -35,106 +35,106 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div>
-            <h3 className="text-2xl font-bold text-[#1a3a52] mb-6">معلومات التواصل</h3>
+            <h3 className="text-2xl font-bold text-[#3e738f] mb-6">معلومات التواصل</h3>
             
             <div className="space-y-6">
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 bg-[#c9a961] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-[#5d9cc3] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform rounded-lg shadow-md">
                   <Phone className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#1a3a52] mb-1">الهاتف</h4>
-                  <a href={`tel:${companyInfo.phone}`} className="text-gray-600 hover:text-[#c9a961] transition-colors" dir="ltr">
+                  <h4 className="font-bold text-[#3e738f] mb-1">الهاتف</h4>
+                  <a href={`tel:${companyInfo.phone}`} className="text-[#696867] hover:text-[#5d9cc3] transition-colors" dir="ltr">
                     {companyInfo.phone}
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 bg-[#c9a961] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-[#5d9cc3] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform rounded-lg shadow-md">
                   <Mail className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#1a3a52] mb-1">البريد الإلكتروني</h4>
-                  <a href={`mailto:${companyInfo.email}`} className="text-gray-600 hover:text-[#c9a961] transition-colors">
+                  <h4 className="font-bold text-[#3e738f] mb-1">البريد الإلكتروني</h4>
+                  <a href={`mailto:${companyInfo.email}`} className="text-[#696867] hover:text-[#5d9cc3] transition-colors">
                     {companyInfo.email}
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 bg-[#c9a961] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-[#5d9cc3] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform rounded-lg shadow-md">
                   <MapPin className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#1a3a52] mb-1">الموقع</h4>
-                  <p className="text-gray-600">{companyInfo.location}</p>
+                  <h4 className="font-bold text-[#3e738f] mb-1">الموقع</h4>
+                  <p className="text-[#696867]">{companyInfo.location}</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] text-white">
+            <div className="mt-8 p-6 bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] text-white rounded-lg shadow-lg">
               <h4 className="text-xl font-bold mb-2">ساعات العمل</h4>
-              <p className="text-gray-300">الأحد - الخميس: 8:00 ص - 5:00 م</p>
-              <p className="text-gray-300">الجمعة والسبت: مغلق</p>
+              <p className="text-white/90">الأحد - الخميس: 8:00 ص - 5:00 م</p>
+              <p className="text-white/90">الجمعة والسبت: مغلق</p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-[#1a3a52] mb-6">أرسل رسالة</h3>
+          <div className="bg-white p-8 shadow-lg rounded-lg border-2 border-gray-100">
+            <h3 className="text-2xl font-bold text-[#3e738f] mb-6">أرسل رسالة</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-[#1a3a52] font-medium mb-2">الاسم *</label>
+                <label className="block text-[#3e738f] font-semibold mb-2">الاسم *</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-300 focus:border-[#c9a961] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 border-2 border-gray-200 focus:border-[#5d9cc3] focus:outline-none transition-colors rounded-lg text-[#3e738f]"
                 />
               </div>
               
               <div>
-                <label className="block text-[#1a3a52] font-medium mb-2">البريد الإلكتروني *</label>
+                <label className="block text-[#3e738f] font-semibold mb-2">البريد الإلكتروني *</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-300 focus:border-[#c9a961] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 border-2 border-gray-200 focus:border-[#5d9cc3] focus:outline-none transition-colors rounded-lg text-[#3e738f]"
                 />
               </div>
               
               <div>
-                <label className="block text-[#1a3a52] font-medium mb-2">رقم الجوال</label>
+                <label className="block text-[#3e738f] font-semibold mb-2">رقم الجوال</label>
                 <input
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 focus:border-[#c9a961] focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 border-2 border-gray-200 focus:border-[#5d9cc3] focus:outline-none transition-colors rounded-lg text-[#3e738f]"
                   dir="ltr"
                 />
               </div>
               
               <div>
-                <label className="block text-[#1a3a52] font-medium mb-2">الرسالة *</label>
+                <label className="block text-[#3e738f] font-semibold mb-2">الرسالة *</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 border-2 border-gray-300 focus:border-[#c9a961] focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 border-2 border-gray-200 focus:border-[#5d9cc3] focus:outline-none transition-colors resize-none rounded-lg text-[#3e738f]"
                 ></textarea>
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-[#c9a961] hover:bg-[#b89951] text-white py-4 font-bold transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                className="w-full bg-[#5d9cc3] hover:bg-[#4a8bb3] text-white py-4 font-bold transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl rounded-lg"
               >
                 <span>إرسال</span>
                 <Send size={20} />

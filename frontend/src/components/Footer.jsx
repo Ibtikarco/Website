@@ -7,27 +7,27 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-[#1a3a52] text-white" dir="rtl">
+      <footer className="bg-[#3e738f] text-white" dir="rtl">
         {/* Main Footer */}
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-[#c9a961]">{companyInfo.nameAr}</h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
+              <h3 className="text-2xl font-bold mb-4 text-white">{companyInfo.nameAr}</h3>
+              <p className="text-white/80 leading-relaxed mb-4">
                 {companyInfo.tagline}
               </p>
               <div className="flex gap-3">
-                <a href="#" className="w-10 h-10 bg-[#c9a961] flex items-center justify-center hover:bg-[#b89951] transition-colors">
+                <a href="#" className="w-10 h-10 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
                   <Facebook size={20} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-[#c9a961] flex items-center justify-center hover:bg-[#b89951] transition-colors">
+                <a href="#" className="w-10 h-10 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
                   <Twitter size={20} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-[#c9a961] flex items-center justify-center hover:bg-[#b89951] transition-colors">
+                <a href="#" className="w-10 h-10 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-[#c9a961] flex items-center justify-center hover:bg-[#b89951] transition-colors">
+                <a href="#" className="w-10 h-10 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
                   <Linkedin size={20} />
                 </a>
               </div>
@@ -35,25 +35,25 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h3 className="text-xl font-bold mb-4">روابط سريعة</h3>
+              <h3 className="text-xl font-bold mb-4 text-white">روابط سريعة</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#about" className="text-gray-300 hover:text-[#c9a961] transition-colors">
+                  <a href="#about" className="text-white/80 hover:text-[#5d9cc3] transition-colors font-medium">
                     من نحن
                   </a>
                 </li>
                 <li>
-                  <a href="#services" className="text-gray-300 hover:text-[#c9a961] transition-colors">
+                  <a href="#services" className="text-white/80 hover:text-[#5d9cc3] transition-colors font-medium">
                     خدماتنا
                   </a>
                 </li>
                 <li>
-                  <a href="#projects" className="text-gray-300 hover:text-[#c9a961] transition-colors">
+                  <a href="#projects" className="text-white/80 hover:text-[#5d9cc3] transition-colors font-medium">
                     مشاريعنا
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-300 hover:text-[#c9a961] transition-colors">
+                  <a href="#contact" className="text-white/80 hover:text-[#5d9cc3] transition-colors font-medium">
                     اتصل بنا
                   </a>
                 </li>
@@ -62,8 +62,8 @@ const Footer = () => {
 
             {/* Services */}
             <div>
-              <h3 className="text-xl font-bold mb-4">خدماتنا</h3>
-              <ul className="space-y-2 text-gray-300">
+              <h3 className="text-xl font-bold mb-4 text-white">خدماتنا</h3>
+              <ul className="space-y-2 text-white/80 font-medium">
                 <li>إدارة مشاريع</li>
                 <li>الإنشاءات الخرسانية</li>
                 <li>التشطيبات والديكور</li>
@@ -73,21 +73,21 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h3 className="text-xl font-bold mb-4">تواصل معنا</h3>
-              <div className="space-y-3 text-gray-300">
+              <h3 className="text-xl font-bold mb-4 text-white">تواصل معنا</h3>
+              <div className="space-y-3 text-white/80">
                 <div className="flex items-start gap-2">
-                  <MapPin size={18} className="text-[#c9a961] flex-shrink-0 mt-1" />
-                  <span>{companyInfo.location}</span>
+                  <MapPin size={18} className="text-[#5d9cc3] flex-shrink-0 mt-1" />
+                  <span className="font-medium">{companyInfo.location}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Phone size={18} className="text-[#c9a961]" />
-                  <a href={`tel:${companyInfo.phone}`} className="hover:text-[#c9a961] transition-colors" dir="ltr">
+                  <Phone size={18} className="text-[#5d9cc3]" />
+                  <a href={`tel:${companyInfo.phone}`} className="hover:text-[#5d9cc3] transition-colors font-medium" dir="ltr">
                     {companyInfo.phone}
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail size={18} className="text-[#c9a961]" />
-                  <a href={`mailto:${companyInfo.email}`} className="hover:text-[#c9a961] transition-colors">
+                  <Mail size={18} className="text-[#5d9cc3]" />
+                  <a href={`mailto:${companyInfo.email}`} className="hover:text-[#5d9cc3] transition-colors font-medium">
                     {companyInfo.email}
                   </a>
                 </div>
@@ -97,14 +97,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#2a4a62]">
+        <div className="border-t border-white/20">
           <div className="container mx-auto px-4 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-right">
-              <p className="text-gray-400 text-sm">
+              <p className="text-white/80 text-sm font-medium">
                 &copy; {new Date().getFullYear()} {companyInfo.nameAr}. جميع الحقوق محفوظة.
               </p>
-              <p className="text-gray-400 text-sm">
-                بناء بإحسان | {companyInfo.website}
+              <p className="text-white/80 text-sm font-medium">
+                {companyInfo.tagline} | {companyInfo.website}
               </p>
             </div>
           </div>
@@ -113,21 +113,21 @@ const Footer = () => {
 
       {/* Cookie Consent Banner */}
       {showCookies && (
-        <div className="fixed bottom-0 left-0 right-0 bg-[#0f1f2e] text-white py-4 px-6 shadow-2xl z-50 border-t-2 border-[#c9a961]">
+        <div className="fixed bottom-0 left-0 right-0 bg-white text-[#3e738f] py-4 px-6 shadow-2xl z-50 border-t-4 border-[#5d9cc3]">
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-center md:text-right" dir="rtl">
+            <p className="text-sm text-center md:text-right text-[#696867] font-medium" dir="rtl">
               يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك. سنفترض أنك موافق على ذلك، ولكن يمكنك إلغاء الاشتراك إذا رغبت في ذلك.
             </p>
             <div className="flex gap-3">
               <button
                 onClick={() => setShowCookies(false)}
-                className="bg-[#c9a961] hover:bg-[#b89951] text-white px-6 py-2 text-sm font-medium transition-colors"
+                className="bg-[#5d9cc3] hover:bg-[#4a8bb3] text-white px-6 py-2 text-sm font-semibold transition-colors rounded-lg shadow-md"
               >
                 قبول
               </button>
               <button
                 onClick={() => setShowCookies(false)}
-                className="border-2 border-white text-white hover:bg-white hover:text-[#1a3a52] px-6 py-2 text-sm font-medium transition-colors"
+                className="border-2 border-[#3e738f] text-[#3e738f] hover:bg-[#3e738f] hover:text-white px-6 py-2 text-sm font-semibold transition-colors rounded-lg"
               >
                 المزيد
               </button>
