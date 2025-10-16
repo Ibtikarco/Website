@@ -5,17 +5,47 @@ import { ArrowLeft } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center" dir="rtl">
-      {/* Background Video */}
+      {/* Background Videos */}
       <div className="absolute inset-0">
+        {/* First Video */}
         <video
           autoPlay
           loop
           muted
           playsInline
           className="w-full h-full object-cover"
+          onEnded={(e) => {
+            e.target.style.display = 'none';
+            const secondVideo = document.getElementById('second-hero-video');
+            if (secondVideo) {
+              secondVideo.style.display = 'block';
+              secondVideo.play();
+            }
+          }}
         >
           <source src="https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/gpa73m3c_copy_D2FD1FE2-6654-45F4-90EA-71EC2D931445%203.mov" type="video/mp4" />
         </video>
+        
+        {/* Second Video */}
+        <video
+          id="second-hero-video"
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          style={{ display: 'none' }}
+          onEnded={(e) => {
+            e.target.style.display = 'none';
+            const firstVideo = e.target.previousElementSibling;
+            if (firstVideo) {
+              firstVideo.style.display = 'block';
+              firstVideo.play();
+            }
+          }}
+        >
+          <source src="https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/eklx79fn_VIDEO-2025-01-05-11-37-52.MOV" type="video/mp4" />
+        </video>
+        
         <div className="absolute inset-0 bg-gradient-to-r from-gray-800/90 via-gray-700/85 to-gray-600/70"></div>
       </div>
 
