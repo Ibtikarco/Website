@@ -166,7 +166,10 @@ export const projects = [
     year: 2016,
     status: 'مكتمل',
     type: 'خاص',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80'
+    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/jhzgtovp_Salam%20Hotel%20-%20CAM01%20-%2003.jpg',
+    images: [
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/jhzgtovp_Salam%20Hotel%20-%20CAM01%20-%2003.jpg'
+    ]
   },
   {
     id: 7,
