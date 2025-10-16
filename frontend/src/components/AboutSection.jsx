@@ -59,7 +59,8 @@ const AboutSection = () => {
                 <img 
                   src="https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/6bhtwhjo_%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9%20copy.png"
                   alt={companyInfo.ceo.name}
-                  className="w-full h-full object-cover rounded-lg border-4 border-white/30 shadow-xl"
+                  className="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                  style={{ objectPosition: 'center 20%' }}
                 />
               </div>
               <div className="flex-1 text-center md:text-right">
