@@ -77,7 +77,12 @@ export const projects = [
     year: 2022,
     status: 'مكتمل',
     type: 'استثمار حكومي',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80'
+    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/ga1cvtib_JPEG%20image-48C8-A16A-44-4%20copy.jpg',
+    images: [
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/ga1cvtib_JPEG%20image-48C8-A16A-44-4%20copy.jpg',
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/nprjoe0y_JPEG%20image-48C8-A16A-44-17%20copy.jpg',
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/yu24n0dj_JPEG%20image-48C8-A16A-44-23%20copy.jpg'
+    ]
   },
   {
     id: 2,
