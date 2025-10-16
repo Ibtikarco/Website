@@ -158,10 +158,11 @@ const ContactSection = () => {
               
               <button
                 type="submit"
-                className="w-full bg-[#5d9cc3] hover:bg-[#4a8bb3] text-white py-4 font-bold transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl rounded-lg"
+                disabled={isSubmitting}
+                className={`w-full bg-[#5d9cc3] hover:bg-[#4a8bb3] text-white py-4 font-bold transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl rounded-lg ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
-                <span>إرسال</span>
-                <Send size={20} />
+                <span>{isSubmitting ? 'جاري الإرسال...' : 'إرسال'}</span>
+                {!isSubmitting && <Send size={20} />}
               </button>
             </form>
           </div>
