@@ -181,10 +181,10 @@ export const projects = [
     year: 2016,
     status: 'مكتمل',
     type: 'حكومي',
-    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/c7lcbo0q_Untitled-2%20copy.jpg',
+    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/bhdpf94e_DJI_0439.jpg',
     images: [
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/bhdpf94e_DJI_0439.jpg',
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/c7lcbo0q_Untitled-2%20copy.jpg',
-      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/k5vl2vk0_DJI_0439.jpg',
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/bppjoppp_IMG_1110.jpg'
     ]
   }
