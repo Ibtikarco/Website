@@ -3,18 +3,22 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
+import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
-import CelebrationSection from './components/CelebrationSection';
+import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
 const Home = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-16">
+      <main className="pt-20">
         <HeroSection />
+        <AboutSection />
+        <ServicesSection />
         <ProjectsSection />
-        <CelebrationSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>
