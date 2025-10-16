@@ -182,7 +182,10 @@ export const projects = [
     year: 2017,
     status: 'مكتمل',
     type: 'أوقاف',
-    image: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&q=80'
+    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/e43tdpfp_%D8%AC%D8%A7%D9%85%D8%B9%20%D8%A7%D9%84%D8%A7%D9%94%D8%A8%D8%B1%D8%A7%D8%B1.png',
+    images: [
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/e43tdpfp_%D8%AC%D8%A7%D9%85%D8%B9%20%D8%A7%D9%84%D8%A7%D9%94%D8%A8%D8%B1%D8%A7%D8%B1.png'
+    ]
   },
   {
     id: 8,
