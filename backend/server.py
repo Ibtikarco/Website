@@ -83,6 +83,37 @@ async def get_status_checks():
     
     return status_checks
 
+@api_router.post("/contact", response_model=ContactMessage)
+async def create_contact_message(input: ContactMessageCreate):
+    try:
+        message_dict = input.model_dump()
+        message_obj = ContactMessage(**message_dict)
+        
+        # Convert to dict and serialize datetime to ISO string for MongoDB
+        doc = message_obj.model_dump()
+        doc['timestamp'] = doc['timestamp'].isoformat()
+        
+        await db.contact_messages.insert_one(doc)
+        
+        # Here you can add email sending logic later
+        # For now, we just save to database
+        
+        return message_obj
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@api_router.get("/contact", response_model=List[ContactMessage])
+async def get_contact_messages():
+    # Exclude MongoDB's _id field from the query results
+    messages = await db.contact_messages.find({}, {"_id": 0}).sort("timestamp", -1).to_list(100)
+    
+    # Convert ISO string timestamps back to datetime objects
+    for message in messages:
+        if isinstance(message['timestamp'], str):
+            message['timestamp'] = datetime.fromisoformat(message['timestamp'])
+    
+    return messages
+
 # Include the router in the main app
 app.include_router(api_router)
 
