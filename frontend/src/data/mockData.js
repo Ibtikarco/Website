@@ -129,7 +129,11 @@ export const projects = [
     year: 2022,
     status: 'مكتمل',
     type: 'خاص',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80'
+    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/y7wtrrp1_PHOTO-2025-07-21-15-25-53%203.jpg',
+    images: [
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/y7wtrrp1_PHOTO-2025-07-21-15-25-53%203.jpg',
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fl8k1ruf_PHOTO-2025-07-21-15-32-21.jpg'
+    ]
   },
   {
     id: 6,
