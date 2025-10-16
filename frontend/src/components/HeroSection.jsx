@@ -1,40 +1,64 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { companyInfo } from '../data/mockData';
 import { ArrowLeft } from 'lucide-react';
 
 const HeroSection = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
+  const video1Ref = useRef(null);
+  const video2Ref = useRef(null);
   
   const videos = [
     'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/gpa73m3c_copy_D2FD1FE2-6654-45F4-90EA-71EC2D931445%203.mov',
     'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/eklx79fn_VIDEO-2025-01-05-11-37-52.MOV'
   ];
 
+  useEffect(() => {
+    const currentRef = currentVideo === 0 ? video1Ref : video2Ref;
+    if (currentRef.current) {
+      currentRef.current.play();
+    }
+  }, [currentVideo]);
+
+  const handleVideoEnd = () => {
+    setCurrentVideo((prev) => (prev + 1) % videos.length);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center" dir="rtl">
       {/* Background Videos */}
       <div className="absolute inset-0">
-        {videos.map((videoSrc, index) => (
-          <video
-            key={index}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover absolute inset-0"
-            style={{
-              opacity: currentVideo === index ? 1 : 0,
-              transition: 'opacity 1s ease-in-out'
-            }}
-            onEnded={() => {
-              setCurrentVideo((prev) => (prev + 1) % videos.length);
-            }}
-          >
-            <source src={videoSrc} type="video/mp4" />
-          </video>
-        ))}
+        {/* First Video */}
+        <video
+          ref={video1Ref}
+          autoPlay
+          muted
+          playsInline
+          className="w-full h-full object-cover absolute inset-0 transition-opacity duration-1000"
+          style={{
+            opacity: currentVideo === 0 ? 1 : 0,
+            zIndex: currentVideo === 0 ? 1 : 0
+          }}
+          onEnded={handleVideoEnd}
+        >
+          <source src={videos[0]} type="video/mp4" />
+        </video>
         
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-800/90 via-gray-700/85 to-gray-600/70"></div>
+        {/* Second Video */}
+        <video
+          ref={video2Ref}
+          muted
+          playsInline
+          className="w-full h-full object-cover absolute inset-0 transition-opacity duration-1000"
+          style={{
+            opacity: currentVideo === 1 ? 1 : 0,
+            zIndex: currentVideo === 1 ? 1 : 0
+          }}
+          onEnded={handleVideoEnd}
+        >
+          <source src={videos[1]} type="video/mp4" />
+        </video>
+        
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800/90 via-gray-700/85 to-gray-600/70" style={{ zIndex: 2 }}></div>
       </div>
 
       {/* Content */}
