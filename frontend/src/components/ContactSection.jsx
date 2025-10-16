@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { companyInfo } from '../data/mockData';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,11 +13,29 @@ const ContactSection = () => {
     phone: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('شكراً على تواصلك! سنعود إليك قريباً');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await axios.post(`${API}/contact`, formData);
+      
+      if (response.status === 200) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        alert('شكراً على تواصلك! تم إرسال رسالتك بنجاح. سنعود إليك قريباً.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+      alert('عذراً، حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة عبر الهاتف.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
