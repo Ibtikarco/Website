@@ -77,11 +77,13 @@ const Footer = () => {
               <div className="space-y-3 text-white/80">
                 <div className="flex items-start gap-2">
                   <MapPin size={18} className="text-[#5d9cc3] flex-shrink-0 mt-1" />
-                  <span className="font-medium">{companyInfo.location}</span>
+                  <a href="https://maps.app.goo.gl/XGogec1T7K3ud2Dd8" target="_blank" rel="noopener noreferrer" className="hover:text-[#5d9cc3] transition-colors font-medium">
+                    {companyInfo.location}
+                  </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone size={18} className="text-[#5d9cc3]" />
-                  <a href={`tel:${companyInfo.phone}`} className="hover:text-[#5d9cc3] transition-colors font-medium" dir="ltr">
+                  <a href="http://wa.me/966569700733" target="_blank" rel="noopener noreferrer" className="hover:text-[#5d9cc3] transition-colors font-medium" dir="ltr">
                     {companyInfo.phone}
                   </a>
                 </div>
