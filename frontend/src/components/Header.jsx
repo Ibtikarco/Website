@@ -23,19 +23,19 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#3e738f] shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b-2 border-[#5d9cc3]">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Right side - Language and User */}
           <div className="flex items-center gap-4">
             <button
               onClick={toggleLanguage}
-              className="text-white text-sm hover:text-[#5d9cc3] transition-colors font-medium"
+              className="text-[#3e738f] text-sm hover:text-[#5d9cc3] transition-colors font-medium border border-[#3e738f] px-3 py-1 rounded hover:bg-[#3e738f] hover:text-white"
             >
               {language === 'ar' ? 'English' : 'العربية'}
             </button>
-            <button className="text-white hover:text-[#5d9cc3] transition-colors">
-              <User size={20} />
+            <button className="text-[#3e738f] hover:text-[#5d9cc3] transition-colors">
+              <User size={22} />
             </button>
           </div>
 
@@ -45,7 +45,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.path)}
-                className="text-white text-sm hover:text-[#5d9cc3] transition-colors font-medium"
+                className="text-[#3e738f] text-sm hover:text-[#5d9cc3] transition-colors font-semibold relative after:content-[''] after:absolute after:bottom-[-8px] after:left-0 after:w-0 after:h-0.5 after:bg-[#5d9cc3] after:transition-all hover:after:w-full"
               >
                 {item.label}
               </button>
@@ -55,16 +55,16 @@ const Header = () => {
           {/* Left side - Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-3">
-              <div className="text-white">
-                <div className="text-xl font-bold">ابتكار</div>
-                <div className="text-xs text-[#5d9cc3]">للمقاولات</div>
+              <div className="text-right">
+                <div className="text-2xl font-bold text-[#3e738f]">ابتكار</div>
+                <div className="text-xs text-[#5d9cc3] font-medium">للمقاولات</div>
               </div>
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-[#3e738f]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -73,12 +73,12 @@ const Header = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-[#5d9cc3]/30">
+          <nav className="md:hidden py-4 border-t border-gray-200">
             {navigationItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.path)}
-                className="block w-full text-right text-white text-sm py-2 hover:text-[#5d9cc3] transition-colors"
+                className="block w-full text-right text-[#3e738f] text-sm py-2 hover:text-[#5d9cc3] hover:bg-gray-50 px-4 transition-colors font-medium"
               >
                 {item.label}
               </button>

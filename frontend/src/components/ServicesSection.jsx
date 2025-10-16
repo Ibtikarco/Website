@@ -16,7 +16,7 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">خدماتنا</h2>
-          <div className="w-24 h-1 bg-[#5d9cc3] mx-auto mb-6"></div>
+          <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto mb-6"></div>
           <p className="text-lg text-[#696867] max-w-3xl mx-auto leading-relaxed">
             نحرص على تركيز اهتمامنا علعلى كل تفاصيل المشروع بداية من أعمال المساحة وتحديد المناسيب حتى الإنتهاء من التنفيذ وتسليم المشروع للعميل
           </p>
@@ -29,10 +29,10 @@ const ServicesSection = () => {
             return (
               <div
                 key={service.id}
-                className="group bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[#5d9cc3]"
+                className="group bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[#5d9cc3] rounded-lg"
               >
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
                     <Icon className="text-white" size={32} />
                   </div>
                 </div>
@@ -46,9 +46,9 @@ const ServicesSection = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 bg-[#3e738f] p-8 md:p-12 text-white text-center">
+        <div className="mt-16 bg-[#3e738f] p-8 md:p-12 text-white text-center rounded-lg shadow-xl">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">خدمات البناء المتكاملة</h3>
-          <p className="text-gray-100 max-w-3xl mx-auto leading-relaxed text-lg">
+          <p className="text-white max-w-3xl mx-auto leading-relaxed text-lg">
             فريق عمل متكامل من الأيدي العاملة الماهرة ومعدات البناء الحديثة مع ضمان تحقيق السلامة في المرتبة الأولى
           </p>
         </div>
