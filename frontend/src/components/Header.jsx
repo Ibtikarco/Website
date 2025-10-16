@@ -11,19 +11,30 @@ const Header = () => {
     setLanguage(language === 'ar' ? 'en' : 'ar');
   };
 
+  const scrollToSection = (path) => {
+    if (path.startsWith('/#')) {
+      const sectionId = path.substring(2);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#3a4751] shadow-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a3a52] shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Right side - Language and User */}
           <div className="flex items-center gap-4">
             <button
               onClick={toggleLanguage}
-              className="text-white text-sm hover:text-gray-300 transition-colors"
+              className="text-white text-sm hover:text-[#c9a961] transition-colors font-medium"
             >
               {language === 'ar' ? 'English' : 'العربية'}
             </button>
-            <button className="text-white hover:text-gray-300 transition-colors">
+            <button className="text-white hover:text-[#c9a961] transition-colors">
               <User size={20} />
             </button>
           </div>
@@ -31,28 +42,22 @@ const Header = () => {
           {/* Center - Navigation (desktop) */}
           <nav className="hidden md:flex items-center gap-8">
             {navigationItems.map((item) => (
-              <Link
+              <button
                 key={item.id}
-                to={item.path}
-                className="text-white text-sm hover:text-gray-300 transition-colors"
+                onClick={() => scrollToSection(item.path)}
+                className="text-white text-sm hover:text-[#c9a961] transition-colors font-medium"
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
           </nav>
 
           {/* Left side - Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
-              <div className="w-16 h-16 flex items-center justify-center">
-                <div className="relative w-12 h-12">
-                  <div className="absolute inset-0 bg-white transform rotate-45"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-[#3a4751] font-bold text-lg z-10 relative transform -rotate-45">
-                      IBC
-                    </span>
-                  </div>
-                </div>
+            <Link to="/" className="flex items-center gap-3">
+              <div className="text-white">
+                <div className="text-xl font-bold">ابتكار</div>
+                <div className="text-xs text-[#c9a961]">للمقاولات</div>
               </div>
             </Link>
           </div>
@@ -68,16 +73,15 @@ const Header = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-600">
+          <nav className="md:hidden py-4 border-t border-[#2a4a62]">
             {navigationItems.map((item) => (
-              <Link
+              <button
                 key={item.id}
-                to={item.path}
-                className="block text-white text-sm py-2 hover:text-gray-300 transition-colors text-right"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => scrollToSection(item.path)}
+                className="block w-full text-right text-white text-sm py-2 hover:text-[#c9a961] transition-colors"
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
           </nav>
         )}
