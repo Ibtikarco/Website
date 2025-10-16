@@ -7,7 +7,7 @@ const ServicesSection = () => {
     clipboard: ClipboardList,
     building: Building2,
     paintbrush: Paintbrush,
-    road: Road
+    road: Construction
   };
 
   return (
