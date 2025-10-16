@@ -43,8 +43,8 @@ const ContactSection = () => {
                   <Phone className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#3e738f] mb-1">الهاتف</h4>
-                  <a href={`tel:${companyInfo.phone}`} className="text-[#696867] hover:text-[#5d9cc3] transition-colors" dir="ltr">
+                  <h4 className="font-bold text-[#3e738f] mb-1">الهاتف / واتساب</h4>
+                  <a href="http://wa.me/966569700733" target="_blank" rel="noopener noreferrer" className="text-[#696867] hover:text-[#5d9cc3] transition-colors" dir="ltr">
                     {companyInfo.phone}
                   </a>
                 </div>
@@ -68,7 +68,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-[#3e738f] mb-1">الموقع</h4>
-                  <p className="text-[#696867]">{companyInfo.location}</p>
+                  <a href="https://maps.app.goo.gl/XGogec1T7K3ud2Dd8" target="_blank" rel="noopener noreferrer" className="text-[#696867] hover:text-[#5d9cc3] transition-colors">
+                    {companyInfo.location}
+                  </a>
                 </div>
               </div>
             </div>
