@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { projects } from '../data/mockData';
 import { MapPin, Calendar } from 'lucide-react';
+import ProjectsChart from './ProjectsChart';
 
 const ProjectsSection = () => {
   const [filter, setFilter] = useState('all');
