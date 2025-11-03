@@ -120,19 +120,18 @@ const ProjectsChart = () => {
         تنوع المشاريع
       </h3>
       
-      {/* Layout: Labels on Right, Chart on Left */}
-      <div className="flex items-center gap-8 md:gap-12 px-4 md:px-8">
+      {/* Layout: Labels and Chart together */}
+      <div className="flex items-center gap-3 px-4 md:px-8">
         {/* Category Labels on the Right */}
-        <div className="flex flex-col justify-around gap-6 md:gap-8 min-w-[180px] md:min-w-[220px]">
+        <div className="flex flex-col justify-around gap-6 md:gap-8 min-w-[160px] md:min-w-[180px]">
           {chartData.map((item, index) => (
             <div
               key={index}
               className="text-[#3e738f] font-bold text-right"
               style={{ 
                 fontFamily: "'Cairo', sans-serif",
-                fontSize: '18px',
+                fontSize: '17px',
                 lineHeight: '1.5',
-                paddingRight: '10px',
                 direction: 'rtl'
               }}
             >
@@ -141,8 +140,8 @@ const ProjectsChart = () => {
           ))}
         </div>
         
-        {/* Chart Bars on the Left */}
-        <div className="flex-1 h-[480px] md:h-[520px]">
+        {/* Chart Bars on the Left - closer to labels */}
+        <div className="flex-1 h-[450px] md:h-[480px]">
           <Bar ref={chartRef} data={barData} options={barOptions} />
         </div>
       </div>
