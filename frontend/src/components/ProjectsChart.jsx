@@ -36,7 +36,15 @@ const ProjectsChart = () => {
             className="flex items-center gap-5 p-3 rounded-lg hover:bg-gray-50 transition-all duration-300 group cursor-pointer"
           >
             {/* Category Name - Right Side */}
-            <div className="w-32 text-right flex-shrink-0">
+            <div className="w-32 text-right flex-shrink-0 flex items-center justify-end gap-2">
+              {item.icon && (
+                <img 
+                  src={item.icon} 
+                  alt={item.name}
+                  className="w-5 h-5 object-contain"
+                  style={{ filter: 'brightness(0) saturate(100%) invert(30%) sepia(35%) saturate(1200%) hue-rotate(170deg) brightness(90%) contrast(90%)' }}
+                />
+              )}
               <span 
                 className="text-sm font-bold text-[#3e738f] leading-tight block group-hover:text-[#5d9cc3] transition-colors duration-300"
                 style={{ fontFamily: "'Cairo', sans-serif" }}
