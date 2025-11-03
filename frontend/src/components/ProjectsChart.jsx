@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
@@ -6,6 +6,8 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const ProjectsChart = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   const chartData = [
     { label: 'السكني', value: 40, color: '#3e738f' },
     { label: 'فنادق', value: 20, color: '#5d9cc3' },
@@ -20,10 +22,13 @@ const ProjectsChart = () => {
     datasets: [
       {
         data: chartData.map(item => item.value),
-        backgroundColor: chartData.map(item => item.color),
+        backgroundColor: chartData.map((item, index) => 
+          hoveredIndex === index ? item.color : item.color + 'CC'
+        ),
         borderColor: '#ffffff',
         borderWidth: 3,
-        hoverOffset: 15
+        hoverOffset: 20,
+        offset: chartData.map((_, index) => hoveredIndex === index ? 10 : 0)
       }
     ]
   };
@@ -33,7 +38,7 @@ const ProjectsChart = () => {
     maintainAspectRatio: true,
     plugins: {
       legend: {
-        display: false // إخفاء الـ legend الافتراضي
+        display: false
       },
       tooltip: {
         rtl: true,
@@ -69,12 +74,24 @@ const ProjectsChart = () => {
         {/* Custom Legend on the right */}
         <div className="flex-1 space-y-2">
           {chartData.map((item, index) => (
-            <div key={index} className="flex items-center gap-2 text-right">
-              <span className="text-sm font-bold text-[#3e738f] flex-1 text-right">
+            <div 
+              key={index} 
+              className="flex items-center justify-end gap-2 cursor-pointer transition-all duration-200 hover:scale-105"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <span className={`text-sm font-bold text-right transition-all duration-200 ${
+                hoveredIndex === index ? 'text-[#5d9cc3] scale-110' : 'text-[#3e738f]'
+              }`}>
                 {item.label}
+                {hoveredIndex === index && (
+                  <span className="mr-2 text-[#5d9cc3]">({item.value}%)</span>
+                )}
               </span>
               <div 
-                className="w-3 h-3 rounded-full flex-shrink-0"
+                className={`w-3 h-3 rounded-full flex-shrink-0 transition-all duration-200 ${
+                  hoveredIndex === index ? 'scale-125 ring-2 ring-[#5d9cc3] ring-offset-1' : ''
+                }`}
                 style={{ backgroundColor: item.color }}
               ></div>
             </div>
