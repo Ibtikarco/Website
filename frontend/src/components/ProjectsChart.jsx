@@ -51,7 +51,7 @@ const ProjectsChart = () => {
     locale: 'ar-SA',  // Arabic locale
     layout: {
       padding: {
-        right: 40,
+        right: 180,  // Increased padding for full category names
         left: 40,
         top: 10,
         bottom: 10
