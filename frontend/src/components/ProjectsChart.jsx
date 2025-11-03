@@ -95,10 +95,10 @@ const ProjectsChart = () => {
         display: false,
         beginAtZero: true,
         max: 100,
-        reverse: false
+        reverse: true  // RTL: bars extend from right to left
       },
       y: {
-        position: 'right',
+        position: 'right',  // RTL: category labels on the right
         grid: {
           display: false
         },
