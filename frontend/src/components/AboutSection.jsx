@@ -47,7 +47,7 @@ const AboutSection = () => {
           </div>
           <div className="bg-white border-2 border-[#3e738f] p-8 hover:shadow-lg transition-shadow rounded-lg">
             <h3 className="text-2xl font-bold text-[#3e738f] mb-4">مهمتنا</h3>
-            <p className="text-[#696867] leading-relaxed">{companyInfo.mission}</p>
+            <p className="text-[#696867] leading-relaxed whitespace-pre-line">{companyInfo.mission}</p>
           </div>
         </div>
 
