@@ -31,9 +31,9 @@ const ProjectsChart = () => {
     maintainAspectRatio: true,
     plugins: {
       legend: {
-        position: 'right',
+        position: 'left',
         rtl: true,
-        align: 'start',
+        align: 'center',
         labels: {
           font: {
             family: "'Cairo', sans-serif",
