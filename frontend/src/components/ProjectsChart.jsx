@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip, Legend } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
@@ -7,6 +7,20 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, ChartDataLabels);
 
 const ProjectsChart = () => {
+  const chartRef = useRef(null);
+
+  // Set canvas direction to RTL after chart mounts
+  useEffect(() => {
+    if (chartRef.current) {
+      const canvas = chartRef.current.canvas;
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          ctx.direction = 'rtl';
+        }
+      }
+    }
+  }, []);
   // Static percentage values
   const chartData = [
     { label: 'سكني', percentage: 40, color: '#3e738f' },
