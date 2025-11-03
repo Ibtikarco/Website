@@ -65,7 +65,7 @@ const StatsSection = () => {
     };
   }, [isVisible]);
 
-  // Animate numbers when visible
+  // Animate numbers when visible or slide changes
   useEffect(() => {
     if (!isVisible) return;
 
@@ -80,7 +80,10 @@ const StatsSection = () => {
       const animate = () => {
         const now = Date.now();
         const progress = Math.min((now - startTime) / duration, 1);
-        const currentValue = Math.floor(progress * targetValue);
+        
+        // Use easeOutQuad for smoother animation
+        const easeProgress = progress * (2 - progress);
+        const currentValue = Math.floor(easeProgress * targetValue);
 
         setAnimatedNumbers(prev => ({
           ...prev,
@@ -89,12 +92,18 @@ const StatsSection = () => {
 
         if (progress < 1) {
           requestAnimationFrame(animate);
+        } else {
+          // Ensure final value is exact
+          setAnimatedNumbers(prev => ({
+            ...prev,
+            [key]: targetValue
+          }));
         }
       };
 
       animate();
     });
-  }, [isVisible, currentSlide, slides]);
+  }, [isVisible, currentSlide]);
 
   // Format number with suffix and comma if needed
   const formatNumber = (value, stat) => {
