@@ -1,7 +1,6 @@
 import React from 'react';
 import { companyInfo, stats } from '../data/mockData';
 import { Building2, Users, Award, TrendingUp } from 'lucide-react';
-import ProjectsChart from './ProjectsChart';
 
 const AboutSection = () => {
   const iconMap = {
