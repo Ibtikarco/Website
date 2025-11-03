@@ -6,19 +6,21 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const ProjectsChart = () => {
+  const chartData = [
+    { label: 'السكني', value: 40, color: '#3e738f' },
+    { label: 'فنادق', value: 20, color: '#5d9cc3' },
+    { label: 'حكومي', value: 15, color: '#4a8bb3' },
+    { label: 'معارض تجارية', value: 15, color: '#6fa8c9' },
+    { label: 'استخدام متعدد', value: 5, color: '#8cb9d4' },
+    { label: 'مكاتب إدارية', value: 5, color: '#a9c9df' }
+  ];
+
   const data = {
-    labels: ['السكني', 'فنادق', 'حكومي', 'معارض تجارية', 'استخدام متعدد', 'مكاتب إدارية'],
+    labels: chartData.map(item => item.label),
     datasets: [
       {
-        data: [40, 20, 15, 15, 5, 5],
-        backgroundColor: [
-          '#3e738f',
-          '#5d9cc3',
-          '#4a8bb3',
-          '#6fa8c9',
-          '#8cb9d4',
-          '#a9c9df'
-        ],
+        data: chartData.map(item => item.value),
+        backgroundColor: chartData.map(item => item.color),
         borderColor: '#ffffff',
         borderWidth: 3,
         hoverOffset: 15
@@ -31,22 +33,7 @@ const ProjectsChart = () => {
     maintainAspectRatio: true,
     plugins: {
       legend: {
-        position: 'right',
-        rtl: true,
-        align: 'center',
-        labels: {
-          font: {
-            family: "'Cairo', sans-serif",
-            size: 12,
-            weight: 'bold'
-          },
-          color: '#3e738f',
-          padding: 10,
-          usePointStyle: true,
-          pointStyle: 'circle',
-          boxWidth: 10,
-          textAlign: 'right'
-        }
+        display: false // إخفاء الـ legend الافتراضي
       },
       tooltip: {
         rtl: true,
@@ -78,8 +65,26 @@ const ProjectsChart = () => {
       <h3 className="text-xl font-bold text-[#3e738f] mb-4 text-center">
         تنوع المشاريع
       </h3>
-      <div className="w-full">
-        <Pie data={data} options={options} />
+      <div className="flex items-center gap-4">
+        {/* Custom Legend on the right */}
+        <div className="flex-1 space-y-2">
+          {chartData.map((item, index) => (
+            <div key={index} className="flex items-center gap-2 text-right">
+              <span className="text-sm font-bold text-[#3e738f] flex-1 text-right">
+                {item.label}
+              </span>
+              <div 
+                className="w-3 h-3 rounded-full flex-shrink-0"
+                style={{ backgroundColor: item.color }}
+              ></div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Chart on the left */}
+        <div className="w-48 flex-shrink-0">
+          <Pie data={data} options={options} />
+        </div>
       </div>
     </div>
   );
