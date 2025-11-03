@@ -128,7 +128,7 @@ const StatsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50" dir="rtl">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-white to-gray-50" dir="rtl">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -200,27 +200,32 @@ const StatsSection = () => {
             {/* Left Side - Statistics Grid */}
             <div className="order-2 lg:order-1">
               <div className="grid grid-cols-2 gap-6">
-                {slides[currentSlide].stats.map((stat, index) => (
-                  <div
-                    key={index}
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[#5d9cc3]"
-                  >
-                    <div className="text-center">
-                      <div
-                        className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-3"
-                        style={{ fontFamily: "'Cairo', sans-serif" }}
-                      >
-                        {stat.number}
-                      </div>
-                      <div
-                        className="text-base md:text-lg text-[#696867] font-semibold leading-relaxed"
-                        style={{ fontFamily: "'Cairo', sans-serif" }}
-                      >
-                        {stat.label}
+                {slides[currentSlide].stats.map((stat, index) => {
+                  const key = `${currentSlide}-${index}`;
+                  const animatedValue = animatedNumbers[key] || 0;
+                  
+                  return (
+                    <div
+                      key={index}
+                      className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[#5d9cc3]"
+                    >
+                      <div className="text-center">
+                        <div
+                          className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-3"
+                          style={{ fontFamily: "'Cairo', sans-serif" }}
+                        >
+                          {formatNumber(animatedValue, stat)}
+                        </div>
+                        <div
+                          className="text-base md:text-lg text-[#696867] font-semibold leading-relaxed"
+                          style={{ fontFamily: "'Cairo', sans-serif" }}
+                        >
+                          {stat.label}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
