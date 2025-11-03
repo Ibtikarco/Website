@@ -49,8 +49,18 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Projects Grid with Chart */}
+        <div className="grid lg:grid-cols-4 gap-8 mb-12">
+          {/* Chart on the right side */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24">
+              <ProjectsChart />
+            </div>
+          </div>
+
+          {/* Projects Grid */}
+          <div className="lg:col-span-3">
+            <div className="grid md:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
