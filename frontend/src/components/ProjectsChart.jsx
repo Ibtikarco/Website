@@ -136,9 +136,33 @@ const ProjectsChart = () => {
         تنوع المشاريع
       </h3>
       
-      {/* Horizontal Bar Chart */}
-      <div className="w-full h-[480px] md:h-[520px] px-4 md:px-8">
-        <Bar ref={chartRef} data={barData} options={barOptions} />
+      {/* Chart with HTML Overlay Labels */}
+      <div className="relative w-full px-4 md:px-8">
+        {/* HTML Category Labels - Positioned Absolutely on the Right */}
+        <div className="absolute right-4 md:right-8 top-0 flex flex-col justify-around" style={{ height: '480px', paddingTop: '25px', paddingBottom: '25px', zIndex: 10 }}>
+          {chartData.map((item, index) => (
+            <div
+              key={index}
+              className="text-[#3e738f] font-bold"
+              style={{ 
+                fontFamily: "'Cairo', sans-serif",
+                fontSize: '18px',
+                height: `${100 / chartData.length}%`,
+                display: 'flex',
+                alignItems: 'center',
+                paddingRight: '15px',
+                direction: 'rtl'
+              }}
+            >
+              {item.label}
+            </div>
+          ))}
+        </div>
+        
+        {/* Chart Canvas */}
+        <div className="w-full h-[480px] md:h-[520px]">
+          <Bar ref={chartRef} data={barData} options={barOptions} />
+        </div>
       </div>
     </div>
   );
