@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { companyInfo } from '../data/mockData';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import axios from 'axios';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
