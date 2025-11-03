@@ -13,7 +13,7 @@ const ProjectsChart = () => {
 
   return (
     <div 
-      className="bg-white rounded-xl shadow-xl border-4 border-[#5d9cc3] w-full max-w-[650px] mx-auto overflow-hidden"
+      className="bg-white rounded-xl shadow-xl border-4 border-[#5d9cc3] w-full max-w-[750px] mx-auto overflow-hidden"
       style={{
         padding: '36px 32px'
       }}
@@ -32,12 +32,12 @@ const ProjectsChart = () => {
         {projectData.map((item, index) => (
           <div 
             key={index}
-            className="flex items-center gap-4"
+            className="flex items-center gap-5"
           >
             {/* Category Name - Right Side */}
-            <div className="w-36 text-right flex-shrink-0">
+            <div className="w-32 text-right flex-shrink-0">
               <span 
-                className="text-base font-bold text-[#3e738f] leading-tight block"
+                className="text-sm font-bold text-[#3e738f] leading-tight block"
                 style={{ fontFamily: "'Cairo', sans-serif" }}
               >
                 {item.name}
@@ -50,8 +50,8 @@ const ProjectsChart = () => {
               <div 
                 className="w-full bg-gray-300 overflow-hidden"
                 style={{ 
-                  height: '7px',
-                  borderRadius: '5px'
+                  height: '8px',
+                  borderRadius: '6px'
                 }}
               >
                 {/* Blue Progress Bar - Width based on percentage */}
@@ -60,16 +60,16 @@ const ProjectsChart = () => {
                   style={{
                     width: `${item.percentage}%`,
                     backgroundColor: item.color,
-                    borderRadius: '5px'
+                    borderRadius: '6px'
                   }}
                 />
               </div>
             </div>
 
             {/* Percentage Text - Left Side */}
-            <div className="w-14 text-left flex-shrink-0">
+            <div className="w-12 text-left flex-shrink-0">
               <span 
-                className="text-base font-bold text-[#3e738f]"
+                className="text-sm font-bold text-[#3e738f]"
                 style={{ fontFamily: "'Cairo', sans-serif" }}
               >
                 {item.percentage}%
