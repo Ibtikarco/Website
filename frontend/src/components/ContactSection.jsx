@@ -48,21 +48,21 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-gray-50 to-white" dir="rtl">
+    <section id="contact" className="py-20 bg-gradient-to-b from-gray-50 to-white" dir={currentLanguage === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">اتصل بنا</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">{t.contactUsTitle}</h2>
           <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto mb-6"></div>
           <p className="text-lg text-[#696867] max-w-3xl mx-auto leading-relaxed">
-            نسعد دائماً للتواصل معكم والإجابة على استفساراتكم
+            {t.contactDescription}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div>
-            <h3 className="text-2xl font-bold text-[#3e738f] mb-6">معلومات التواصل</h3>
+            <h3 className="text-2xl font-bold text-[#3e738f] mb-6">{t.contactInfo}</h3>
             
             <div className="space-y-6">
               <div className="flex items-start gap-4 group">
@@ -70,7 +70,7 @@ const ContactSection = () => {
                   <Phone className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#3e738f] mb-1">الهاتف / واتساب</h4>
+                  <h4 className="font-bold text-[#3e738f] mb-1">{t.phoneWhatsapp}</h4>
                   <a href="http://wa.me/966569700733" target="_blank" rel="noopener noreferrer" className="text-[#696867] hover:text-[#5d9cc3] transition-colors" dir="ltr">
                     {companyInfo.phone}
                   </a>
@@ -82,7 +82,7 @@ const ContactSection = () => {
                   <Mail className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#3e738f] mb-1">البريد الإلكتروني</h4>
+                  <h4 className="font-bold text-[#3e738f] mb-1">{t.email}</h4>
                   <a href={`mailto:${companyInfo.email}`} className="text-[#696867] hover:text-[#5d9cc3] transition-colors">
                     {companyInfo.email}
                   </a>
@@ -94,7 +94,7 @@ const ContactSection = () => {
                   <MapPin className="text-white" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-[#3e738f] mb-1">الموقع</h4>
+                  <h4 className="font-bold text-[#3e738f] mb-1">{t.location}</h4>
                   <a href="https://maps.app.goo.gl/XGogec1T7K3ud2Dd8" target="_blank" rel="noopener noreferrer" className="text-[#696867] hover:text-[#5d9cc3] transition-colors">
                     {companyInfo.location}
                   </a>
@@ -103,18 +103,18 @@ const ContactSection = () => {
             </div>
 
             <div className="mt-8 p-6 bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] text-white rounded-lg shadow-lg">
-              <h4 className="text-xl font-bold mb-2">ساعات العمل</h4>
-              <p className="text-white/90">السبت - الخميس: 8:00 ص - 5:00 م</p>
-              <p className="text-white/90">الجمعة: مغلق</p>
+              <h4 className="text-xl font-bold mb-2">{t.workingHours}</h4>
+              <p className="text-white/90">{t.workingDays}</p>
+              <p className="text-white/90">{t.weekend}</p>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-white p-8 shadow-lg rounded-lg border-2 border-gray-100">
-            <h3 className="text-2xl font-bold text-[#3e738f] mb-6">أرسل رسالة</h3>
+            <h3 className="text-2xl font-bold text-[#3e738f] mb-6">{t.sendMessage}</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-[#3e738f] font-semibold mb-2">الاسم *</label>
+                <label className="block text-[#3e738f] font-semibold mb-2">{t.name} *</label>
                 <input
                   type="text"
                   name="name"
@@ -126,7 +126,7 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <label className="block text-[#3e738f] font-semibold mb-2">البريد الإلكتروني *</label>
+                <label className="block text-[#3e738f] font-semibold mb-2">{t.email} *</label>
                 <input
                   type="email"
                   name="email"
@@ -138,7 +138,7 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <label className="block text-[#3e738f] font-semibold mb-2">رقم الجوال</label>
+                <label className="block text-[#3e738f] font-semibold mb-2">{t.phone}</label>
                 <input
                   type="tel"
                   name="phone"
@@ -150,7 +150,7 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <label className="block text-[#3e738f] font-semibold mb-2">الرسالة *</label>
+                <label className="block text-[#3e738f] font-semibold mb-2">{t.message} *</label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -166,7 +166,7 @@ const ContactSection = () => {
                 disabled={isSubmitting}
                 className={`w-full bg-[#5d9cc3] hover:bg-[#4a8bb3] text-white py-4 font-bold transition-colors flex items-center justify-center gap-2 shadow-lg hover:shadow-xl rounded-lg ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
-                <span>{isSubmitting ? 'جاري الإرسال...' : 'إرسال'}</span>
+                <span>{isSubmitting ? t.sending : t.send}</span>
                 {!isSubmitting && <Send size={20} />}
               </button>
             </form>
