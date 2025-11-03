@@ -32,8 +32,8 @@ const ServicesSection = () => {
                 className="group bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[#5d9cc3] rounded-lg"
               >
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-[#3e738f] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
-                    <Icon className="text-white" size={32} />
+                  <div className="w-16 h-16 bg-[#3e738f] group-hover:bg-white rounded-lg flex items-center justify-center group-hover:scale-110 transition-all shadow-md">
+                    <Icon className="text-white group-hover:text-[#3e738f]" size={32} />
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-[#3e738f] mb-3 group-hover:text-[#5d9cc3] transition-colors">
