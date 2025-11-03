@@ -69,27 +69,27 @@ const ProjectsChart = () => {
   };
 
   return (
-    <div className="bg-white p-16 md:p-20 lg:p-24 mx-4 md:mx-8 lg:mx-12 rounded-lg shadow-xl border-4 border-[#5d9cc3] overflow-hidden max-w-7xl w-full">
-      <h3 className="text-3xl md:text-4xl font-bold text-[#3e738f] mb-10 md:mb-12 text-center">
+    <div className="bg-white p-8 md:p-10 lg:p-12 rounded-lg shadow-xl border-4 border-[#5d9cc3] overflow-hidden">
+      <h3 className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-6 md:mb-8 text-center">
         تنوع المشاريع
       </h3>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-20 px-8">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-12 px-4">
         {/* Custom Legend on the right */}
-        <div className="w-full md:flex-1 space-y-5 md:max-w-[280px]">
+        <div className="w-full md:flex-1 space-y-3 md:max-w-[200px]">
           {chartData.map((item, index) => (
             <div 
               key={index} 
-              className="flex items-center gap-4 cursor-pointer transition-all duration-200 hover:scale-105"
+              className="flex items-center gap-3 cursor-pointer transition-all duration-200 hover:scale-105"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div 
-                className={`w-5 h-5 rounded-full flex-shrink-0 transition-all duration-200 ${
+                className={`w-4 h-4 rounded-full flex-shrink-0 transition-all duration-200 ${
                   hoveredIndex === index ? 'scale-125 ring-2 ring-[#5d9cc3] ring-offset-1' : ''
                 }`}
                 style={{ backgroundColor: item.color }}
               ></div>
-              <span className={`text-lg md:text-xl font-bold whitespace-nowrap transition-all duration-200 ${
+              <span className={`text-sm md:text-base font-bold whitespace-nowrap transition-all duration-200 ${
                 hoveredIndex === index ? 'text-[#5d9cc3] scale-110' : 'text-[#3e738f]'
               }`}>
                 {item.label}
@@ -102,7 +102,7 @@ const ProjectsChart = () => {
         </div>
         
         {/* Chart on the left */}
-        <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 flex-shrink-0">
+        <div className="w-44 h-44 md:w-48 md:h-48 lg:w-52 lg:h-52 flex-shrink-0">
           <Pie data={data} options={options} />
         </div>
       </div>
