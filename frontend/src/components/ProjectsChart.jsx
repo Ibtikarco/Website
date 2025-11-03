@@ -70,7 +70,7 @@ const ProjectsChart = () => {
       <h3 className="text-xl font-bold text-[#3e738f] mb-4 text-center">
         تنوع المشاريع
       </h3>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-6">
         {/* Custom Legend on the right */}
         <div className="flex-1 space-y-2">
           {chartData.map((item, index) => (
@@ -86,12 +86,12 @@ const ProjectsChart = () => {
                 }`}
                 style={{ backgroundColor: item.color }}
               ></div>
-              <span className={`text-sm font-bold transition-all duration-200 ${
+              <span className={`text-sm font-bold whitespace-nowrap transition-all duration-200 ${
                 hoveredIndex === index ? 'text-[#5d9cc3] scale-110' : 'text-[#3e738f]'
               }`}>
                 {item.label}
                 {hoveredIndex === index && (
-                  <span className="mr-2 text-[#5d9cc3]">({item.value}%)</span>
+                  <span className="mr-1 text-[#5d9cc3]">({item.value}%)</span>
                 )}
               </span>
             </div>
@@ -99,7 +99,7 @@ const ProjectsChart = () => {
         </div>
         
         {/* Chart on the left */}
-        <div className="w-48 flex-shrink-0">
+        <div className="w-40 h-40 flex-shrink-0">
           <Pie data={data} options={options} />
         </div>
       </div>
