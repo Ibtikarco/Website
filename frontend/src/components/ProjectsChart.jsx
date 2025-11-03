@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip, Legend } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
@@ -31,11 +31,12 @@ const ProjectsChart = () => {
         barThickness: 45,
         datalabels: {
           color: '#ffffff',
-          anchor: 'center',
-          align: 'center',
+          anchor: 'end',
+          align: 'start',
+          offset: 8,
           font: {
             family: "'Cairo', sans-serif",
-            size: 16,
+            size: 18,
             weight: 'bold'
           },
           formatter: (value) => {
@@ -52,7 +53,7 @@ const ProjectsChart = () => {
     maintainAspectRatio: false,
     layout: {
       padding: {
-        right: 40,
+        right: 60,
         left: 40,
         top: 10,
         bottom: 10
@@ -100,7 +101,24 @@ const ProjectsChart = () => {
         reverse: true  // RTL: bars extend from right to left
       },
       y: {
-        display: false  // Hide y-axis labels - we'll use custom HTML labels instead
+        position: 'right',  // RTL: category labels on the right
+        grid: {
+          display: false
+        },
+        ticks: {
+          font: {
+            family: "'Cairo', sans-serif",
+            size: 18,
+            weight: 'bold'
+          },
+          color: '#3e738f',
+          padding: 15,
+          mirror: false,
+          autoSkip: false,
+          maxRotation: 0,
+          minRotation: 0,
+          crossAlign: 'far'
+        }
       }
     },
     animation: {
@@ -118,31 +136,9 @@ const ProjectsChart = () => {
         تنوع المشاريع
       </h3>
       
-      {/* Chart with custom labels */}
-      <div className="flex items-start gap-4">
-        {/* Custom HTML labels on the right */}
-        <div className="flex flex-col justify-around" style={{ height: '480px', paddingTop: '30px', paddingBottom: '30px' }}>
-          {chartData.map((item, index) => (
-            <div
-              key={index}
-              className="text-[#3e738f] font-bold text-base"
-              style={{ 
-                fontFamily: "'Cairo', sans-serif",
-                height: `${100 / chartData.length}%`,
-                display: 'flex',
-                alignItems: 'center',
-                paddingRight: '10px'
-              }}
-            >
-              {item.label}
-            </div>
-          ))}
-        </div>
-        
-        {/* Chart */}
-        <div className="flex-1 h-[480px] md:h-[520px]">
-          <Bar ref={chartRef} data={barData} options={barOptions} />
-        </div>
+      {/* Horizontal Bar Chart */}
+      <div className="w-full h-[480px] md:h-[520px] px-4 md:px-8">
+        <Bar ref={chartRef} data={barData} options={barOptions} />
       </div>
     </div>
   );
