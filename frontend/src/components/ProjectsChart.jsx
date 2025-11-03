@@ -48,6 +48,7 @@ const ProjectsChart = () => {
     indexAxis: 'y', // Horizontal bars
     responsive: true,
     maintainAspectRatio: false,
+    locale: 'ar-SA',  // Arabic locale
     layout: {
       padding: {
         right: 40,
