@@ -31,16 +31,15 @@ const ProjectsChart = () => {
         barThickness: 45,
         datalabels: {
           color: '#ffffff',
-          anchor: 'end',
-          align: 'start',
-          offset: 8,
+          anchor: 'center',
+          align: 'center',
           font: {
             family: "'Cairo', sans-serif",
-            size: 18,
+            size: 20,
             weight: 'bold'
           },
           formatter: (value) => {
-            return value > 0 ? `${value}%` : '';
+            return value > 0 ? `%${value}` : '';
           }
         }
       }
