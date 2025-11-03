@@ -65,18 +65,6 @@ const ProjectsChart = () => {
           </div>
         ))}
       </div>
-
-      {/* Animation Keyframes */}
-      <style jsx>{`
-        @keyframes slideIn {
-          from {
-            width: 0%;
-          }
-          to {
-            width: ${100}%;
-          }
-        }
-      `}</style>
     </div>
   );
 };
