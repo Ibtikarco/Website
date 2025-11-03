@@ -10,11 +10,11 @@ const Header = () => {
   const t = translations[language];
 
   const navigationItems = [
-    { id: 1, label: t.home, path: '/' },
-    { id: 2, label: t.about, path: '/#about' },
-    { id: 3, label: t.services, path: '/#services' },
+    { id: 5, label: t.contact, path: '/#contact' },
     { id: 4, label: t.projects, path: '/#projects' },
-    { id: 5, label: t.contact, path: '/#contact' }
+    { id: 3, label: t.services, path: '/#services' },
+    { id: 2, label: t.about, path: '/#about' },
+    { id: 1, label: t.home, path: '/' }
   ];
 
   const scrollToSection = (path) => {
