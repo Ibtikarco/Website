@@ -5,9 +5,14 @@ import { ClipboardList, Building2, Paintbrush, Construction } from 'lucide-react
 const ServicesSection = () => {
   const iconMap = {
     clipboard: ClipboardList,
-    building: Building2,
+    building: 'custom-concrete', // Custom icon for concrete construction
     paintbrush: Paintbrush,
-    road: 'custom' // Custom icon for infrastructure
+    road: 'custom-infrastructure' // Custom icon for infrastructure
+  };
+
+  const customIcons = {
+    'custom-concrete': 'https://customer-assets.emergentagent.com/job_9cb6292f-4541-4a30-9e23-f8c438933b5c/artifacts/ohsszpqu_iconsai-02.png',
+    'custom-infrastructure': 'https://customer-assets.emergentagent.com/job_9cb6292f-4541-4a30-9e23-f8c438933b5c/artifacts/jt63n548_iconsai-01.png'
   };
 
   return (
