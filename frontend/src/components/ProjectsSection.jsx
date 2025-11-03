@@ -100,6 +100,8 @@ const ProjectsSection = () => {
               </div>
             </div>
           ))}
+            </div>
+          </div>
         </div>
 
         {/* Project Modal */}
