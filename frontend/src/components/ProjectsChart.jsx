@@ -37,7 +37,7 @@ const ProjectsChart = () => {
     responsive: true,
     maintainAspectRatio: true,
     layout: {
-      padding: 0
+      padding: 10
     },
     plugins: {
       legend: {
@@ -69,13 +69,13 @@ const ProjectsChart = () => {
   };
 
   return (
-    <div className="bg-white p-8 md:p-10 lg:p-12 rounded-lg shadow-xl border-4 border-[#5d9cc3] overflow-hidden">
-      <h3 className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-6 md:mb-8 text-center">
+    <div className="bg-white p-10 md:p-12 rounded-lg shadow-xl border-4 border-[#5d9cc3]">
+      <h3 className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-8 text-center">
         تنوع المشاريع
       </h3>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-12 px-4">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-4">
         {/* Custom Legend on the right */}
-        <div className="w-full md:flex-1 space-y-3 md:max-w-[200px]">
+        <div className="w-full md:flex-1 space-y-4 max-w-[220px]">
           {chartData.map((item, index) => (
             <div 
               key={index} 
@@ -89,7 +89,7 @@ const ProjectsChart = () => {
                 }`}
                 style={{ backgroundColor: item.color }}
               ></div>
-              <span className={`text-sm md:text-base font-bold whitespace-nowrap transition-all duration-200 ${
+              <span className={`text-base font-bold whitespace-nowrap transition-all duration-200 ${
                 hoveredIndex === index ? 'text-[#5d9cc3] scale-110' : 'text-[#3e738f]'
               }`}>
                 {item.label}
@@ -102,7 +102,7 @@ const ProjectsChart = () => {
         </div>
         
         {/* Chart on the left */}
-        <div className="w-44 h-44 md:w-48 md:h-48 lg:w-52 lg:h-52 flex-shrink-0">
+        <div className="w-56 h-56 flex-shrink-0">
           <Pie data={data} options={options} />
         </div>
       </div>
