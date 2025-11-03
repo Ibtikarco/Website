@@ -69,11 +69,11 @@ const ProjectsChart = () => {
   };
 
   return (
-    <div className="bg-white p-8 md:p-10 lg:p-12 rounded-lg shadow-xl border-2 border-[#5d9cc3] overflow-hidden">
+    <div className="bg-white p-10 md:p-12 lg:p-14 rounded-lg shadow-xl border-2 border-[#5d9cc3] overflow-hidden">
       <h3 className="text-xl font-bold text-[#3e738f] mb-6 md:mb-8 text-center">
         تنوع المشاريع
       </h3>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-12 px-2">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-12 px-4">
         {/* Custom Legend on the right */}
         <div className="w-full md:flex-1 space-y-3 md:max-w-[180px]">
           {chartData.map((item, index) => (
