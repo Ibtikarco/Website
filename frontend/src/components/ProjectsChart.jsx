@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
-import { Pie } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip, Legend } from 'chart.js';
 import { projects } from '../data/mockData';
 
 // Register Chart.js components
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 const ProjectsChart = () => {
   // Calculate project counts by category dynamically
@@ -58,22 +58,30 @@ const ProjectsChart = () => {
     return chartData.reduce((sum, item) => sum + item.count, 0);
   }, [chartData]);
 
-  const pieData = {
+  const barData = {
     labels: chartData.map(item => item.label),
     datasets: [
       {
         data: chartData.map(item => item.count),
         backgroundColor: chartData.map(item => item.color),
-        borderColor: '#ffffff',
-        borderWidth: 3,
-        hoverOffset: 15
+        borderColor: chartData.map(item => item.color),
+        borderWidth: 2,
+        borderRadius: 8,
+        barThickness: 35
       }
     ]
   };
 
-  const pieOptions = {
+  const barOptions = {
+    indexAxis: 'y', // Horizontal bars
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        right: 20,
+        left: 20
+      }
+    },
     plugins: {
       legend: {
         display: false
@@ -83,7 +91,7 @@ const ProjectsChart = () => {
         backgroundColor: '#3e738f',
         titleColor: '#ffffff',
         bodyColor: '#ffffff',
-        padding: 12,
+        padding: 15,
         bodyFont: {
           family: "'Cairo', sans-serif",
           size: 14,
@@ -95,12 +103,58 @@ const ProjectsChart = () => {
           weight: 'bold'
         },
         callbacks: {
+          title: function(context) {
+            return context[0].label;
+          },
           label: function(context) {
-            const count = context.parsed;
+            const count = context.parsed.x;
             const percentage = totalProjects > 0 ? ((count / totalProjects) * 100).toFixed(1) : 0;
-            return ` ${count} مشروع (${percentage}%)`;
+            return [
+              `العدد: ${count} ${count === 1 ? 'مشروع' : count === 2 ? 'مشروعان' : 'مشاريع'}`,
+              `النسبة: ${percentage}%`
+            ];
           }
         }
+      }
+    },
+    scales: {
+      x: {
+        beginAtZero: true,
+        grid: {
+          display: true,
+          color: 'rgba(0, 0, 0, 0.05)'
+        },
+        ticks: {
+          stepSize: 1,
+          font: {
+            family: "'Cairo', sans-serif",
+            size: 12,
+            weight: 'bold'
+          },
+          color: '#696867'
+        }
+      },
+      y: {
+        grid: {
+          display: false
+        },
+        ticks: {
+          font: {
+            family: "'Cairo', sans-serif",
+            size: 13,
+            weight: 'bold'
+          },
+          color: '#3e738f',
+          crossAlign: 'far',
+          padding: 10
+        }
+      }
+    },
+    animation: {
+      duration: 1500,
+      easing: 'easeOutQuart',
+      delay: (context) => {
+        return context.dataIndex * 100;
       }
     }
   };
@@ -111,46 +165,16 @@ const ProjectsChart = () => {
         تنوع المشاريع
       </h3>
       
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-10 px-4">
-        {/* Category List on the Right */}
-        <div className="w-full lg:flex-1 space-y-4 max-w-md">
-          {chartData.map((item, index) => (
-            <div 
-              key={index} 
-              className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
-            >
-              <div className="flex items-center gap-3">
-                <div 
-                  className="w-4 h-4 rounded-full flex-shrink-0"
-                  style={{ backgroundColor: item.color }}
-                ></div>
-                <span className="text-base font-bold text-[#3e738f]">
-                  {item.label}
-                </span>
-              </div>
-              <span className="text-base font-bold text-[#5d9cc3]">
-                {item.count} {item.count === 1 ? 'مشروع' : item.count === 2 ? 'مشروعان' : 'مشاريع'}
-              </span>
-            </div>
-          ))}
-          
-          {/* Total */}
-          <div className="flex items-center justify-between p-3 rounded-lg bg-[#3e738f] text-white mt-4">
-            <span className="text-base font-bold">
-              المجموع
-            </span>
-            <span className="text-base font-bold">
-              {totalProjects} {totalProjects === 1 ? 'مشروع' : totalProjects === 2 ? 'مشروعان' : 'مشاريع'}
-            </span>
-          </div>
-        </div>
-        
-        {/* Interactive Pie Chart on the Left */}
-        <div className="w-full lg:w-auto flex-shrink-0">
-          <div className="w-72 h-72 md:w-80 md:h-80 mx-auto">
-            <Pie data={pieData} options={pieOptions} />
-          </div>
-        </div>
+      {/* Horizontal Bar Chart */}
+      <div className="w-full h-[400px] md:h-[450px]">
+        <Bar data={barData} options={barOptions} />
+      </div>
+      
+      {/* Total Summary */}
+      <div className="mt-6 flex items-center justify-center p-4 rounded-lg bg-gradient-to-r from-[#3e738f] to-[#5d9cc3] text-white">
+        <span className="text-lg font-bold">
+          إجمالي المشاريع: {totalProjects} {totalProjects === 1 ? 'مشروع' : totalProjects === 2 ? 'مشروعان' : 'مشاريع'}
+        </span>
       </div>
     </div>
   );
