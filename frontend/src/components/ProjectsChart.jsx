@@ -36,6 +36,9 @@ const ProjectsChart = () => {
   const options = {
     responsive: true,
     maintainAspectRatio: true,
+    layout: {
+      padding: 0
+    },
     plugins: {
       legend: {
         display: false
