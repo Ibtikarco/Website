@@ -26,14 +26,14 @@ const ProjectsChart = () => {
         borderColor: chartData.map(item => item.color),
         borderWidth: 2,
         borderRadius: 8,
-        barThickness: 40,
+        barThickness: 45,
         datalabels: {
           color: '#ffffff',
           anchor: 'center',
           align: 'center',
           font: {
             family: "'Cairo', sans-serif",
-            size: 15,
+            size: 16,
             weight: 'bold'
           },
           formatter: (value) => {
@@ -50,8 +50,10 @@ const ProjectsChart = () => {
     maintainAspectRatio: false,
     layout: {
       padding: {
-        right: 30,
-        left: 30
+        right: 40,
+        left: 40,
+        top: 10,
+        bottom: 10
       }
     },
     plugins: {
@@ -93,23 +95,25 @@ const ProjectsChart = () => {
         display: false,
         beginAtZero: true,
         max: 100,
-        reverse: false // Bars extend from left to right (visually looks RTL with right-aligned labels)
+        reverse: false
       },
       y: {
-        position: 'right', // Labels on the right side for RTL
+        position: 'right',
         grid: {
           display: false
         },
         ticks: {
           font: {
             family: "'Cairo', sans-serif",
-            size: 15,
+            size: 16,
             weight: 'bold'
           },
           color: '#3e738f',
-          padding: 15,
+          padding: 20,
           mirror: false,
-          textAlign: 'right'
+          autoSkip: false,
+          maxRotation: 0,
+          minRotation: 0
         }
       }
     },
@@ -123,13 +127,13 @@ const ProjectsChart = () => {
   };
 
   return (
-    <div className="bg-white p-8 md:p-10 rounded-lg shadow-xl border-4 border-[#5d9cc3] max-w-[1200px] mx-auto" dir="rtl">
-      <h3 className="text-xl md:text-2xl font-bold text-[#3e738f] mb-8 text-center">
+    <div className="bg-white p-10 md:p-14 lg:p-16 rounded-lg shadow-xl border-4 border-[#5d9cc3] w-full max-w-[1400px] mx-auto" dir="rtl">
+      <h3 className="text-xl md:text-2xl font-bold text-[#3e738f] mb-10 text-center">
         تنوع المشاريع
       </h3>
       
       {/* Horizontal Bar Chart */}
-      <div className="w-full h-[420px] md:h-[470px]">
+      <div className="w-full h-[480px] md:h-[520px] px-4 md:px-8">
         <Bar data={barData} options={barOptions} />
       </div>
     </div>
