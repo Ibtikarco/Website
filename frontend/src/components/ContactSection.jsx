@@ -99,8 +99,8 @@ const ContactSection = () => {
 
             <div className="mt-8 p-6 bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] text-white rounded-lg shadow-lg">
               <h4 className="text-xl font-bold mb-2">ساعات العمل</h4>
-              <p className="text-white/90">الأحد - الخميس: 8:00 ص - 5:00 م</p>
-              <p className="text-white/90">الجمعة والسبت: مغلق</p>
+              <p className="text-white/90">السبت - الخميس: 8:00 ص - 5:00 م</p>
+              <p className="text-white/90">الجمعة: مغلق</p>
             </div>
           </div>
 
