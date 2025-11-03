@@ -52,11 +52,6 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Projects Chart */}
-        <div className="mb-16">
-          <ProjectsChart />
-        </div>
-
         {/* Download Profile Button */}
         <div className="text-center mb-16">
           <a 
