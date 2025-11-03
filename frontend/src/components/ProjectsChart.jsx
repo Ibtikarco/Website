@@ -1,10 +1,11 @@
 import React, { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip, Legend } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { projects } from '../data/mockData';
 
 // Register Chart.js components
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, ChartDataLabels);
 
 const ProjectsChart = () => {
   // Calculate project counts by category dynamically
@@ -36,6 +37,10 @@ const ProjectsChart = () => {
     return counts;
   }, []);
 
+  const totalProjects = useMemo(() => {
+    return Object.values(categoryCounts).reduce((sum, count) => sum + count, 0);
+  }, [categoryCounts]);
+
   const chartData = useMemo(() => {
     const categories = [
       { label: 'سكني', color: '#3e738f' },
@@ -47,27 +52,40 @@ const ProjectsChart = () => {
       { label: 'مكاتب إدارية', color: '#7da5bf' }
     ];
 
-    return categories.map(cat => ({
-      label: cat.label,
-      count: categoryCounts[cat.label],
-      color: cat.color
-    }));
-  }, [categoryCounts]);
-
-  const totalProjects = useMemo(() => {
-    return chartData.reduce((sum, item) => sum + item.count, 0);
-  }, [chartData]);
+    return categories.map(cat => {
+      const count = categoryCounts[cat.label];
+      const percentage = totalProjects > 0 ? ((count / totalProjects) * 100).toFixed(1) : 0;
+      return {
+        label: cat.label,
+        percentage: parseFloat(percentage),
+        color: cat.color
+      };
+    });
+  }, [categoryCounts, totalProjects]);
 
   const barData = {
     labels: chartData.map(item => item.label),
     datasets: [
       {
-        data: chartData.map(item => item.count),
+        data: chartData.map(item => item.percentage),
         backgroundColor: chartData.map(item => item.color),
         borderColor: chartData.map(item => item.color),
         borderWidth: 2,
         borderRadius: 8,
-        barThickness: 35
+        barThickness: 35,
+        datalabels: {
+          color: '#ffffff',
+          anchor: 'center',
+          align: 'center',
+          font: {
+            family: "'Cairo', sans-serif",
+            size: 14,
+            weight: 'bold'
+          },
+          formatter: (value) => {
+            return value > 0 ? `${value}%` : '';
+          }
+        }
       }
     ]
   };
@@ -86,6 +104,9 @@ const ProjectsChart = () => {
       legend: {
         display: false
       },
+      datalabels: {
+        display: true
+      },
       tooltip: {
         rtl: true,
         backgroundColor: '#3e738f',
@@ -94,12 +115,12 @@ const ProjectsChart = () => {
         padding: 15,
         bodyFont: {
           family: "'Cairo', sans-serif",
-          size: 14,
+          size: 16,
           weight: 'bold'
         },
         titleFont: {
           family: "'Cairo', sans-serif",
-          size: 16,
+          size: 18,
           weight: 'bold'
         },
         callbacks: {
@@ -107,12 +128,8 @@ const ProjectsChart = () => {
             return context[0].label;
           },
           label: function(context) {
-            const count = context.parsed.x;
-            const percentage = totalProjects > 0 ? ((count / totalProjects) * 100).toFixed(1) : 0;
-            return [
-              `العدد: ${count} ${count === 1 ? 'مشروع' : count === 2 ? 'مشروعان' : 'مشاريع'}`,
-              `النسبة: ${percentage}%`
-            ];
+            const percentage = context.parsed.x;
+            return `${percentage}%`;
           }
         }
       }
@@ -120,7 +137,8 @@ const ProjectsChart = () => {
     scales: {
       x: {
         display: false, // Hide x-axis completely
-        beginAtZero: true
+        beginAtZero: true,
+        max: 100 // Set max to 100 for percentage scale
       },
       y: {
         grid: {
