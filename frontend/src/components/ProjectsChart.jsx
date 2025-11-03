@@ -32,12 +32,12 @@ const ProjectsChart = () => {
         {projectData.map((item, index) => (
           <div 
             key={index}
-            className="flex items-center gap-5"
+            className="flex items-center gap-5 p-3 rounded-lg hover:bg-gray-50 transition-all duration-300 group cursor-pointer"
           >
             {/* Category Name - Right Side */}
             <div className="w-32 text-right flex-shrink-0">
               <span 
-                className="text-sm font-bold text-[#3e738f] leading-tight block"
+                className="text-sm font-bold text-[#3e738f] leading-tight block group-hover:text-[#5d9cc3] transition-colors duration-300"
                 style={{ fontFamily: "'Cairo', sans-serif" }}
               >
                 {item.name}
@@ -48,7 +48,7 @@ const ProjectsChart = () => {
             <div className="flex-1 relative min-w-0">
               {/* Grey Background Bar - Full Width */}
               <div 
-                className="w-full bg-gray-300 overflow-hidden"
+                className="w-full bg-gray-300 overflow-hidden group-hover:bg-gray-400 transition-colors duration-300"
                 style={{ 
                   height: '8px',
                   borderRadius: '6px'
@@ -56,7 +56,7 @@ const ProjectsChart = () => {
               >
                 {/* Blue Progress Bar - Width based on percentage */}
                 <div
-                  className="h-full transition-all duration-700 ease-out"
+                  className="h-full transition-all duration-700 ease-out group-hover:opacity-90"
                   style={{
                     width: `${item.percentage}%`,
                     backgroundColor: item.color,
@@ -64,12 +64,18 @@ const ProjectsChart = () => {
                   }}
                 />
               </div>
+              
+              {/* Tooltip on hover */}
+              <div className="absolute left-0 -top-8 bg-[#3e738f] text-white px-3 py-1 rounded text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap"
+                   style={{ fontFamily: "'Cairo', sans-serif" }}>
+                {item.name}: {item.percentage}%
+              </div>
             </div>
 
             {/* Percentage Text - Left Side */}
             <div className="w-12 text-left flex-shrink-0">
               <span 
-                className="text-sm font-bold text-[#3e738f]"
+                className="text-sm font-bold text-[#3e738f] group-hover:text-[#5d9cc3] group-hover:scale-110 inline-block transition-all duration-300"
                 style={{ fontFamily: "'Cairo', sans-serif" }}
               >
                 {item.percentage}%
