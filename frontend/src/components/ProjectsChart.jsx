@@ -36,13 +36,14 @@ const ProjectsChart = () => {
         labels: {
           font: {
             family: "'Cairo', sans-serif",
-            size: 14,
+            size: 12,
             weight: 'bold'
           },
           color: '#3e738f',
-          padding: 20,
+          padding: 15,
           usePointStyle: true,
-          pointStyle: 'circle'
+          pointStyle: 'circle',
+          boxWidth: 12
         }
       },
       tooltip: {
@@ -53,12 +54,12 @@ const ProjectsChart = () => {
         padding: 12,
         bodyFont: {
           family: "'Cairo', sans-serif",
-          size: 14,
+          size: 13,
           weight: 'bold'
         },
         titleFont: {
           family: "'Cairo', sans-serif",
-          size: 16,
+          size: 14,
           weight: 'bold'
         },
         callbacks: {
@@ -71,11 +72,11 @@ const ProjectsChart = () => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-xl border-2 border-[#5d9cc3]">
-      <h3 className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-6 text-center">
+    <div className="bg-white p-6 rounded-lg shadow-xl border-2 border-[#5d9cc3] h-full">
+      <h3 className="text-xl font-bold text-[#3e738f] mb-4 text-center">
         تنوع المشاريع
       </h3>
-      <div className="max-w-md mx-auto">
+      <div className="w-full">
         <Pie data={data} options={options} />
       </div>
     </div>
