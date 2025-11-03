@@ -52,10 +52,10 @@ const ProjectsChart = () => {
     maintainAspectRatio: false,
     layout: {
       padding: {
-        right: 10,
-        left: 40,
-        top: 20,
-        bottom: 20
+        right: 5,
+        left: 20,
+        top: 15,
+        bottom: 15
       }
     },
     plugins: {
