@@ -7,7 +7,7 @@ const ServicesSection = () => {
     clipboard: ClipboardList,
     building: Building2,
     paintbrush: Paintbrush,
-    road: Construction
+    road: 'custom' // Custom icon for infrastructure
   };
 
   return (
@@ -26,6 +26,8 @@ const ServicesSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service) => {
             const Icon = iconMap[service.icon];
+            const isCustomIcon = Icon === 'custom';
+            
             return (
               <div
                 key={service.id}
@@ -33,7 +35,18 @@ const ServicesSection = () => {
               >
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-[#3e738f] group-hover:bg-white rounded-lg flex items-center justify-center group-hover:scale-110 transition-all shadow-md">
-                    <Icon className="text-white group-hover:text-[#3e738f]" size={32} />
+                    {isCustomIcon ? (
+                      <img 
+                        src="https://customer-assets.emergentagent.com/job_9cb6292f-4541-4a30-9e23-f8c438933b5c/artifacts/jt63n548_iconsai-01.png"
+                        alt={service.title}
+                        className="w-8 h-8 object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all"
+                        style={{ 
+                          filter: 'brightness(0) invert(1)',
+                        }}
+                      />
+                    ) : (
+                      <Icon className="text-white group-hover:text-[#3e738f]" size={32} />
+                    )}
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-[#3e738f] mb-3 group-hover:text-[#5d9cc3] transition-colors">
