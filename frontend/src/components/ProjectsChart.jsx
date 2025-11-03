@@ -66,13 +66,13 @@ const ProjectsChart = () => {
   };
 
   return (
-    <div className="bg-white p-10 rounded-lg shadow-xl border-2 border-[#5d9cc3] h-full">
+    <div className="bg-white p-12 rounded-lg shadow-xl border-2 border-[#5d9cc3] h-full">
       <h3 className="text-xl font-bold text-[#3e738f] mb-8 text-center">
         تنوع المشاريع
       </h3>
-      <div className="flex items-center justify-between gap-8 px-4">
+      <div className="flex items-center justify-center gap-10 px-6">
         {/* Custom Legend on the right */}
-        <div className="flex-1 space-y-3 pr-2">
+        <div className="flex-1 space-y-3 max-w-xs">
           {chartData.map((item, index) => (
             <div 
               key={index} 
@@ -99,7 +99,7 @@ const ProjectsChart = () => {
         </div>
         
         {/* Chart on the left */}
-        <div className="w-40 h-40 flex-shrink-0 pl-4">
+        <div className="w-36 h-36 flex-shrink-0">
           <Pie data={data} options={options} />
         </div>
       </div>
