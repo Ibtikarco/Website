@@ -26,10 +26,10 @@ const ProjectsChart = () => {
         {projectData.map((item, index) => (
           <div 
             key={index}
-            className="flex items-center gap-4 md:gap-6 group hover:bg-gray-50 p-3 rounded-lg transition-all duration-300"
+            className="flex items-center gap-4 group hover:bg-gray-50 p-3 rounded-lg transition-all duration-300"
           >
             {/* Category Name - Right Side */}
-            <div className="w-40 md:w-48 text-right">
+            <div className="w-32 md:w-36 text-right flex-shrink-0">
               <span 
                 className="text-base md:text-lg font-bold text-[#3e738f]"
                 style={{ fontFamily: "'Cairo', sans-serif" }}
@@ -38,10 +38,10 @@ const ProjectsChart = () => {
               </span>
             </div>
 
-            {/* Bar Container - Left Side */}
+            {/* Bar Container - Left Side - Takes remaining space */}
             <div className="flex-1 flex items-center gap-3">
-              {/* Progress Bar */}
-              <div className="flex-1 bg-gray-200 rounded-lg h-10 md:h-12 overflow-hidden relative">
+              {/* Progress Bar - Full width available */}
+              <div className="flex-1 bg-gray-200 rounded-lg h-10 md:h-12 overflow-hidden relative min-w-0">
                 <div
                   className="h-full rounded-lg transition-all duration-1000 ease-out flex items-center justify-start pr-3"
                   style={{
@@ -49,14 +49,14 @@ const ProjectsChart = () => {
                     backgroundColor: item.color
                   }}
                 >
-                  <span className="text-white font-bold text-sm md:text-base">
+                  <span className="text-white font-bold text-sm md:text-base whitespace-nowrap">
                     {item.percentage}%
                   </span>
                 </div>
               </div>
 
-              {/* Count/Percentage Label */}
-              <div className="min-w-[60px] text-left">
+              {/* Percentage Label on right of bar */}
+              <div className="w-12 md:w-14 text-left flex-shrink-0">
                 <span className="text-sm md:text-base font-bold text-[#3e738f]">
                   {item.percentage}%
                 </span>
