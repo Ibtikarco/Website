@@ -48,7 +48,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-gray-50 to-white" dir={currentLanguage === 'ar' ? 'rtl' : 'ltr'}>
+    <section id="contact" className="py-20 bg-gradient-to-b from-gray-50 to-white" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
