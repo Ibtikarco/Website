@@ -31,7 +31,7 @@ const ProjectsChart = () => {
     maintainAspectRatio: true,
     plugins: {
       legend: {
-        position: 'left',
+        position: 'right',
         rtl: true,
         align: 'center',
         labels: {
