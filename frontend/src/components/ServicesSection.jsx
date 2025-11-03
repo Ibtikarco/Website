@@ -32,7 +32,7 @@ const ServicesSection = () => {
                 className="group bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-[#5d9cc3] rounded-lg"
               >
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
+                  <div className="w-16 h-16 bg-[#3e738f] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
                     <Icon className="text-white" size={32} />
                   </div>
                 </div>
