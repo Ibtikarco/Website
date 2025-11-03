@@ -119,20 +119,8 @@ const ProjectsChart = () => {
     },
     scales: {
       x: {
-        beginAtZero: true,
-        grid: {
-          display: true,
-          color: 'rgba(0, 0, 0, 0.05)'
-        },
-        ticks: {
-          stepSize: 1,
-          font: {
-            family: "'Cairo', sans-serif",
-            size: 12,
-            weight: 'bold'
-          },
-          color: '#696867'
-        }
+        display: false, // Hide x-axis completely
+        beginAtZero: true
       },
       y: {
         grid: {
@@ -141,7 +129,7 @@ const ProjectsChart = () => {
         ticks: {
           font: {
             family: "'Cairo', sans-serif",
-            size: 13,
+            size: 14,
             weight: 'bold'
           },
           color: '#3e738f',
@@ -168,13 +156,6 @@ const ProjectsChart = () => {
       {/* Horizontal Bar Chart */}
       <div className="w-full h-[400px] md:h-[450px]">
         <Bar data={barData} options={barOptions} />
-      </div>
-      
-      {/* Total Summary */}
-      <div className="mt-6 flex items-center justify-center p-4 rounded-lg bg-gradient-to-r from-[#3e738f] to-[#5d9cc3] text-white">
-        <span className="text-lg font-bold">
-          إجمالي المشاريع: {totalProjects} {totalProjects === 1 ? 'مشروع' : totalProjects === 2 ? 'مشروعان' : 'مشاريع'}
-        </span>
       </div>
     </div>
   );
