@@ -76,11 +76,17 @@ const ProjectsChart = () => {
           {chartData.map((item, index) => (
             <div 
               key={index} 
-              className="flex items-center justify-end gap-2 cursor-pointer transition-all duration-200 hover:scale-105"
+              className="flex items-center gap-2 cursor-pointer transition-all duration-200 hover:scale-105"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <span className={`text-sm font-bold text-right transition-all duration-200 ${
+              <div 
+                className={`w-3 h-3 rounded-full flex-shrink-0 transition-all duration-200 ${
+                  hoveredIndex === index ? 'scale-125 ring-2 ring-[#5d9cc3] ring-offset-1' : ''
+                }`}
+                style={{ backgroundColor: item.color }}
+              ></div>
+              <span className={`text-sm font-bold transition-all duration-200 ${
                 hoveredIndex === index ? 'text-[#5d9cc3] scale-110' : 'text-[#3e738f]'
               }`}>
                 {item.label}
@@ -88,12 +94,6 @@ const ProjectsChart = () => {
                   <span className="mr-2 text-[#5d9cc3]">({item.value}%)</span>
                 )}
               </span>
-              <div 
-                className={`w-3 h-3 rounded-full flex-shrink-0 transition-all duration-200 ${
-                  hoveredIndex === index ? 'scale-125 ring-2 ring-[#5d9cc3] ring-offset-1' : ''
-                }`}
-                style={{ backgroundColor: item.color }}
-              ></div>
             </div>
           ))}
         </div>
