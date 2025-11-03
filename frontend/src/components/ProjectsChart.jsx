@@ -9,18 +9,6 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, ChartD
 const ProjectsChart = () => {
   const chartRef = useRef(null);
 
-  // Set canvas direction to RTL after chart mounts
-  useEffect(() => {
-    if (chartRef.current) {
-      const canvas = chartRef.current.canvas;
-      if (canvas) {
-        const ctx = canvas.getContext('2d');
-        if (ctx) {
-          ctx.direction = 'rtl';
-        }
-      }
-    }
-  }, []);
   // Static percentage values
   const chartData = [
     { label: 'سكني', percentage: 40, color: '#3e738f' },
@@ -112,23 +100,7 @@ const ProjectsChart = () => {
         reverse: true  // RTL: bars extend from right to left
       },
       y: {
-        position: 'right',  // RTL: category labels on the right
-        grid: {
-          display: false
-        },
-        ticks: {
-          font: {
-            family: "'Cairo', sans-serif",
-            size: 16,
-            weight: 'bold'
-          },
-          color: '#3e738f',
-          padding: 20,
-          mirror: false,
-          autoSkip: false,
-          maxRotation: 0,
-          minRotation: 0
-        }
+        display: false  // Hide y-axis labels - we'll use custom HTML labels instead
       }
     },
     animation: {
@@ -146,9 +118,31 @@ const ProjectsChart = () => {
         تنوع المشاريع
       </h3>
       
-      {/* Horizontal Bar Chart */}
-      <div className="w-full h-[480px] md:h-[520px] px-4 md:px-8">
-        <Bar ref={chartRef} data={barData} options={barOptions} />
+      {/* Chart with custom labels */}
+      <div className="flex items-start gap-4">
+        {/* Custom HTML labels on the right */}
+        <div className="flex flex-col justify-around" style={{ height: '480px', paddingTop: '30px', paddingBottom: '30px' }}>
+          {chartData.map((item, index) => (
+            <div
+              key={index}
+              className="text-[#3e738f] font-bold text-base"
+              style={{ 
+                fontFamily: "'Cairo', sans-serif",
+                height: `${100 / chartData.length}%`,
+                display: 'flex',
+                alignItems: 'center',
+                paddingRight: '10px'
+              }}
+            >
+              {item.label}
+            </div>
+          ))}
+        </div>
+        
+        {/* Chart */}
+        <div className="flex-1 h-[480px] md:h-[520px]">
+          <Bar ref={chartRef} data={barData} options={barOptions} />
+        </div>
       </div>
     </div>
   );
