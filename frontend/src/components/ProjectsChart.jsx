@@ -7,14 +7,14 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, ChartDataLabels);
 
 const ProjectsChart = () => {
-  // Static percentage values
+  // Static percentage values with RTL markers for proper Arabic text rendering
   const chartData = [
-    { label: 'سكني', percentage: 40, color: '#3e738f' },
-    { label: 'فنادق', percentage: 20, color: '#5d9cc3' },
-    { label: 'حكومي', percentage: 15, color: '#4a8bb3' },
-    { label: 'معارض تجارية', percentage: 15, color: '#6fa8c9' },
-    { label: 'استخدام متعدد', percentage: 5, color: '#8cb9d4' },
-    { label: 'مكاتب إدارية', percentage: 5, color: '#a9c9df' }
+    { label: '\u202B' + 'سكني' + '\u202C', percentage: 40, color: '#3e738f' },
+    { label: '\u202B' + 'فنادق' + '\u202C', percentage: 20, color: '#5d9cc3' },
+    { label: '\u202B' + 'حكومي' + '\u202C', percentage: 15, color: '#4a8bb3' },
+    { label: '\u202B' + 'معارض تجارية' + '\u202C', percentage: 15, color: '#6fa8c9' },
+    { label: '\u202B' + 'استخدام متعدد' + '\u202C', percentage: 5, color: '#8cb9d4' },
+    { label: '\u202B' + 'مكاتب إدارية' + '\u202C', percentage: 5, color: '#a9c9df' }
   ];
 
   const barData = {
