@@ -73,7 +73,7 @@ const ProjectsChart = () => {
   return (
     <div className="bg-white p-8 rounded-lg shadow-xl border-2 border-[#5d9cc3]">
       <h3 className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-6 text-center">
-        توزيع المشاريع حسب النوع
+        تنوع المشاريع
       </h3>
       <div className="max-w-md mx-auto">
         <Pie data={data} options={options} />
