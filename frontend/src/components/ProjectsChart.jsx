@@ -70,9 +70,9 @@ const ProjectsChart = () => {
       <h3 className="text-xl font-bold text-[#3e738f] mb-8 text-center">
         تنوع المشاريع
       </h3>
-      <div className="flex items-center justify-between gap-8 px-2">
+      <div className="flex items-center justify-between gap-8 px-4">
         {/* Custom Legend on the right */}
-        <div className="flex-1 space-y-3">
+        <div className="flex-1 space-y-3 pr-2">
           {chartData.map((item, index) => (
             <div 
               key={index} 
@@ -99,7 +99,7 @@ const ProjectsChart = () => {
         </div>
         
         {/* Chart on the left */}
-        <div className="w-44 h-44 flex-shrink-0">
+        <div className="w-40 h-40 flex-shrink-0 pl-4">
           <Pie data={data} options={options} />
         </div>
       </div>
