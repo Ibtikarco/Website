@@ -39,7 +39,7 @@ const ServicesSection = () => {
                       <img 
                         src="https://customer-assets.emergentagent.com/job_9cb6292f-4541-4a30-9e23-f8c438933b5c/artifacts/jt63n548_iconsai-01.png"
                         alt={service.title}
-                        className="w-12 h-12 object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all"
+                        className="w-24 h-24 object-contain brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all"
                       />
                     ) : (
                       <Icon className="text-white group-hover:text-[#3e738f]" size={32} />
