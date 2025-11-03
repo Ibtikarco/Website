@@ -69,7 +69,7 @@ const ProjectsChart = () => {
   };
 
   return (
-    <div className="bg-white p-12 md:p-14 lg:p-16 mx-8 md:mx-12 lg:mx-16 rounded-lg shadow-xl border-2 border-[#5d9cc3] overflow-hidden">
+    <div className="bg-white p-12 md:p-14 lg:p-16 mx-8 md:mx-12 lg:mx-16 rounded-lg shadow-xl border-4 border-[#5d9cc3] overflow-hidden">
       <h3 className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-8 md:mb-10 text-center">
         تنوع المشاريع
       </h3>
