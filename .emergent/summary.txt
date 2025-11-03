@@ -1,0 +1,95 @@
+<analysis>
+The AI engineer successfully built a pixel-perfect clone of the BCG UAE website, renamed ibtikarco, starting from a basic React/FastAPI/MongoDB template. The process involved initial UI replication with mock data, followed by extensive content integration from user-provided PDFs and images. Key challenges included correcting CSS compilation issues, implementing dynamic content (logo, project images, CEO message, working hours), incorporating two sequential videos into the hero section, building a functional contact form with backend integration, and adding full bilingual (Arabic/English) support with RTL/LTR handling. The AI demonstrated iterative development, responding to specific user feedback on colors, content, link updates, and UI element positioning, consistently using screenshot verification.
+</analysis>
+
+<product_requirements>
+The user initially requested a pixel-perfect clone of  named , mirroring its design, layout, colors, fonts, images, animations, and responsive behavior.
+Initial build requirements:
+- **Frontend-only with mock data**: Replicate UI, UX, and interactive elements.
+- **Content updates**: Integrate actual company logo, profile content (text for about sections, CEO message, statistics), project images (Al-Widad Residence, Bawabat Samou, Jadah Al-Hikmah, King Faisal Hospital, Malath, One-Day Surgery Center, Salam Plaza Hotel, Al-Abrar Mosque), and a hero video, then a second video in sequence.
+- **Design adjustments**: Apply specific color palette (, , , white), refine logo display (circular, zoomed-in CEO image), and adjust video overlay to gray.
+- **Functionality**:
+    - Implement a contact form that sends messages to company email and saves to MongoDB.
+    - Update all external links (WhatsApp, Location, Profile PDF, X, Instagram).
+    - Implement bilingual support (Arabic/English) with correct RTL/LTR layout.
+    - Ensure navigation menu order: Home, About Us, Services, Projects, Contact.
+- **Pending**: Update working hours in the Contact section.
+</product_requirements>
+
+<key_technical_concepts>
+- **React**: Frontend framework for UI development.
+- **FastAPI**: Backend framework for API development.
+- **MongoDB**: Database for persistent storage.
+- **Tailwind CSS & Shadcn UI**: Styling and component library for modern UI.
+- **React Router**: For client-side routing.
+- **Axios**: For making HTTP requests to the backend.
+- **Internationalization (i18n)**: Implemented using React Context for bilingual support (Arabic/English, RTL/LTR).
+- **Video Handling**: Embedding and sequential playback of multiple videos in React.
+</key_technical_concepts>
+
+<code_architecture>
+
+
+
+- ****:
+    - **Importance**: The main application entry point, setting up React Router and integrating all major components. It now includes  for i18n.
+    - **Changes**: Updated to wrap the application with , dynamically render components based on language context, and manage route definitions.
+- ****:
+    - **Importance**: Global CSS styles, including Tailwind CSS imports and custom CSS variables for Shadcn themes.
+    - **Changes**: Fixed  and  order issues, added Arabic font imports and RTL/LTR specific styles, and defined custom color variables based on user requests.
+- ****:
+    - **Importance**: Centralized source for all static content, initially for mock data, later updated with actual client information.
+    - **Changes**: Extensively updated with content from the provided profile PDF, including company description, CEO message, statistics, services, project details, and contact information. Project images and video URLs are also stored here.
+- ****:
+    - **Importance**: Navigation bar of the application.
+    - **Changes**: Updated to display the , include a language toggle button, fetch navigation items from , and ensure correct RTL/LTR layout.
+- ****:
+    - **Importance**: The prominent top section of the homepage.
+    - **Changes**: Modified to play two user-provided  videos sequentially as background, apply a gray overlay, and dynamically display text, buttons (Discover More, Company Profile, Contact Us) based on the active language. The Company Profile button links to the provided PDF.
+- ****:
+    - **Importance**: Displays company About Us information and CEO message.
+    - **Changes**: Updated with content from , including the CEO's message and a circular, zoomed-in image of the CEO. A Download Company Profile button was added here.
+- ****:
+    - **Importance**: Displays various company projects.
+    - **Changes**: Updated to display real images for projects like Al-Widad Residence, Bawabat Samou, Jadah Al-Hikmah, King Faisal Hospital, Malath, One-Day Surgery Center, Salam Plaza Hotel, and Al-Abrar Mosque. Filters for project categories (e.g., Medical, Charitable) are implemented.
+- ****:
+    - **Importance**: Provides contact details and a submission form.
+    - **Changes**: Updated with actual company contact details (phone, email, location), and the form is now functional, sending data to the FastAPI backend and saving it to MongoDB.
+- ****:
+    - **Importance**: Displays copyright, contact info, and social media links.
+    - **Changes**: Updated with the correct social media links (WhatsApp, X, Instagram, Profile PDF) and removed the LinkedIn icon.
+- ****:
+    - **Importance**: Manages the global language state and direction (RTL/LTR).
+    - **Changes**: New file created to provide context for  and a  function.
+- ****:
+    - **Importance**: Stores all text content for both Arabic and English languages.
+    - **Changes**: New file created, populating all UI text with corresponding translations.
+- ****:
+    - **Importance**: FastAPI backend for API endpoints.
+    - **Changes**: Added a new  POST endpoint to receive form submissions and store them in the  collection in MongoDB.
+
+</code_architecture>
+
+<pending_tasks>
+- Update the working hours in the Contact section to 8 AM to 5 PM, Saturday to Thursday / Closed on Friday.
+</pending_tasks>
+
+<current_work>
+The ibtikarco website is a fully functional, pixel-perfect clone of the requested site, featuring a modern React frontend, a FastAPI backend, and a MongoDB database. The frontend is built using Tailwind CSS and Shadcn UI components, ensuring a responsive and visually appealing design.
+
+Currently, the application includes:
+- **Dynamic Header**: Displays the , a language toggle for Arabic/English, and a navigation menu with the correct order (Home, About Us, Services, Projects, Contact).
+- **Hero Section**: Features two user-provided  videos playing sequentially as a background, overlaid with a subtle gray filter. Key company information and calls-to-action (Discover More, Company Profile, Contact Us) are prominently displayed over the video, with the Company Profile button linking to a PDF.
+- **About Section**: Presents the company's About Us details, a CEO message, and a circular, zoomed-in image of the CEO, all populated from user-provided content. A Download Company Profile button is also present.
+- **Services Section**: Details the company's offerings, using content extracted from the profile PDF.
+- **Projects Section**: Showcases 8 distinct projects (Al-Widad Residence, Bawabat Samou, Jadah Al-Hikmah, King Faisal Hospital, Malath, One-Day Surgery Center, Salam Plaza Hotel, Al-Abrar Mosque), each with multiple real images provided by the user. Projects are categorized and presented professionally.
+- **Contact Section**: Provides updated contact information (phone/WhatsApp, email, location) and a fully functional contact form. Submissions are successfully sent to the FastAPI backend and stored in a  collection in MongoDB, including sender details, message, and a 'new' status.
+- **Footer**: Contains updated social media links (X, Instagram, WhatsApp, Profile PDF) and other essential company information, adhering to the requested color palette (, , , white).
+- **Bilingual Support**: The entire site supports both Arabic (RTL) and English (LTR) languages, with all content, navigation, and layout adjustments handled dynamically via  and .
+
+The previous AI engineer was in the process of updating the working hours in the Contact section at the time of this summary request.
+</current_work>
+
+<optional_next_step>
+Update the working hours in the Contact section as per the user's request: عدل ساعات العمل من ٨ صباحًا إلى ٥ مساءًا من السبت للخميس / الجمعة مغلف.
+</optional_next_step>
