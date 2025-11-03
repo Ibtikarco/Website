@@ -41,16 +41,15 @@ const ProjectsChart = () => {
             {/* Bar Container - Left Side */}
             <div className="flex-1 flex items-center gap-3">
               {/* Progress Bar */}
-              <div className="flex-1 bg-gray-200 rounded-full h-8 md:h-10 overflow-hidden relative">
+              <div className="flex-1 bg-gray-200 rounded-lg h-10 md:h-12 overflow-hidden relative">
                 <div
-                  className="h-full rounded-full transition-all duration-1000 ease-out flex items-center justify-center"
+                  className="h-full rounded-lg transition-all duration-1000 ease-out flex items-center justify-start pr-3"
                   style={{
                     width: `${item.percentage}%`,
-                    backgroundColor: item.color,
-                    animation: `slideIn 1.5s ease-out ${index * 0.1}s both`
+                    backgroundColor: item.color
                   }}
                 >
-                  <span className="text-white font-bold text-sm md:text-base px-2">
+                  <span className="text-white font-bold text-sm md:text-base">
                     {item.percentage}%
                   </span>
                 </div>
