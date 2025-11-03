@@ -118,21 +118,19 @@ const ProjectsChart = () => {
         تنوع المشاريع
       </h3>
       
-      {/* Chart with HTML Overlay Labels */}
-      <div className="relative w-full px-4 md:px-8">
-        {/* HTML Category Labels - Positioned Absolutely on the Right */}
-        <div className="absolute right-4 md:right-8 top-0 flex flex-col justify-around" style={{ height: '480px', paddingTop: '25px', paddingBottom: '25px', zIndex: 10 }}>
+      {/* Layout: Labels on Right, Chart on Left */}
+      <div className="flex items-center gap-8 md:gap-12 px-4 md:px-8">
+        {/* Category Labels on the Right */}
+        <div className="flex flex-col justify-around gap-6 md:gap-8 min-w-[180px] md:min-w-[220px]">
           {chartData.map((item, index) => (
             <div
               key={index}
-              className="text-[#3e738f] font-bold"
+              className="text-[#3e738f] font-bold text-right"
               style={{ 
                 fontFamily: "'Cairo', sans-serif",
                 fontSize: '18px',
-                height: `${100 / chartData.length}%`,
-                display: 'flex',
-                alignItems: 'center',
-                paddingRight: '15px',
+                lineHeight: '1.5',
+                paddingRight: '10px',
                 direction: 'rtl'
               }}
             >
@@ -141,8 +139,8 @@ const ProjectsChart = () => {
           ))}
         </div>
         
-        {/* Chart Canvas */}
-        <div className="w-full h-[480px] md:h-[520px]">
+        {/* Chart Bars on the Left */}
+        <div className="flex-1 h-[480px] md:h-[520px]">
           <Bar ref={chartRef} data={barData} options={barOptions} />
         </div>
       </div>
