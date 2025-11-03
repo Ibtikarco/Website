@@ -148,7 +148,7 @@ const ProjectsChart = () => {
       
       {/* Horizontal Bar Chart */}
       <div className="w-full h-[480px] md:h-[520px] px-4 md:px-8">
-        <Bar data={barData} options={barOptions} />
+        <Bar ref={chartRef} data={barData} options={barOptions} />
       </div>
     </div>
   );
