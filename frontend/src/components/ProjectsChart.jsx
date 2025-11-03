@@ -1,150 +1,83 @@
-import React, { useRef } from 'react';
-import { Bar } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Tooltip, Legend } from 'chart.js';
-import ChartDataLabels from 'chartjs-plugin-datalabels';
-
-// Register Chart.js components
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, ChartDataLabels);
+import React from 'react';
 
 const ProjectsChart = () => {
-  const chartRef = useRef(null);
-
-  // Static percentage values
-  const chartData = [
-    { label: 'سكني', percentage: 40, color: '#3e738f' },
-    { label: 'فنادق', percentage: 20, color: '#5d9cc3' },
-    { label: 'حكومي', percentage: 15, color: '#4a8bb3' },
-    { label: 'معارض تجارية', percentage: 15, color: '#6fa8c9' },
-    { label: 'استخدام متعدد', percentage: 5, color: '#8cb9d4' },
-    { label: 'مكاتب إدارية', percentage: 5, color: '#a9c9df' }
+  // Project categories with their percentages
+  const projectData = [
+    { name: 'سكني', percentage: 40, color: '#3e738f' },
+    { name: 'فنادق', percentage: 20, color: '#5d9cc3' },
+    { name: 'حكومي', percentage: 15, color: '#4a8bb3' },
+    { name: 'معارض تجارية', percentage: 15, color: '#6fa8c9' },
+    { name: 'استخدام متعدد', percentage: 5, color: '#8cb9d4' },
+    { name: 'مكاتب إدارية', percentage: 5, color: '#a9c9df' }
   ];
 
-  const barData = {
-    labels: chartData.map(item => item.label),
-    datasets: [
-      {
-        data: chartData.map(item => item.percentage),
-        backgroundColor: chartData.map(item => item.color),
-        borderColor: chartData.map(item => item.color),
-        borderWidth: 2,
-        borderRadius: 8,
-        barThickness: 45,
-        datalabels: {
-          color: '#ffffff',
-          anchor: 'center',
-          align: 'center',
-          font: {
-            family: "'Cairo', sans-serif",
-            size: 20,
-            weight: 'bold'
-          },
-          formatter: (value) => {
-            return value > 0 ? `%${value}` : '';
-          }
-        }
-      }
-    ]
-  };
-
-  const barOptions = {
-    indexAxis: 'y', // Horizontal bars
-    responsive: true,
-    maintainAspectRatio: false,
-    layout: {
-      padding: {
-        right: 5,
-        left: 20,
-        top: 15,
-        bottom: 15
-      }
-    },
-    plugins: {
-      legend: {
-        display: false
-      },
-      datalabels: {
-        display: false  // Hide percentage labels on bars to keep them clean
-      },
-      tooltip: {
-        enabled: true,
-        rtl: true,
-        backgroundColor: '#3e738f',
-        titleColor: '#ffffff',
-        bodyColor: '#ffffff',
-        padding: 15,
-        bodyFont: {
-          family: "'Cairo', sans-serif",
-          size: 18,
-          weight: 'bold'
-        },
-        titleFont: {
-          family: "'Cairo', sans-serif",
-          size: 20,
-          weight: 'bold'
-        },
-        displayColors: false,
-        callbacks: {
-          title: function(context) {
-            return context[0].label;
-          },
-          label: function(context) {
-            const percentage = context.parsed.x;
-            return `النسبة: ${percentage}%`;
-          }
-        }
-      }
-    },
-    scales: {
-      x: {
-        display: false,
-        beginAtZero: true,
-        max: 100,
-        reverse: true  // RTL: bars extend from right to left
-      },
-      y: {
-        display: false  // Hide y-axis - using separate HTML labels
-      }
-    },
-    animation: {
-      duration: 1500,
-      easing: 'easeOutQuart',
-      delay: (context) => {
-        return context.dataIndex * 100;
-      }
-    }
-  };
-
   return (
-    <div className="bg-white p-10 md:p-14 lg:p-16 rounded-lg shadow-xl border-4 border-[#5d9cc3] w-full max-w-[1400px] mx-auto" dir="rtl">
-      <h3 className="text-xl md:text-2xl font-bold text-[#3e738f] mb-10 text-center">
+    <div 
+      className="bg-white p-8 md:p-12 lg:p-14 rounded-xl shadow-xl border-4 border-[#5d9cc3] w-full max-w-[1200px] mx-auto"
+      dir="rtl"
+    >
+      {/* Title */}
+      <h3 className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-8 text-center">
         تنوع المشاريع
       </h3>
-      
-      {/* Layout: Labels and Chart together */}
-      <div className="flex items-center gap-3 px-4 md:px-8">
-        {/* Category Labels on the Right */}
-        <div className="flex flex-col justify-around gap-6 md:gap-8 min-w-[160px] md:min-w-[180px]">
-          {chartData.map((item, index) => (
-            <div
-              key={index}
-              className="text-[#3e738f] font-bold text-right"
-              style={{ 
-                fontFamily: "'Cairo', sans-serif",
-                fontSize: '17px',
-                lineHeight: '1.5',
-                direction: 'rtl'
-              }}
-            >
-              {item.label}
+
+      {/* Two-column layout: Categories + Bars */}
+      <div className="space-y-5">
+        {projectData.map((item, index) => (
+          <div 
+            key={index}
+            className="flex items-center gap-4 md:gap-6 group hover:bg-gray-50 p-3 rounded-lg transition-all duration-300"
+          >
+            {/* Category Name - Right Side */}
+            <div className="w-40 md:w-48 text-right">
+              <span 
+                className="text-base md:text-lg font-bold text-[#3e738f]"
+                style={{ fontFamily: "'Cairo', sans-serif" }}
+              >
+                {item.name}
+              </span>
             </div>
-          ))}
-        </div>
-        
-        {/* Chart Bars on the Left - closer to labels */}
-        <div className="flex-1 h-[450px] md:h-[480px]">
-          <Bar ref={chartRef} data={barData} options={barOptions} />
-        </div>
+
+            {/* Bar Container - Left Side */}
+            <div className="flex-1 flex items-center gap-3">
+              {/* Progress Bar */}
+              <div className="flex-1 bg-gray-200 rounded-full h-8 md:h-10 overflow-hidden relative">
+                <div
+                  className="h-full rounded-full transition-all duration-1000 ease-out flex items-center justify-center"
+                  style={{
+                    width: `${item.percentage}%`,
+                    backgroundColor: item.color,
+                    animation: `slideIn 1.5s ease-out ${index * 0.1}s both`
+                  }}
+                >
+                  <span className="text-white font-bold text-sm md:text-base px-2">
+                    {item.percentage}%
+                  </span>
+                </div>
+              </div>
+
+              {/* Count/Percentage Label */}
+              <div className="min-w-[60px] text-left">
+                <span className="text-sm md:text-base font-bold text-[#3e738f]">
+                  {item.percentage}%
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
+
+      {/* Animation Keyframes */}
+      <style jsx>{`
+        @keyframes slideIn {
+          from {
+            width: 0%;
+          }
+          to {
+            width: ${100}%;
+          }
+        }
+      `}</style>
     </div>
   );
 };
