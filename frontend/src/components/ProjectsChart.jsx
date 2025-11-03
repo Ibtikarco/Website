@@ -70,7 +70,7 @@ const ProjectsChart = () => {
 
   return (
     <div className="bg-white p-10 md:p-12 rounded-lg shadow-xl border-4 border-[#5d9cc3]">
-      <h3 className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-8 text-center">
+      <h3 className="text-xl md:text-2xl font-bold text-[#3e738f] mb-8 text-center whitespace-nowrap">
         تنوع المشاريع
       </h3>
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 py-4">
@@ -102,7 +102,7 @@ const ProjectsChart = () => {
         </div>
         
         {/* Chart on the left */}
-        <div className="w-56 h-56 flex-shrink-0">
+        <div className="w-48 h-48 flex-shrink-0">
           <Pie data={data} options={options} />
         </div>
       </div>
