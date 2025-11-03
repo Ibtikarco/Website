@@ -3,13 +3,12 @@ import React from 'react';
 const ProjectsChart = () => {
   // Project categories with their percentages
   const projectData = [
-    { name: 'سكني', percentage: 40, color: '#3e738f', icon: null },
-    { name: 'فنادق', percentage: 20, color: '#5d9cc3', icon: null },
-    { name: 'حكومي', percentage: 15, color: '#4a8bb3', icon: null },
-    { name: 'معارض تجارية', percentage: 15, color: '#6fa8c9', icon: null },
-    { name: 'بنية تحتية', percentage: 5, color: '#8cb9d4', icon: 'https://customer-assets.emergentagent.com/job_9cb6292f-4541-4a30-9e23-f8c438933b5c/artifacts/jt63n548_iconsai-01.png' },
-    { name: 'استخدام متعدد', percentage: 3, color: '#a9c9df', icon: null },
-    { name: 'مكاتب إدارية', percentage: 2, color: '#b5d5e9', icon: null }
+    { name: 'سكني', percentage: 40, color: '#3e738f' },
+    { name: 'فنادق', percentage: 20, color: '#5d9cc3' },
+    { name: 'حكومي', percentage: 15, color: '#4a8bb3' },
+    { name: 'معارض تجارية', percentage: 15, color: '#6fa8c9' },
+    { name: 'استخدام متعدد', percentage: 5, color: '#8cb9d4' },
+    { name: 'مكاتب إدارية', percentage: 5, color: '#a9c9df' }
   ];
 
   return (
