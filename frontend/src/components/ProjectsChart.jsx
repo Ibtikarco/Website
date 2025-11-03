@@ -101,24 +101,7 @@ const ProjectsChart = () => {
         reverse: true  // RTL: bars extend from right to left
       },
       y: {
-        position: 'right',  // RTL: category labels on the right
-        grid: {
-          display: false
-        },
-        ticks: {
-          font: {
-            family: "'Cairo', sans-serif",
-            size: 18,
-            weight: 'bold'
-          },
-          color: '#3e738f',
-          padding: 15,
-          mirror: false,
-          autoSkip: false,
-          maxRotation: 0,
-          minRotation: 0,
-          crossAlign: 'far'
-        }
+        display: false  // Hide Chart.js labels - using HTML overlays instead
       }
     },
     animation: {
