@@ -1,44 +1,115 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const StatsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [animatedNumbers, setAnimatedNumbers] = useState({});
+  const sectionRef = useRef(null);
 
   const slides = [
     {
       id: 1,
       title: 'الأصول والمعدات',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80', // Heavy equipment
+      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
       stats: [
-        { number: '12', label: 'المعدات الثقيلة' },
-        { number: '32', label: 'معدات النقل' },
-        { number: '7', label: 'معدات الاختبارات' },
-        { number: '4', label: 'أجهزة المساحة' }
+        { number: '12', label: 'المعدات الثقيلة', target: 12 },
+        { number: '32', label: 'معدات النقل', target: 32 },
+        { number: '7', label: 'معدات الاختبارات', target: 7 },
+        { number: '4', label: 'أجهزة المساحة', target: 4 }
       ]
     },
     {
       id: 2,
       title: 'القوى العاملة',
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80', // Workers/team
+      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
       stats: [
-        { number: '17', label: 'الطاقم الهندسي' },
-        { number: '19', label: 'المشرفين والمراقبين' },
-        { number: '13', label: 'الطاقم الإداري' },
-        { number: '184', label: 'القوى العاملة الميدانية' }
+        { number: '17', label: 'الطاقم الهندسي', target: 17 },
+        { number: '19', label: 'المشرفين والمراقبين', target: 19 },
+        { number: '13', label: 'الطاقم الإداري', target: 13 },
+        { number: '184', label: 'القوى العاملة الميدانية', target: 184 }
       ]
     },
     {
       id: 3,
       title: 'الإنجازات والمشاريع',
-      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80', // Completed projects
+      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80',
       stats: [
-        { number: '50+', label: 'مشروع منجز' },
-        { number: '6', label: 'مشاريع حالية' },
-        { number: '120,000 م²', label: 'مساحات تنفيذ' },
-        { number: '12', label: 'سنة خبرة' }
+        { number: '50+', label: 'مشروع منجز', target: 50, suffix: '+' },
+        { number: '6', label: 'مشاريع حالية', target: 6 },
+        { number: '120,000 م²', label: 'مساحات تنفيذ', target: 120000, suffix: ' م²', useComma: true },
+        { number: '12', label: 'سنة خبرة', target: 12 }
       ]
     }
   ];
+
+  // Intersection Observer to detect when section is visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [isVisible]);
+
+  // Animate numbers when visible
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const currentStats = slides[currentSlide].stats;
+    const duration = 1500; // 1.5 seconds
+
+    currentStats.forEach((stat, index) => {
+      const key = `${currentSlide}-${index}`;
+      const startTime = Date.now();
+      const targetValue = stat.target;
+
+      const animate = () => {
+        const now = Date.now();
+        const progress = Math.min((now - startTime) / duration, 1);
+        const currentValue = Math.floor(progress * targetValue);
+
+        setAnimatedNumbers(prev => ({
+          ...prev,
+          [key]: currentValue
+        }));
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+
+      animate();
+    });
+  }, [isVisible, currentSlide, slides]);
+
+  // Format number with suffix and comma if needed
+  const formatNumber = (value, stat) => {
+    let formatted = value.toString();
+    
+    if (stat.useComma) {
+      formatted = value.toLocaleString('en-US');
+    }
+    
+    if (stat.suffix) {
+      formatted += stat.suffix;
+    }
+    
+    return formatted;
+  };
 
   // Auto-slide every 5 seconds
   useEffect(() => {
