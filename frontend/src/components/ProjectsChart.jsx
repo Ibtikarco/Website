@@ -13,59 +13,63 @@ const ProjectsChart = () => {
 
   return (
     <div 
-      className="bg-white rounded-xl shadow-2xl border-4 border-[#5d9cc3] w-full max-w-[600px] mx-auto overflow-hidden"
+      className="bg-white rounded-xl shadow-xl border-4 border-[#5d9cc3] w-full max-w-[650px] mx-auto overflow-hidden"
       style={{
-        padding: '32px 28px'
+        padding: '36px 32px'
       }}
       dir="rtl"
     >
-      {/* Title */}
+      {/* Card Title */}
       <h3 
-        className="text-2xl font-bold text-[#3e738f] mb-8 text-center"
+        className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-8 text-center"
         style={{ fontFamily: "'Cairo', sans-serif" }}
       >
         تنوع المشاريع
       </h3>
 
-      {/* Categories List */}
-      <div className="space-y-5">
+      {/* Progress Bars List */}
+      <div className="space-y-6">
         {projectData.map((item, index) => (
           <div 
             key={index}
             className="flex items-center gap-4"
           >
-            {/* Category Name - Right Side - Fixed Width */}
-            <div className="w-32 text-right flex-shrink-0">
+            {/* Category Name - Right Side */}
+            <div className="w-36 text-right flex-shrink-0">
               <span 
-                className="text-sm font-bold text-[#3e738f] block"
+                className="text-base font-bold text-[#3e738f] leading-tight block"
                 style={{ fontFamily: "'Cairo', sans-serif" }}
               >
                 {item.name}
               </span>
             </div>
 
-            {/* Bar Container - Middle - Flexible, takes most space */}
-            <div className="flex-1 relative">
-              {/* Background Grey Bar - Full Width */}
+            {/* Progress Bar Container - Middle (takes most space) */}
+            <div className="flex-1 relative min-w-0">
+              {/* Grey Background Bar - Full Width */}
               <div 
-                className="w-full bg-gray-300 rounded-full overflow-hidden"
-                style={{ height: '8px' }}
+                className="w-full bg-gray-300 overflow-hidden"
+                style={{ 
+                  height: '7px',
+                  borderRadius: '5px'
+                }}
               >
-                {/* Colored Bar - Width based on percentage */}
+                {/* Blue Progress Bar - Width based on percentage */}
                 <div
-                  className="h-full rounded-full transition-all duration-700 ease-out"
+                  className="h-full transition-all duration-700 ease-out"
                   style={{
                     width: `${item.percentage}%`,
-                    backgroundColor: item.color
+                    backgroundColor: item.color,
+                    borderRadius: '5px'
                   }}
                 />
               </div>
             </div>
 
-            {/* Percentage - Left Side - Fixed Width */}
+            {/* Percentage Text - Left Side */}
             <div className="w-14 text-left flex-shrink-0">
               <span 
-                className="text-sm font-bold text-[#3e738f]"
+                className="text-base font-bold text-[#3e738f]"
                 style={{ fontFamily: "'Cairo', sans-serif" }}
               >
                 {item.percentage}%
