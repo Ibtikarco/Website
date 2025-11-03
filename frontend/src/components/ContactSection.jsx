@@ -9,8 +9,8 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 const ContactSection = () => {
-  const { currentLanguage } = useLanguage();
-  const t = translations[currentLanguage];
+  const { language } = useLanguage();
+  const t = translations[language];
   
   const [formData, setFormData] = useState({
     name: '',
