@@ -52,10 +52,10 @@ const ProjectsChart = () => {
     maintainAspectRatio: false,
     layout: {
       padding: {
-        right: 60,
+        right: 10,
         left: 40,
-        top: 10,
-        bottom: 10
+        top: 20,
+        bottom: 20
       }
     },
     plugins: {
@@ -63,9 +63,10 @@ const ProjectsChart = () => {
         display: false
       },
       datalabels: {
-        display: true
+        display: false  // Hide percentage labels on bars to keep them clean
       },
       tooltip: {
+        enabled: true,
         rtl: true,
         backgroundColor: '#3e738f',
         titleColor: '#ffffff',
@@ -73,21 +74,22 @@ const ProjectsChart = () => {
         padding: 15,
         bodyFont: {
           family: "'Cairo', sans-serif",
-          size: 16,
+          size: 18,
           weight: 'bold'
         },
         titleFont: {
           family: "'Cairo', sans-serif",
-          size: 18,
+          size: 20,
           weight: 'bold'
         },
+        displayColors: false,
         callbacks: {
           title: function(context) {
             return context[0].label;
           },
           label: function(context) {
             const percentage = context.parsed.x;
-            return `${percentage}%`;
+            return `النسبة: ${percentage}%`;
           }
         }
       }
@@ -100,7 +102,7 @@ const ProjectsChart = () => {
         reverse: true  // RTL: bars extend from right to left
       },
       y: {
-        display: false  // Hide Chart.js labels - using HTML overlays instead
+        display: false  // Hide y-axis - using separate HTML labels
       }
     },
     animation: {
