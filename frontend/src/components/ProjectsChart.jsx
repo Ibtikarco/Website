@@ -31,8 +31,9 @@ const ProjectsChart = () => {
     maintainAspectRatio: true,
     plugins: {
       legend: {
-        position: 'bottom',
+        position: 'right',
         rtl: true,
+        align: 'start',
         labels: {
           font: {
             family: "'Cairo', sans-serif",
@@ -40,10 +41,11 @@ const ProjectsChart = () => {
             weight: 'bold'
           },
           color: '#3e738f',
-          padding: 15,
+          padding: 10,
           usePointStyle: true,
           pointStyle: 'circle',
-          boxWidth: 12
+          boxWidth: 10,
+          textAlign: 'right'
         }
       },
       tooltip: {
