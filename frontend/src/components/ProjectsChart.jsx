@@ -114,12 +114,7 @@ const ProjectsChart = () => {
           mirror: false,
           autoSkip: false,
           maxRotation: 0,
-          minRotation: 0,
-          textDirection: 'rtl',  // Force RTL text direction
-          callback: function(value, index) {
-            // Return the full label text
-            return this.getLabelForValue(value);
-          }
+          minRotation: 0
         }
       }
     },
