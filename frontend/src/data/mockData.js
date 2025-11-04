@@ -75,7 +75,7 @@ export const projects = [
     title: 'بوابة سمو',
     category: 'فندقي تجاري',
     location: 'المنطقة المركزية - شمال المسجد النبوي الشريف',
-    area: '21 ألف م²',
+    area: '21 ألف م2 بعمق 12 متر',
     depth: '12 متر',
     value: '13 مليون',
     year: 2022,
