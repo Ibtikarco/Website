@@ -127,27 +127,30 @@ const ProjectsSection = ({ showAll = false }) => {
         {/* Project Modal */}
         {selectedProject && (
           <div 
-            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 overflow-y-auto"
+            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 overflow-y-auto animate-fade-in"
             onClick={() => setSelectedProject(null)}
           >
             <div 
-              className="bg-white max-w-4xl w-full my-8 rounded-xl shadow-2xl"
+              className="bg-white max-w-5xl w-full my-8 rounded-2xl shadow-2xl transform scale-100 transition-all duration-300"
               onClick={(e) => e.stopPropagation()}
               dir="rtl"
             >
+              {/* Close Button - Outside the card, top-right corner */}
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-4 left-4 bg-white text-[#3e738f] w-12 h-12 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300 rounded-full shadow-2xl font-bold text-3xl z-10 border-2 border-[#3e738f] hover:border-red-500"
+                aria-label="إغلاق"
+              >
+                ×
+              </button>
+
               {/* Image Section */}
               <div className="relative h-96">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-full object-cover rounded-t-xl"
+                  className="w-full h-full object-cover rounded-t-2xl"
                 />
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 left-4 bg-white text-[#3e738f] w-10 h-10 flex items-center justify-center hover:bg-[#5d9cc3] hover:text-white transition-colors rounded-full shadow-lg font-bold text-2xl"
-                >
-                  ×
-                </button>
               </div>
 
               {/* Project Details Section */}
