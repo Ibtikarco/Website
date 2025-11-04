@@ -220,13 +220,13 @@ const StatsSection = () => {
                     >
                       <div className="text-center">
                         <div
-                          className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-3"
+                          className={`text-4xl md:text-5xl font-bold text-[#3e738f] mb-3 ${stat.noWrap ? 'whitespace-nowrap' : ''}`}
                           style={{ fontFamily: "'Cairo', sans-serif" }}
                         >
                           {formatNumber(animatedValue, stat)}
                         </div>
                         <div
-                          className="text-base md:text-lg text-[#696867] font-semibold leading-relaxed"
+                          className={`text-base md:text-lg text-[#696867] font-semibold leading-relaxed ${stat.noWrap ? 'whitespace-nowrap' : ''}`}
                           style={{ fontFamily: "'Cairo', sans-serif" }}
                         >
                           {stat.label}
