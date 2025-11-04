@@ -60,7 +60,7 @@ const HeroSection = () => {
           <source src={videos[1]} type="video/mp4" />
         </video>
         
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-800/20 via-gray-700/20 to-gray-600/20" style={{ zIndex: 2 }}></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800/30 via-gray-700/30 to-gray-600/30" style={{ zIndex: 2 }}></div>
       </div>
 
       {/* Content */}
