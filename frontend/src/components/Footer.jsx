@@ -9,74 +9,61 @@ const Footer = () => {
     <>
       <footer className="bg-[#3e738f] text-white" dir="rtl">
         {/* Main Footer */}
-        <div className="container mx-auto px-4 py-8">
-          {/* Company Name and Tagline */}
-          <div className="text-center mb-6">
-            <h3 className="text-3xl font-bold mb-2 text-white">{companyInfo.nameAr}</h3>
-            <p className="text-white/80 text-lg">
-              {companyInfo.tagline}
-            </p>
-          </div>
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            
+            {/* Company Info */}
+            <div className="flex items-center gap-3">
+              <h3 className="text-2xl font-bold text-white">{companyInfo.nameAr}</h3>
+              <span className="text-white/40 hidden lg:inline">|</span>
+              <p className="text-white/80 text-base hidden lg:block">
+                {companyInfo.tagline}
+              </p>
+            </div>
 
-          {/* Horizontal Layout */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-6">
             {/* Quick Links */}
-            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-              <a href="#about" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium text-lg">
+            <div className="flex items-center gap-6">
+              <a href="#about" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
                 من نحن
               </a>
-              <span className="text-white/40">|</span>
-              <a href="#services" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium text-lg">
+              <a href="#services" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
                 خدماتنا
               </a>
-              <span className="text-white/40">|</span>
-              <a href="#projects" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium text-lg">
+              <a href="#projects" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
                 مشاريعنا
               </a>
-              <span className="text-white/40">|</span>
-              <a href="#contact" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium text-lg">
+              <a href="#contact" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
                 اتصل بنا
               </a>
             </div>
-          </div>
 
-          {/* Contact Info - Horizontal */}
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mb-6 text-white/90">
-            <div className="flex items-center gap-2">
-              <MapPin size={18} className="text-[#5d9cc3]" />
-              <a href="https://maps.app.goo.gl/XGogec1T7K3ud2Dd8" target="_blank" rel="noopener noreferrer" className="hover:text-[#5d9cc3] transition-colors font-medium">
+            {/* Contact Info */}
+            <div className="flex items-center gap-6 text-white/90 text-sm">
+              <a href="https://maps.app.goo.gl/XGogec1T7K3ud2Dd8" target="_blank" rel="noopener noreferrer" className="hover:text-[#5d9cc3] transition-colors font-medium flex items-center gap-1">
+                <MapPin size={16} className="text-[#5d9cc3]" />
                 {companyInfo.location}
               </a>
-            </div>
-            <span className="text-white/40 hidden md:inline">|</span>
-            <div className="flex items-center gap-2">
-              <Phone size={18} className="text-[#5d9cc3]" />
-              <a href="http://wa.me/966569700733" target="_blank" rel="noopener noreferrer" className="hover:text-[#5d9cc3] transition-colors font-medium" dir="ltr">
+              <a href="http://wa.me/966569700733" target="_blank" rel="noopener noreferrer" className="hover:text-[#5d9cc3] transition-colors font-medium flex items-center gap-1" dir="ltr">
+                <Phone size={16} className="text-[#5d9cc3]" />
                 {companyInfo.phone}
               </a>
             </div>
-            <span className="text-white/40 hidden md:inline">|</span>
-            <div className="flex items-center gap-2">
-              <Mail size={18} className="text-[#5d9cc3]" />
-              <a href={`mailto:${companyInfo.email}`} className="hover:text-[#5d9cc3] transition-colors font-medium">
-                {companyInfo.email}
+
+            {/* Social Media Icons */}
+            <div className="flex gap-3">
+              <a href="https://x.com/ibtikarco" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/ibtikarco" target="_blank" rel="noopener noreferrer" className="w-9 h-9 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
+                <Instagram size={18} />
+              </a>
+              <a href={`mailto:${companyInfo.email}`} className="w-9 h-9 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
+                <Mail size={18} />
               </a>
             </div>
-          </div>
 
-          {/* Social Media Icons */}
-          <div className="flex justify-center gap-4 mb-4">
-            <a href="https://x.com/ibtikarco" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/ibtikarco" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
-              <Instagram size={20} />
-            </a>
-            <a href={`mailto:${companyInfo.email}`} className="w-10 h-10 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
-              <Mail size={20} />
-            </a>
           </div>
         </div>
 
