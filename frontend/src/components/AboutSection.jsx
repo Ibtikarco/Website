@@ -51,21 +51,6 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Download Profile Button */}
-        <div className="text-center mb-16">
-          <a 
-            href="https://www.ibtikarco.com/profile.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#5d9cc3] hover:bg-[#4a8bb3] text-white px-10 py-4 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold rounded-lg"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            <span className="text-lg">تحميل الملف التعريفي</span>
-          </a>
-        </div>
-
         {/* CEO Message */}
         <div className="mt-16 bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] p-8 md:p-12 text-white rounded-lg shadow-xl">
           <div className="max-w-4xl mx-auto">
