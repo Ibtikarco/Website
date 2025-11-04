@@ -26,18 +26,37 @@ const ContactSection = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    // Prepare WhatsApp message
+    const whatsappMessage = `*رسالة جديدة من موقع ابتكار*\n\n*الاسم:* ${formData.name}\n*البريد الإلكتروني:* ${formData.email}\n*رقم الهاتف:* ${formData.phone}\n\n*الرسالة:*\n${formData.message}`;
+    const whatsappNumber = '966569700733';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    // Prepare email
+    const emailSubject = 'رسالة جديدة من موقع ابتكار';
+    const emailBody = `الاسم: ${formData.name}\nالبريد الإلكتروني: ${formData.email}\nرقم الهاتف: ${formData.phone}\n\nالرسالة:\n${formData.message}`;
+    const emailUrl = `mailto:info@ibtikarco.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
     try {
-      const response = await axios.post(`${API}/contact`, formData);
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank');
       
-      if (response.status === 200) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '', message: '' });
-        alert('شكراً على تواصلك! تم إرسال رسالتك بنجاح. سنعود إليك قريباً.');
+      // Open email client
+      window.location.href = emailUrl;
+      
+      // Save to backend (optional)
+      try {
+        await axios.post(`${API}/contact`, formData);
+      } catch (backendError) {
+        console.log('Backend save failed, but WhatsApp and email opened successfully');
       }
+      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      alert('شكراً على تواصلك! سيتم فتح WhatsApp والبريد الإلكتروني.');
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
-      alert('عذراً، حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة عبر الهاتف.');
+      alert('عذراً، حدث خطأ. يرجى المحاولة مرة أخرى.');
     } finally {
       setIsSubmitting(false);
     }
