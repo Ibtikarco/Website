@@ -50,13 +50,9 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-gray-50 to-white" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">{t.contactUsTitle}</h2>
-          <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto mb-6"></div>
-          <p className="text-lg text-[#696867] max-w-3xl mx-auto leading-relaxed">
-            {t.contactDescription}
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">{t.contactTitle}</h2>
+          <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto"></div>
         </div>
 
         {/* Contact Form and Map Layout */}
