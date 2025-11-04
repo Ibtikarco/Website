@@ -22,11 +22,8 @@ const AboutSection = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col items-center justify-center gap-6">
               <div className="text-lg text-[#696867] leading-relaxed text-center">
-                <p className="mb-3 text-xl font-semibold text-[#3e738f]">
-                  ﴿هُوَ أَنشَأَكُم مِّنَ الْأَرْضِ وَاسْتَعْمَرَكُمْ فِيهَا﴾
-                </p>
                 <p className="text-lg leading-relaxed">
-                  انطلاقًا من هذا المبدأ، ومنذ عام 2013، نُسهم في إعمار المدينة المنورة ببناءٍ قائم على الإحسان، تقوده كوادر سعودية بعلم وخبرة تضاهي كبرى الشركات العالمية.
+                  <span className="text-xl font-semibold text-[#3e738f]">﴿هُوَ أَنشَأَكُم مِّنَ الْأَرْضِ وَاسْتَعْمَرَكُمْ فِيهَا﴾</span> انطلاقًا من هذا المبدأ، ومنذ عام 2013، نُسهم في إعمار المدينة المنورة ببناءٍ قائم على الإحسان، تقوده كوادر سعودية بعلم وخبرة تضاهي كبرى الشركات العالمية.
                 </p>
               </div>
               
