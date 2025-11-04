@@ -131,27 +131,32 @@ const ProjectsSection = ({ showAll = false }) => {
             onClick={() => setSelectedProject(null)}
           >
             <div 
-              className="bg-white max-w-5xl w-full my-8 rounded-2xl shadow-2xl transform scale-100 transition-all duration-300"
+              className="bg-white max-w-6xl w-full my-8 rounded-2xl shadow-2xl transform scale-100 transition-all duration-300 max-h-[90vh] overflow-hidden"
               onClick={(e) => e.stopPropagation()}
               dir="rtl"
             >
-              {/* Close Button - Outside the card, top-right corner */}
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-4 left-4 bg-white text-[#3e738f] w-12 h-12 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300 rounded-full shadow-2xl font-bold text-3xl z-10 border-2 border-[#3e738f] hover:border-red-500"
-                aria-label="إغلاق"
-              >
-                ×
-              </button>
-
-              {/* Image Section */}
-              <div className="relative h-96">
+              {/* Large Project Image Banner */}
+              <div className="relative w-full h-[400px] overflow-hidden rounded-t-2xl">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-full object-cover rounded-t-2xl"
+                  className="w-full h-full object-cover"
                 />
+                {/* Gradient overlay for better text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                
+                {/* Close Button - Over the image, top-left corner (RTL) */}
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-[#3e738f] w-12 h-12 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300 rounded-full shadow-2xl font-bold text-3xl z-10 border-2 border-white hover:border-red-500"
+                  aria-label="إغلاق"
+                >
+                  ×
+                </button>
               </div>
+
+              {/* Scrollable Content Area */}
+              <div className="overflow-y-auto max-h-[calc(90vh-400px)]">
 
               {/* Project Details Section */}
               <div className="p-8">
