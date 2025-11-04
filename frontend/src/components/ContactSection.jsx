@@ -62,7 +62,16 @@ const ContactSection = () => {
           <div className="order-1 lg:order-2">
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-[#3e738f] mb-2">موقعنا</h3>
-              <p className="text-lg text-[#696867]">بئر عثمان، المدينة المنورة</p>
+              <p className="text-lg text-[#696867] mb-2">بئر عثمان، المدينة المنورة</p>
+              <a 
+                href="https://maps.app.goo.gl/pE8a58JJSGgAtBbP7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#5d9cc3] hover:text-[#3e738f] font-semibold transition-colors"
+              >
+                <MapPin size={20} />
+                <span>افتح في خرائط جوجل</span>
+              </a>
             </div>
             <div className="w-full h-[600px] rounded-xl overflow-hidden shadow-2xl border-4 border-[#5d9cc3]">
               <iframe
