@@ -98,3 +98,42 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #2c3e50;
 }
+
+/* Swiper Slider Custom Styles for Project Modal */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+  background: rgba(62, 115, 143, 0.8) !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(93, 156, 195, 0.95) !important;
+  transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+  background: #fff !important;
+  opacity: 0.5 !important;
+  width: 10px !important;
+  height: 10px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: #5d9cc3 !important;
+  width: 24px !important;
+  border-radius: 5px !important;
+}
