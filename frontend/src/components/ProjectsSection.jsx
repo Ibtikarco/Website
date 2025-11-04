@@ -160,12 +160,9 @@ const ProjectsSection = ({ showAll = false }) => {
                   
                   {/* المالك */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-[#5d9cc3]">📌</span>
-                      <p className="text-sm font-bold text-[#3e738f]">المالك</p>
-                    </div>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">المالك</p>
                     {selectedProject.ownerLogo ? (
-                      <div className="pr-6 flex items-center justify-start">
+                      <div className="flex items-center justify-start">
                         <img 
                           src={selectedProject.ownerLogo} 
                           alt={selectedProject.owner}
@@ -173,18 +170,15 @@ const ProjectsSection = ({ showAll = false }) => {
                         />
                       </div>
                     ) : (
-                      <p className="text-[#696867] font-medium pr-6">{selectedProject.owner || 'غير محدد'}</p>
+                      <p className="text-[#696867] font-medium">{selectedProject.owner || 'غير محدد'}</p>
                     )}
                   </div>
 
                   {/* المستثمر */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-[#5d9cc3]">💼</span>
-                      <p className="text-sm font-bold text-[#3e738f]">المستثمر</p>
-                    </div>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">المستثمر</p>
                     {selectedProject.investorLogo ? (
-                      <div className="pr-6 flex items-center justify-start">
+                      <div className="flex items-center justify-start">
                         <img 
                           src={selectedProject.investorLogo} 
                           alt={selectedProject.investor}
@@ -192,63 +186,45 @@ const ProjectsSection = ({ showAll = false }) => {
                         />
                       </div>
                     ) : (
-                      <p className="text-[#696867] font-medium pr-6">{selectedProject.investor || 'غير محدد'}</p>
+                      <p className="text-[#696867] font-medium">{selectedProject.investor || 'غير محدد'}</p>
                     )}
                   </div>
 
                   {/* الموقع */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-[#5d9cc3]">📍</span>
-                      <p className="text-sm font-bold text-[#3e738f]">الموقع</p>
-                    </div>
-                    <p className="text-[#696867] font-medium pr-6">{selectedProject.location}</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">الموقع</p>
+                    <p className="text-[#696867] font-medium">{selectedProject.location}</p>
                   </div>
 
                   {/* المساحة */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-[#5d9cc3]">📏</span>
-                      <p className="text-sm font-bold text-[#3e738f]">المساحة</p>
-                    </div>
-                    <p className="text-[#696867] font-medium pr-6">{selectedProject.area}</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">المساحة</p>
+                    <p className="text-[#696867] font-medium">{selectedProject.area}</p>
                   </div>
 
                   {/* قيمة المشروع */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-[#5d9cc3]">💰</span>
-                      <p className="text-sm font-bold text-[#3e738f]">قيمة المشروع</p>
-                    </div>
-                    <p className="text-[#696867] font-medium pr-6">{selectedProject.value}</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">قيمة المشروع</p>
+                    <p className="text-[#696867] font-medium">{selectedProject.value}</p>
                   </div>
 
                   {/* التصنيف */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-[#5d9cc3]">🏷</span>
-                      <p className="text-sm font-bold text-[#3e738f]">التصنيف</p>
-                    </div>
-                    <p className="text-[#696867] font-medium pr-6">{selectedProject.category} - {selectedProject.type}</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">التصنيف</p>
+                    <p className="text-[#696867] font-medium">{selectedProject.category} - {selectedProject.type}</p>
                   </div>
 
                   {/* سنة التعاقد */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-[#5d9cc3]">📅</span>
-                      <p className="text-sm font-bold text-[#3e738f]">سنة التعاقد</p>
-                    </div>
-                    <p className="text-[#696867] font-medium pr-6">{selectedProject.year}</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">سنة التعاقد</p>
+                    <p className="text-[#696867] font-medium">{selectedProject.year}</p>
                   </div>
 
                   {/* نسبة الإنجاز */}
                   {selectedProject.completion && (
                     <div className="bg-[#F3F7FA] rounded-lg p-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-[#5d9cc3]">📊</span>
-                        <p className="text-sm font-bold text-[#3e738f]">نسبة الإنجاز</p>
-                      </div>
-                      <p className="text-[#696867] font-medium pr-6">{selectedProject.completion}</p>
+                      <p className="text-base font-bold text-[#3e738f] mb-3">نسبة الإنجاز</p>
+                      <p className="text-[#696867] font-medium">{selectedProject.completion}</p>
                     </div>
                   )}
 
