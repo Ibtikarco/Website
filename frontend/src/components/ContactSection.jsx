@@ -59,64 +59,39 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-2xl font-bold text-[#3e738f] mb-6">{t.contactInfo}</h3>
-            
-            <div className="space-y-6">
-              <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 bg-[#5d9cc3] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform rounded-lg shadow-md">
-                  <Phone className="text-white" size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-[#3e738f] mb-1">{t.phoneWhatsapp}</h4>
-                  <a href="http://wa.me/966569700733" target="_blank" rel="noopener noreferrer" className="text-[#696867] hover:text-[#5d9cc3] transition-colors" dir="ltr">
-                    {companyInfo.phone}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 bg-[#5d9cc3] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform rounded-lg shadow-md">
-                  <Mail className="text-white" size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-[#3e738f] mb-1">{t.email}</h4>
-                  <a href={`mailto:${companyInfo.email}`} className="text-[#696867] hover:text-[#5d9cc3] transition-colors">
-                    {companyInfo.email}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 bg-[#5d9cc3] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform rounded-lg shadow-md">
-                  <MapPin className="text-white" size={24} />
-                </div>
-                <div>
-                  <h4 className="font-bold text-[#3e738f] mb-1">{t.location}</h4>
-                  <a href="https://maps.app.goo.gl/XGogec1T7K3ud2Dd8" target="_blank" rel="noopener noreferrer" className="text-[#696867] hover:text-[#5d9cc3] transition-colors">
-                    {companyInfo.location}
-                  </a>
-                </div>
-              </div>
+        {/* Contact Form and Map Layout */}
+        <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+          
+          {/* Right Side - Google Map */}
+          <div className="order-1 lg:order-2">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-[#3e738f] mb-2">موقعنا</h3>
+              <p className="text-lg text-[#696867]">بئر عثمان، المدينة المنورة</p>
             </div>
-
-            <div className="mt-8 p-6 bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] text-white rounded-lg shadow-lg">
-              <h4 className="text-xl font-bold mb-2">{t.workingHours}</h4>
-              <p className="text-white/90">{t.workingDays}</p>
-              <p className="text-white/90">{t.weekend}</p>
+            <div className="w-full h-[600px] rounded-xl overflow-hidden shadow-2xl border-4 border-[#5d9cc3]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.4999999999995!2d39.61389!3d24.48139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf4e7e7e7e7e%3A0x7e7e7e7e7e7e7e7e!2z2KjYptixINi52KvZhdin2YYg2YHYsdi5INin2YTYrti12Kkg2KfZhNiz2YPZhtmKINin2YTZhdiv2YrZhtipINin2YTZhdmG2YjYsdip!5e0!3m2!1sar!2ssa!4v1699000000000!5m2!1sar!2ssa"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="موقع الشركة - بئر عثمان، المدينة المنورة"
+              ></iframe>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-white p-8 shadow-lg rounded-lg border-2 border-gray-100">
-            <h3 className="text-2xl font-bold text-[#3e738f] mb-6">{t.sendMessage}</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Left Side - Contact Form */}
+          <div className="order-2 lg:order-1">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-[#3e738f] font-semibold mb-2">{t.name} *</label>
+                <label htmlFor="name" className="block text-[#3e738f] font-semibold mb-2 text-lg">
+                  {t.name}
+                </label>
                 <input
                   type="text"
+                  id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -126,9 +101,12 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <label className="block text-[#3e738f] font-semibold mb-2">{t.email} *</label>
+                <label htmlFor="email" className="block text-[#3e738f] font-semibold mb-2 text-lg">
+                  {t.email}
+                </label>
                 <input
                   type="email"
+                  id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -138,20 +116,26 @@ const ContactSection = () => {
               </div>
               
               <div>
-                <label className="block text-[#3e738f] font-semibold mb-2">{t.phone}</label>
+                <label htmlFor="phone" className="block text-[#3e738f] font-semibold mb-2 text-lg">
+                  {t.phone}
+                </label>
                 <input
                   type="tel"
+                  id="phone"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 border-2 border-gray-200 focus:border-[#5d9cc3] focus:outline-none transition-colors rounded-lg text-[#3e738f]"
-                  dir="ltr"
                 />
               </div>
               
               <div>
-                <label className="block text-[#3e738f] font-semibold mb-2">{t.message} *</label>
+                <label htmlFor="message" className="block text-[#3e738f] font-semibold mb-2 text-lg">
+                  {t.message}
+                </label>
                 <textarea
+                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -171,26 +155,7 @@ const ContactSection = () => {
               </button>
             </form>
           </div>
-        </div>
 
-        {/* Google Map */}
-        <div className="mt-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-2">موقعنا</h3>
-            <p className="text-lg text-[#696867]">بئر عثمان، المدينة المنورة</p>
-          </div>
-          <div className="w-full h-[450px] rounded-xl overflow-hidden shadow-2xl border-4 border-[#5d9cc3]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28493.582743886935!2d39.570!3d24.467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbe060a0fa2b7%3A0x4d7a2e8b3e4f6c8a!2z2KjYptixINi52KvZhdin2YbYjCDYp9mE2YXYr9mK2YbYqSDYp9mE2YXZhtmI2LHYqQ!5e0!3m2!1sar!2ssa!4v1699000000000!5m2!1sar!2ssa"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="موقع الشركة - بئر عثمان، المدينة المنورة"
-            ></iframe>
-          </div>
         </div>
       </div>
     </section>
