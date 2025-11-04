@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { projects } from '../data/mockData';
-import { MapPin, Calendar } from 'lucide-react';
+import { MapPin, Calendar, ArrowLeft } from 'lucide-react';
 import ProjectsChart from './ProjectsChart';
+import { useNavigate } from 'react-router-dom';
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ showAll = false }) => {
   const [filter, setFilter] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
+  const navigate = useNavigate();
 
   const categories = [
     { id: 'all', label: 'الكل' },
@@ -20,6 +22,9 @@ const ProjectsSection = () => {
     ? projects 
     : projects.filter(p => p.category.includes(filter));
 
+  // Show only 3 projects on homepage, all on projects page
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
+
   return (
     <section id="projects" className="py-20 bg-white" dir="rtl">
       <div className="container mx-auto px-4">
@@ -32,22 +37,24 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setFilter(cat.id)}
-              className={`px-6 py-2 font-semibold transition-all duration-300 rounded-full ${
-                filter === cat.id
-                  ? 'bg-[#5d9cc3] text-white shadow-lg'
-                  : 'bg-white text-[#3e738f] hover:bg-[#5d9cc3] hover:text-white shadow border-2 border-[#3e738f]'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
+        {/* Filter Buttons - Only show on full projects page */}
+        {showAll && (
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setFilter(cat.id)}
+                className={`px-6 py-2 font-semibold transition-all duration-300 rounded-full ${
+                  filter === cat.id
+                    ? 'bg-[#5d9cc3] text-white shadow-lg'
+                    : 'bg-white text-[#3e738f] hover:bg-[#5d9cc3] hover:text-white shadow border-2 border-[#3e738f]'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Projects Grid with Chart */}
         <div className="grid lg:grid-cols-4 gap-8 mb-12">
@@ -61,7 +68,7 @@ const ProjectsSection = () => {
           {/* Projects Grid */}
           <div className="lg:col-span-3">
             <div className="grid md:grid-cols-2 gap-8">
-          {filteredProjects.map((project) => (
+          {displayedProjects.map((project) => (
             <div
               key={project.id}
               className="group bg-white shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden cursor-pointer rounded-lg border-2 border-gray-100"
