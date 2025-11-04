@@ -75,13 +75,13 @@ const ContactSection = () => {
             <div className="text-center mt-4">
               <p className="text-lg text-[#696867] mb-2">بئر عثمان، المدينة المنورة</p>
               <a 
-                href="https://www.google.com/maps/place/Ibtikar+Contracting+%7C+%D8%A7%D8%A8%D8%AA%D9%83%D8%A7%D8%B1+%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA/@24.4899284,39.5886585,17z/"
+                href="https://maps.app.goo.gl/53i88J6dULJi7NFE9?g_st=ipc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-[#5d9cc3] hover:text-[#3e738f] font-semibold transition-colors"
               >
                 <MapPin size={20} />
-                <span>افتح في خرائط جوجل</span>
+                <span>موقعنا على الخريطة</span>
               </a>
             </div>
           </div>
