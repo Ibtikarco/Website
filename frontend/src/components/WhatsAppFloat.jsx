@@ -6,7 +6,7 @@ const WhatsAppFloat = () => {
       href="http://wa.me/966569700733"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed left-6 bottom-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 animate-bounce hover:animate-none group"
+      className="fixed left-6 bottom-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 animate-float-gentle hover:animate-none group"
       aria-label="تواصل عبر واتساب"
     >
       <svg
