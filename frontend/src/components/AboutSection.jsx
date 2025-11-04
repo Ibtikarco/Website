@@ -55,16 +55,28 @@ const AboutSection = () => {
         <div className="mt-16 bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] p-8 md:p-12 text-white rounded-lg shadow-xl">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row items-start gap-6">
-              <div className="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 mx-auto md:mx-0 bg-white rounded-full p-2 shadow-xl">
+              <a 
+                href="https://x.com/majed10back"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-32 h-32 md:w-40 md:h-40 flex-shrink-0 mx-auto md:mx-0 bg-white rounded-full p-2 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
                 <img 
                   src="https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/6bhtwhjo_%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9%20copy.png"
                   alt={companyInfo.ceo.name}
                   className="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
                   style={{ objectPosition: 'center 20%' }}
                 />
-              </div>
+              </a>
               <div className="flex-1 text-center md:text-right">
-                <h3 className="text-2xl font-bold mb-2">{companyInfo.ceo.name}</h3>
+                <a 
+                  href="https://x.com/majed10back"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block hover:text-white/90 transition-colors duration-300"
+                >
+                  <h3 className="text-2xl font-bold mb-2">{companyInfo.ceo.name}</h3>
+                </a>
                 <p className="text-white/90 mb-4 text-lg">{companyInfo.ceo.title}</p>
                 <p className="text-white leading-relaxed text-lg mb-4">
                   {companyInfo.slogan}
