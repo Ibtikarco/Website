@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { companyInfo } from '../data/mockData';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const [showCookies, setShowCookies] = useState(true);
