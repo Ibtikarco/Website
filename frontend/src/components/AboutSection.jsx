@@ -20,8 +20,8 @@ const AboutSection = () => {
           
           {/* New Content with Profile Button */}
           <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
-              <div className="text-lg text-[#696867] leading-relaxed flex-1 text-center md:text-right">
+            <div className="flex flex-col items-center justify-center gap-6">
+              <div className="text-lg text-[#696867] leading-relaxed text-center">
                 <p className="mb-3 text-xl font-semibold text-[#3e738f]">
                   ﴿هُوَ أَنشَأَكُم مِّنَ الْأَرْضِ وَاسْتَعْمَرَكُمْ فِيهَا﴾
                 </p>
