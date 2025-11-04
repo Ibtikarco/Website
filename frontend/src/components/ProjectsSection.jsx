@@ -150,15 +150,40 @@ const ProjectsSection = ({ showAll = false }) => {
                 <span className="block" style={{ marginTop: '-2px' }}>×</span>
               </button>
 
-              {/* Large Project Image Banner - Scrolls with content */}
+              {/* Large Project Image Banner/Slider - Scrolls with content */}
               <div className="relative w-full h-[400px] overflow-hidden rounded-t-2xl">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-full object-cover"
-                />
-                {/* Gradient overlay for better text contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                {selectedProject.images && selectedProject.images.length > 1 ? (
+                  <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    navigation
+                    pagination={{ clickable: true }}
+                    autoplay={{ delay: 4000, disableOnInteraction: false }}
+                    loop={true}
+                    className="w-full h-full"
+                  >
+                    {selectedProject.images.map((imageUrl, index) => (
+                      <SwiperSlide key={index}>
+                        <img
+                          src={imageUrl}
+                          alt={`${selectedProject.title} - ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                        {/* Gradient overlay for better text contrast */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                ) : (
+                  <>
+                    <img
+                      src={selectedProject.image}
+                      alt={selectedProject.title}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Gradient overlay for better text contrast */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                  </>
+                )}
               </div>
 
               {/* Content Area */}
