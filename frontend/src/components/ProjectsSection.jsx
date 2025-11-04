@@ -151,7 +151,7 @@ const ProjectsSection = ({ showAll = false }) => {
               </button>
 
               {/* Large Project Image Banner/Slider - Scrolls with content */}
-              <div className="relative w-full h-[400px] overflow-hidden rounded-t-2xl">
+              <div className="relative w-full h-[400px] overflow-hidden rounded-t-2xl" dir="ltr">
                 {selectedProject.images && selectedProject.images.length > 1 ? (
                   <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
