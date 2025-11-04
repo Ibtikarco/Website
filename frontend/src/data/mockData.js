@@ -89,6 +89,7 @@ export const projects = [
     ],
     owner: 'الإدارة العامة للمشاريع',
     investor: 'وزارة الإسكان',
+    investorLogo: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/jitofkrn_1661406-538654455%20copy.png',
     completion: '100%',
     brief: 'مشروع فندقي تجاري متكامل في موقع استراتيجي بالقرب من المسجد النبوي الشريف، يتضمن خدمات راقية ومرافق حديثة.'
   },
