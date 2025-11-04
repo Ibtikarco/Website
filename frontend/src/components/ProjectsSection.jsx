@@ -127,53 +127,125 @@ const ProjectsSection = ({ showAll = false }) => {
         {/* Project Modal */}
         {selectedProject && (
           <div 
-            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 overflow-y-auto"
             onClick={() => setSelectedProject(null)}
           >
             <div 
-              className="bg-white max-w-3xl w-full max-h-[90vh] overflow-auto rounded-lg"
+              className="bg-white max-w-4xl w-full my-8 rounded-xl shadow-2xl"
               onClick={(e) => e.stopPropagation()}
               dir="rtl"
             >
+              {/* Image Section */}
               <div className="relative h-96">
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-t-xl"
                 />
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 left-4 bg-white text-[#3e738f] w-10 h-10 flex items-center justify-center hover:bg-[#5d9cc3] hover:text-white transition-colors rounded-full shadow-lg font-bold"
+                  className="absolute top-4 left-4 bg-white text-[#3e738f] w-10 h-10 flex items-center justify-center hover:bg-[#5d9cc3] hover:text-white transition-colors rounded-full shadow-lg font-bold text-2xl"
                 >
                   ×
                 </button>
               </div>
+
+              {/* Project Details Section */}
               <div className="p-8">
-                <h2 className="text-3xl font-bold text-[#3e738f] mb-4">{selectedProject.title}</h2>
-                <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div>
-                    <p className="text-sm text-[#696867] font-semibold">الموقع</p>
-                    <p className="font-medium text-[#3e738f]">{selectedProject.location}</p>
+                {/* Project Title */}
+                <h2 className="text-3xl font-bold text-[#3e738f] mb-6 text-center">{selectedProject.title}</h2>
+
+                {/* Information Grid */}
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  
+                  {/* المالك */}
+                  <div className="bg-[#F3F7FA] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-[#5d9cc3]">📌</span>
+                      <p className="text-sm font-bold text-[#3e738f]">المالك</p>
+                    </div>
+                    <p className="text-[#696867] font-medium pr-6">{selectedProject.owner || 'غير محدد'}</p>
                   </div>
-                  <div>
-                    <p className="text-sm text-[#696867] font-semibold">المساحة</p>
-                    <p className="font-medium text-[#3e738f]">{selectedProject.area}</p>
+
+                  {/* المستثمر */}
+                  <div className="bg-[#F3F7FA] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-[#5d9cc3]">💼</span>
+                      <p className="text-sm font-bold text-[#3e738f]">المستثمر</p>
+                    </div>
+                    <p className="text-[#696867] font-medium pr-6">{selectedProject.investor || 'غير محدد'}</p>
                   </div>
-                  <div>
-                    <p className="text-sm text-[#696867] font-semibold">السنة</p>
-                    <p className="font-medium text-[#3e738f]">{selectedProject.year}</p>
+
+                  {/* الموقع */}
+                  <div className="bg-[#F3F7FA] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-[#5d9cc3]">📍</span>
+                      <p className="text-sm font-bold text-[#3e738f]">الموقع</p>
+                    </div>
+                    <p className="text-[#696867] font-medium pr-6">{selectedProject.location}</p>
                   </div>
-                  <div>
-                    <p className="text-sm text-[#696867] font-semibold">القيمة</p>
-                    <p className="font-medium text-[#5d9cc3] text-xl">{selectedProject.value}</p>
+
+                  {/* المساحة */}
+                  <div className="bg-[#F3F7FA] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-[#5d9cc3]">📏</span>
+                      <p className="text-sm font-bold text-[#3e738f]">المساحة</p>
+                    </div>
+                    <p className="text-[#696867] font-medium pr-6">{selectedProject.area}</p>
                   </div>
+
+                  {/* قيمة المشروع */}
+                  <div className="bg-[#F3F7FA] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-[#5d9cc3]">💰</span>
+                      <p className="text-sm font-bold text-[#3e738f]">قيمة المشروع</p>
+                    </div>
+                    <p className="text-[#696867] font-medium pr-6">{selectedProject.value}</p>
+                  </div>
+
+                  {/* التصنيف */}
+                  <div className="bg-[#F3F7FA] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-[#5d9cc3]">🏷</span>
+                      <p className="text-sm font-bold text-[#3e738f]">التصنيف</p>
+                    </div>
+                    <p className="text-[#696867] font-medium pr-6">{selectedProject.category} - {selectedProject.type}</p>
+                  </div>
+
+                  {/* سنة التعاقد */}
+                  <div className="bg-[#F3F7FA] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-[#5d9cc3]">📅</span>
+                      <p className="text-sm font-bold text-[#3e738f]">سنة التعاقد</p>
+                    </div>
+                    <p className="text-[#696867] font-medium pr-6">{selectedProject.year}</p>
+                  </div>
+
+                  {/* نسبة الإنجاز */}
+                  {selectedProject.completion && (
+                    <div className="bg-[#F3F7FA] rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-[#5d9cc3]">📊</span>
+                        <p className="text-sm font-bold text-[#3e738f]">نسبة الإنجاز</p>
+                      </div>
+                      <p className="text-[#696867] font-medium pr-6">{selectedProject.completion}</p>
+                    </div>
+                  )}
+
                 </div>
-                <div className="pt-4 border-t-2 border-gray-200">
-                  <span className="inline-block bg-[#3e738f] text-white px-4 py-2 text-sm font-semibold rounded-full mr-2">
-                    {selectedProject.category}
-                  </span>
-                  <span className="inline-block bg-[#5d9cc3] text-white px-4 py-2 text-sm font-semibold rounded-full">
-                    {selectedProject.type}
+
+                {/* Project Brief/Description */}
+                {selectedProject.brief && (
+                  <div className="mt-6 p-6 bg-gradient-to-r from-[#F3F7FA] to-white rounded-lg border-r-4 border-[#5d9cc3]">
+                    <h3 className="text-lg font-bold text-[#3e738f] mb-3">نبذة عن المشروع</h3>
+                    <p className="text-[#696867] leading-relaxed">{selectedProject.brief}</p>
+                  </div>
+                )}
+
+                {/* Status Badge */}
+                <div className="mt-6 flex justify-center">
+                  <span className="inline-block bg-gradient-to-r from-[#3e738f] to-[#5d9cc3] text-white px-6 py-3 text-sm font-bold rounded-full shadow-lg">
+                    الحالة: {selectedProject.status}
                   </span>
                 </div>
               </div>
