@@ -176,6 +176,18 @@ const ProjectsSection = ({ showAll = false }) => {
                       </SwiperSlide>
                     ))}
                   </Swiper>
+                  
+                  {/* Custom Navigation Arrows */}
+                  <button className="custom-swiper-button-prev">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M10 2L4 8l6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                  <button className="custom-swiper-button-next">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M6 2l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
                 ) : (
                   <>
                     <img
