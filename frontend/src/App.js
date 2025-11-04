@@ -10,6 +10,7 @@ import StatsSection from './components/StatsSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat';
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
         <ContactSection />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };
