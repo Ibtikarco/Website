@@ -18,7 +18,10 @@ const Header = () => {
   ];
 
   const scrollToSection = (path) => {
-    if (path.startsWith('/#')) {
+    if (path === '/') {
+      // Scroll to top for home
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (path.startsWith('/#')) {
       const sectionId = path.substring(2);
       const element = document.getElementById(sectionId);
       if (element) {
