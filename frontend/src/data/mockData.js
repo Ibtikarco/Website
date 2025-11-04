@@ -86,7 +86,11 @@ export const projects = [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/ga1cvtib_JPEG%20image-48C8-A16A-44-4%20copy.jpg',
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/nprjoe0y_JPEG%20image-48C8-A16A-44-17%20copy.jpg',
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/yu24n0dj_JPEG%20image-48C8-A16A-44-23%20copy.jpg'
-    ]
+    ],
+    owner: 'الإدارة العامة للمشاريع',
+    investor: 'وزارة الإسكان',
+    completion: '100%',
+    brief: 'مشروع فندقي تجاري متكامل في موقع استراتيجي بالقرب من المسجد النبوي الشريف، يتضمن خدمات راقية ومرافق حديثة.'
   },
   {
     id: 2,
