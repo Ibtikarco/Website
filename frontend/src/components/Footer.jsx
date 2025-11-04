@@ -26,8 +26,8 @@ const Footer = () => {
                 <a href="https://www.instagram.com/ibtikarco" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
                   <Instagram size={20} />
                 </a>
-                <a href="http://wa.me/966569700733" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
-                  <Phone size={20} />
+                <a href={`mailto:${companyInfo.email}`} className="w-10 h-10 bg-[#5d9cc3] flex items-center justify-center hover:bg-white hover:text-[#3e738f] transition-colors rounded-lg">
+                  <Mail size={20} />
                 </a>
               </div>
             </div>
