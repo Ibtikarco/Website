@@ -164,7 +164,17 @@ const ProjectsSection = ({ showAll = false }) => {
                       <span className="text-[#5d9cc3]">📌</span>
                       <p className="text-sm font-bold text-[#3e738f]">المالك</p>
                     </div>
-                    <p className="text-[#696867] font-medium pr-6">{selectedProject.owner || 'غير محدد'}</p>
+                    {selectedProject.ownerLogo ? (
+                      <div className="pr-6 flex items-center justify-start">
+                        <img 
+                          src={selectedProject.ownerLogo} 
+                          alt={selectedProject.owner}
+                          className="h-16 w-auto object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <p className="text-[#696867] font-medium pr-6">{selectedProject.owner || 'غير محدد'}</p>
+                    )}
                   </div>
 
                   {/* المستثمر */}
@@ -173,7 +183,17 @@ const ProjectsSection = ({ showAll = false }) => {
                       <span className="text-[#5d9cc3]">💼</span>
                       <p className="text-sm font-bold text-[#3e738f]">المستثمر</p>
                     </div>
-                    <p className="text-[#696867] font-medium pr-6">{selectedProject.investor || 'غير محدد'}</p>
+                    {selectedProject.investorLogo ? (
+                      <div className="pr-6 flex items-center justify-start">
+                        <img 
+                          src={selectedProject.investorLogo} 
+                          alt={selectedProject.investor}
+                          className="h-16 w-auto object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <p className="text-[#696867] font-medium pr-6">{selectedProject.investor || 'غير محدد'}</p>
+                    )}
                   </div>
 
                   {/* الموقع */}
