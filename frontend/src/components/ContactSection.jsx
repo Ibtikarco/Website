@@ -75,7 +75,7 @@ const ContactSection = () => {
             </div>
             <div className="w-full h-[600px] rounded-xl overflow-hidden shadow-2xl border-4 border-[#5d9cc3]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57846.08!2d39.61564!3d24.48153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbef5e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sIbtikar%20Company!5e0!3m2!1sar!2ssa!4v1730727000000!5m2!1sar!2ssa&z=15"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.095!2d39.6139!3d24.4814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbef4e4e4e4e4%3A0x4e4e4e4e4e4e4e4e!2z2YHYsdi5INin2YTYrti12Kkg2KfZhNiz2YPZhtmKINin2YTZhdiv2YrZhtipINin2YTZhdmG2YjYsdip!5e0!3m2!1sar!2ssa!4v1730729000000!5m2!1sar!2ssa"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
