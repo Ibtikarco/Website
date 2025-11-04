@@ -51,7 +51,7 @@ const ContactSection = () => {
     <section id="contact" className="py-20 bg-gradient-to-b from-gray-50 to-white" dir="rtl">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">{t.contactTitle}</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">اتصل بنا</h2>
           <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto"></div>
         </div>
 
@@ -60,19 +60,6 @@ const ContactSection = () => {
           
           {/* Right Side - Google Map */}
           <div className="order-1 lg:order-2">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-[#3e738f] mb-2">موقعنا</h3>
-              <p className="text-lg text-[#696867] mb-2">بئر عثمان، المدينة المنورة</p>
-              <a 
-                href="https://maps.app.goo.gl/pE8a58JJSGgAtBbP7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#5d9cc3] hover:text-[#3e738f] font-semibold transition-colors"
-              >
-                <MapPin size={20} />
-                <span>افتح في خرائط جوجل</span>
-              </a>
-            </div>
             <div className="w-full h-[600px] rounded-xl overflow-hidden shadow-2xl border-4 border-[#5d9cc3]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.095!2d39.6139!3d24.4814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbef4e4e4e4e4%3A0x4e4e4e4e4e4e4e4e!2z2YHYsdi5INin2YTYrti12Kkg2KfZhNiz2YPZhtmKINin2YTZhdiv2YrZhtipINin2YTZhdmG2YjYsdip!5e0!3m2!1sar!2ssa!4v1730729000000!5m2!1sar!2ssa"
@@ -85,12 +72,23 @@ const ContactSection = () => {
                 title="موقع الشركة - بئر عثمان، المدينة المنورة"
               ></iframe>
             </div>
+            <div className="text-center mt-4">
+              <p className="text-lg text-[#696867] mb-2">بئر عثمان، المدينة المنورة</p>
+              <a 
+                href="https://maps.app.goo.gl/pE8a58JJSGgAtBbP7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#5d9cc3] hover:text-[#3e738f] font-semibold transition-colors"
+              >
+                <MapPin size={20} />
+                <span>افتح في خرائط جوجل</span>
+              </a>
+            </div>
           </div>
 
           {/* Left Side - Contact Form */}
           <div className="order-2 lg:order-1">
-            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#5d9cc3]">
-              <h3 className="text-3xl font-bold text-[#3e738f] mb-8 text-center">اتصل بنا</h3>
+            <div className="h-[600px] bg-white p-8 rounded-xl shadow-2xl border-4 border-[#5d9cc3] overflow-y-auto">
               <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-[#3e738f] font-semibold mb-2 text-lg">
