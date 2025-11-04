@@ -11,6 +11,7 @@ import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
+import ProjectsPage from './pages/ProjectsPage';
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
         <AboutSection />
         <ServicesSection />
         <StatsSection />
-        <ProjectsSection />
+        <ProjectsSection showAll={false} />
         <ContactSection />
       </main>
       <Footer />
@@ -37,6 +38,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/مشاريعنا" element={<ProjectsPage />} />
           </Routes>
         </BrowserRouter>
       </div>
