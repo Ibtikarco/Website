@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, User } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations/translations';
@@ -8,6 +8,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, toggleLanguage, dir } = useLanguage();
   const t = translations[language];
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navigationItems = [
     { id: 5, label: t.contact, path: '/#contact' },
@@ -18,17 +20,39 @@ const Header = () => {
   ];
 
   const scrollToSection = (path) => {
+    setIsMenuOpen(false);
+    
     if (path === '/') {
-      // Scroll to top for home
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Navigate to home and scroll to top
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     } else if (path.startsWith('/#')) {
       const sectionId = path.substring(2);
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      
+      // If we're not on homepage, navigate there first
+      if (location.pathname !== '/') {
+        navigate('/');
+        // Wait for navigation and then scroll
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 300);
+      } else {
+        // Already on homepage, just scroll
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
-    setIsMenuOpen(false);
   };
 
   return (
