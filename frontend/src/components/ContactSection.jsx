@@ -161,6 +161,7 @@ const ContactSection = () => {
                 {!isSubmitting && <Send size={20} />}
               </button>
             </form>
+            </div>
           </div>
 
         </div>
