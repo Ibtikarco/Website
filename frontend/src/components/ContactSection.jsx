@@ -159,10 +159,10 @@ const ContactSection = () => {
                 <span>{isSubmitting ? t.sending : t.send}</span>
                 {!isSubmitting && <Send size={20} />}
               </button>
-            </form>
+              </form>
             </div>
           </div>
-          </div>
+        </div>
 
         </div>
       </div>
