@@ -142,7 +142,7 @@ const StatsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">
-            ابتكار في أرقام
+            أرقام ابتكار
           </h2>
           <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto"></div>
         </div>
