@@ -125,11 +125,11 @@ html {
 }
 
 .swiper-button-prev {
-  left: -60px !important;
+  left: 0 !important;
 }
 
 .swiper-button-next {
-  right: -60px !important;
+  right: 0 !important;
 }
 
 .swiper-button-next::after,
