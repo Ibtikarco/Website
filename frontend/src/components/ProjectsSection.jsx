@@ -107,22 +107,29 @@ const ProjectsSection = ({ showAll = false }) => {
               </div>
             </div>
           ))}
+          
+          {/* View More Button Card - Only show on homepage */}
+          {!showAll && (
+            <div
+              onClick={() => navigate('/projects')}
+              className="group bg-gradient-to-br from-[#5d9cc3] to-[#3e738f] hover:from-[#3e738f] hover:to-[#5d9cc3] shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden cursor-pointer rounded-lg border-2 border-[#5d9cc3] flex items-center justify-center"
+            >
+              <div className="p-6 text-center">
+                <div className="flex flex-col items-center justify-center h-full gap-6">
+                  <ArrowLeft size={64} className="text-white transform rotate-180 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-3xl font-bold text-white">
+                    عرض جميع المشاريع
+                  </h3>
+                  <p className="text-white/90 text-lg">
+                    اكتشف المزيد من أعمالنا
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
             </div>
           </div>
         </div>
-
-        {/* View More Button - Only show on homepage */}
-        {!showAll && (
-          <div className="flex justify-center mt-12">
-            <button
-              onClick={() => navigate('/projects')}
-              className="group bg-[#5d9cc3] hover:bg-[#3e738f] text-white px-8 py-4 font-bold text-lg transition-all duration-300 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 flex items-center gap-3"
-            >
-              <span>عرض جميع المشاريع</span>
-              <ArrowLeft size={24} className="transform rotate-180 group-hover:translate-x-2 transition-transform" />
-            </button>
-          </div>
-        )}
 
         {/* Project Modal */}
         {selectedProject && (
