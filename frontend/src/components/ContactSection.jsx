@@ -62,20 +62,20 @@ const ContactSection = () => {
           <div className="order-1 lg:order-2">
             <div className="w-full h-[650px] rounded-xl overflow-hidden shadow-2xl border-4 border-[#5d9cc3]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.095!2d39.6139!3d24.4814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbef4e4e4e4e4%3A0x4e4e4e4e4e4e4e4e!2z2YHYsdi5INin2YTYrti12Kkg2KfZhNiz2YPZhtmKINin2YTZhdiv2YrZhtipINin2YTZhdmG2YjYsdip!5e0!3m2!1sar!2ssa!4v1730729000000!5m2!1sar!2ssa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.692398910307!2d39.5886585!3d24.4899284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bd959e403af529%3A0x1460d80b0084d7a5!2zSWJ0aWthciBDb250cmFjdGluZyB8INin2KjYqtmD2KfYsSDZhNmE2YXZgtin2YjZhNin2Ko!5e1!3m2!1sen!2ssa!4v1762242622782!5m2!1sen!2ssa"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="موقع الشركة - بئر عثمان، المدينة المنورة"
+                title="موقع الشركة - Ibtikar Contracting | ابتكار للمقاولات"
               ></iframe>
             </div>
             <div className="text-center mt-4">
               <p className="text-lg text-[#696867] mb-2">بئر عثمان، المدينة المنورة</p>
               <a 
-                href="https://maps.app.goo.gl/pE8a58JJSGgAtBbP7"
+                href="https://www.google.com/maps/place/Ibtikar+Contracting+%7C+%D8%A7%D8%A8%D8%AA%D9%83%D8%A7%D8%B1+%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA/@24.4899284,39.5886585,17z/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-[#5d9cc3] hover:text-[#3e738f] font-semibold transition-colors"
