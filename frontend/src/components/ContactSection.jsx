@@ -89,8 +89,9 @@ const ContactSection = () => {
 
           {/* Left Side - Contact Form */}
           <div className="order-2 lg:order-1">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-8 text-center">اتصل بنا</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-[#5d9cc3]">
+              <h3 className="text-3xl font-bold text-[#3e738f] mb-8 text-center">اتصل بنا</h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-[#3e738f] font-semibold mb-2 text-lg">
                   {t.name}
