@@ -153,41 +153,43 @@ const ProjectsSection = ({ showAll = false }) => {
               {/* Large Project Image Banner/Slider - Scrolls with content */}
               <div className="relative w-full h-[400px] overflow-hidden rounded-t-2xl" dir="ltr">
                 {selectedProject.images && selectedProject.images.length > 1 ? (
-                  <Swiper
-                    modules={[Navigation, Pagination, Autoplay]}
-                    navigation={{
-                      prevEl: '.custom-swiper-button-prev',
-                      nextEl: '.custom-swiper-button-next',
-                    }}
-                    pagination={{ clickable: true }}
-                    autoplay={{ delay: 4000, disableOnInteraction: false }}
-                    loop={true}
-                    className="w-full h-full"
-                  >
-                    {selectedProject.images.map((imageUrl, index) => (
-                      <SwiperSlide key={index}>
-                        <img
-                          src={imageUrl}
-                          alt={`${selectedProject.title} - ${index + 1}`}
-                          className="w-full h-full object-cover"
-                        />
-                        {/* Gradient overlay for better text contrast */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                  
-                  {/* Custom Navigation Arrows */}
-                  <button className="custom-swiper-button-prev">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                      <path d="M10 2L4 8l6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
-                  <button className="custom-swiper-button-next">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                      <path d="M6 2l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
+                  <>
+                    <Swiper
+                      modules={[Navigation, Pagination, Autoplay]}
+                      navigation={{
+                        prevEl: '.custom-swiper-button-prev',
+                        nextEl: '.custom-swiper-button-next',
+                      }}
+                      pagination={{ clickable: true }}
+                      autoplay={{ delay: 4000, disableOnInteraction: false }}
+                      loop={true}
+                      className="w-full h-full"
+                    >
+                      {selectedProject.images.map((imageUrl, index) => (
+                        <SwiperSlide key={index}>
+                          <img
+                            src={imageUrl}
+                            alt={`${selectedProject.title} - ${index + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                          {/* Gradient overlay for better text contrast */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                    
+                    {/* Custom Navigation Arrows */}
+                    <button className="custom-swiper-button-prev">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M10 2L4 8l6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                    <button className="custom-swiper-button-next">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M6 2l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </button>
+                  </>
                 ) : (
                   <>
                     <img
