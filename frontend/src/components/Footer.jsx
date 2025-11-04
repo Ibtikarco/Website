@@ -1,9 +1,32 @@
 import React, { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { companyInfo } from '../data/mockData';
 import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const [showCookies, setShowCookies] = useState(true);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (sectionId) => {
+    // If we're not on homepage, navigate there first
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation and then scroll
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300);
+    } else {
+      // Already on homepage, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <>
@@ -23,18 +46,18 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="flex items-center gap-6">
-              <a href="#about" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
+              <button onClick={() => handleNavigation('about')} className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
                 من نحن
-              </a>
-              <a href="#services" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
+              </button>
+              <button onClick={() => handleNavigation('services')} className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
                 خدماتنا
-              </a>
-              <a href="#projects" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
+              </button>
+              <button onClick={() => handleNavigation('projects')} className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
                 مشاريعنا
-              </a>
-              <a href="#contact" className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
+              </button>
+              <button onClick={() => handleNavigation('contact')} className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
                 اتصل بنا
-              </a>
+              </button>
             </div>
 
             {/* Contact Info */}
