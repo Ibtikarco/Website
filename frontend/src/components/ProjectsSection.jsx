@@ -202,9 +202,9 @@ const ProjectsSection = ({ showAll = false }) => {
                     <p className="text-[#696867] font-medium">{selectedProject.area}</p>
                   </div>
 
-                  {/* قيمة المشروع */}
+                  {/* حجم المشروع */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <p className="text-base font-bold text-[#3e738f] mb-3">قيمة المشروع</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">حجم المشروع</p>
                     <p className="text-[#696867] font-medium">{selectedProject.value}</p>
                   </div>
 
