@@ -64,7 +64,7 @@ const ServicesSection = () => {
 
         {/* Additional Info */}
         <div className="mt-16 bg-[#3e738f] p-8 md:p-12 text-white text-center rounded-lg shadow-xl">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">خدمات البناء المتكاملة</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4 whitespace-nowrap">خدمات البناء المتكاملة</h3>
           <p className="text-white max-w-3xl mx-auto leading-relaxed text-lg">
             فريق عمل متكامل من الأيدي العاملة الماهرة ومعدات البناء الحديثة مع ضمان تحقيق السلامة في المرتبة الأولى
           </p>
