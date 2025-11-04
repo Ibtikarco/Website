@@ -100,55 +100,51 @@ html {
 }
 
 /* Swiper Slider Custom Styles for Project Modal */
+.custom-swiper-button-next,
+.custom-swiper-button-prev {
+  position: absolute;
+  color: #3e738f;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: none;
+  outline: none;
+}
+
+.custom-swiper-button-prev {
+  left: 0;
+}
+
+.custom-swiper-button-next {
+  right: 0;
+}
+
+.custom-swiper-button-next:hover,
+.custom-swiper-button-prev:hover {
+  background-color: #5d9cc3;
+  color: #fff;
+}
+
+.custom-swiper-button-next svg,
+.custom-swiper-button-prev svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Hide default Swiper buttons */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #3e738f !important;
-  background-color: #fff !important;
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  margin-top: 0 !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
-  padding: 0 !important;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: #5d9cc3 !important;
-  color: #fff !important;
-}
-
-.swiper-button-prev {
-  left: 0 !important;
-}
-
-.swiper-button-next {
-  right: 0 !important;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 4px !important;
-  font-weight: bold !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  position: absolute !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  line-height: 1 !important;
-}
-
-.swiper-button-next:hover::after,
-.swiper-button-prev:hover::after {
-  color: #fff !important;
+  display: none !important;
 }
 
 .swiper-pagination-bullet {
