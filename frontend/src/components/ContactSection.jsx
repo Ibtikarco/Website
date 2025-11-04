@@ -56,11 +56,11 @@ const ContactSection = () => {
         </div>
 
         {/* Contact Form and Map Layout */}
-        <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
           
           {/* Right Side - Google Map */}
           <div className="order-1 lg:order-2">
-            <div className="w-full h-[600px] rounded-xl overflow-hidden shadow-2xl border-4 border-[#5d9cc3]">
+            <div className="w-full h-[650px] rounded-xl overflow-hidden shadow-2xl border-4 border-[#5d9cc3]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.095!2d39.6139!3d24.4814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbef4e4e4e4e4%3A0x4e4e4e4e4e4e4e4e!2z2YHYsdi5INin2YTYrti12Kkg2KfZhNiz2YPZhtmKINin2YTZhdiv2YrZhtipINin2YTZhdmG2YjYsdip!5e0!3m2!1sar!2ssa!4v1730729000000!5m2!1sar!2ssa"
                 width="100%"
@@ -88,8 +88,9 @@ const ContactSection = () => {
 
           {/* Left Side - Contact Form */}
           <div className="order-2 lg:order-1">
-            <div className="h-[600px] bg-white p-8 rounded-xl shadow-2xl border-4 border-[#5d9cc3] overflow-y-auto">
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="h-[650px] bg-white p-8 rounded-xl shadow-2xl border-4 border-[#5d9cc3] flex flex-col">
+              <h3 className="text-2xl font-bold text-[#3e738f] mb-6 text-center">اتصل بنا</h3>
+              <form onSubmit={handleSubmit} className="space-y-6 flex-1 overflow-y-auto pr-2">
               <div>
                 <label htmlFor="name" className="block text-[#3e738f] font-semibold mb-2 text-lg">
                   {t.name}
