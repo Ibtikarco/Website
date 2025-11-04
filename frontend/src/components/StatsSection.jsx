@@ -33,7 +33,7 @@ const StatsSection = () => {
     {
       id: 3,
       title: 'الإنجازات والمشاريع',
-      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80',
+      image: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/jbrx0nbc_dji_fly_20250904_084918_0159_1756970821719_photo.jpg',
       stats: [
         { number: '50+', label: 'مشروع منجز', target: 50, suffix: '+' },
         { number: '6', label: 'مشاريع حالية', target: 6 },
