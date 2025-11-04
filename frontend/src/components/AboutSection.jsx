@@ -23,17 +23,17 @@ const AboutSection = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-5xl mx-auto">
           {stats.map((stat, index) => {
             const Icon = iconMap[index];
             return (
               <div
                 key={stat.id}
-                className="bg-gradient-to-br from-[#3e738f] to-[#5d9cc3] p-8 text-center transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl rounded-lg"
+                className="bg-white border-4 border-[#3e738f] p-10 text-center transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl rounded-xl hover:bg-[#3e738f] group"
               >
-                <Icon className="mx-auto mb-4 text-white" size={40} />
-                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-sm text-white font-medium">{stat.label}</div>
+                <Icon className="mx-auto mb-4 text-[#3e738f] group-hover:text-white transition-colors duration-300" size={48} />
+                <div className="text-5xl font-bold text-[#3e738f] group-hover:text-white transition-colors duration-300 mb-3">{stat.number}</div>
+                <div className="text-lg text-[#3e738f] group-hover:text-white transition-colors duration-300 font-semibold">{stat.label}</div>
               </div>
             );
           })}
