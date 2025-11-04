@@ -66,7 +66,7 @@ const ContactSection = () => {
             </div>
             <div className="w-full h-[600px] rounded-xl overflow-hidden shadow-2xl border-4 border-[#5d9cc3]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.4999999999995!2d39.61389!3d24.48139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf4e7e7e7e7e%3A0x7e7e7e7e7e7e7e7e!2z2KjYptixINi52KvZhdin2YYg2YHYsdi5INin2YTYrti12Kkg2KfZhNiz2YPZhtmKINin2YTZhdiv2YrZhtipINin2YTZhdmG2YjYsdip!5e0!3m2!1sar!2ssa!4v1699000000000!5m2!1sar!2ssa"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3623.0947834891647!2d39.61388757598965!3d24.481393063929043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDI4JzUzLjAiTiAzOcKwMzYnNTcuNiJF!5e0!3m2!1sar!2ssa!4v1730724000000!5m2!1sar!2ssa"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
