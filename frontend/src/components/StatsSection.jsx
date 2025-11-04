@@ -11,7 +11,7 @@ const StatsSection = () => {
     {
       id: 1,
       title: 'الأصول والمعدات',
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80',
+      image: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/gow0t5we_JPEG%20image-48C8-A16A-44-4%20copy.jpg',
       stats: [
         { number: '12', label: 'المعدات الثقيلة', target: 12 },
         { number: '32', label: 'معدات النقل', target: 32 },
