@@ -22,7 +22,7 @@ const StatsSection = () => {
     {
       id: 2,
       title: 'القوى العاملة',
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+      image: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/x1yn9t5f_IMG_7119-2%20copy.jpg',
       stats: [
         { number: '17', label: 'الطاقم الهندسي', target: 17 },
         { number: '19', label: 'المشرفين والمراقبين', target: 19 },
