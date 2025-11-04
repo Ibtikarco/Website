@@ -250,11 +250,12 @@ const ProjectsSection = ({ showAll = false }) => {
                 )}
 
                 {/* Status Badge */}
-                <div className="mt-6 flex justify-center">
+                <div className="mt-6 flex justify-center pb-6">
                   <span className="inline-block bg-gradient-to-r from-[#3e738f] to-[#5d9cc3] text-white px-6 py-3 text-sm font-bold rounded-full shadow-lg">
                     الحالة: {selectedProject.status}
                   </span>
                 </div>
+              </div>
               </div>
             </div>
           </div>
