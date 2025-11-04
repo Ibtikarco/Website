@@ -116,6 +116,7 @@ html {
   transform: translateY(-50%) !important;
   margin-top: 0 !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  padding: 0 !important;
 }
 
 .swiper-button-next:hover,
@@ -134,10 +135,15 @@ html {
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 16px !important;
+  font-size: 14px !important;
   font-weight: bold !important;
   margin: 0 !important;
   padding: 0 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  line-height: 1 !important;
 }
 
 .swiper-button-next:hover::after,
