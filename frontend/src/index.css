@@ -103,23 +103,31 @@ html {
 .swiper-button-next,
 .swiper-button-prev {
   color: #fff !important;
-  background: rgba(62, 115, 143, 0.8) !important;
-  width: 44px !important;
-  height: 44px !important;
+  background: rgba(0, 0, 0, 0.4) !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50% !important;
-  backdrop-filter: blur(4px);
   transition: all 0.3s ease;
+  top: 50% !important;
+  transform: translateY(-50%);
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background: rgba(93, 156, 195, 0.95) !important;
-  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.swiper-button-prev {
+  left: 15px !important;
+}
+
+.swiper-button-next {
+  right: 15px !important;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 20px !important;
+  font-size: 18px !important;
   font-weight: bold;
 }
 
