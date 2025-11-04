@@ -10,7 +10,7 @@ const Footer = () => {
       <footer className="bg-[#3e738f] text-white" dir="rtl">
         {/* Main Footer */}
         <div className="container mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Company Info */}
             <div>
               <h3 className="text-2xl font-bold mb-4 text-white">{companyInfo.nameAr}</h3>
@@ -56,17 +56,6 @@ const Footer = () => {
                     اتصل بنا
                   </a>
                 </li>
-              </ul>
-            </div>
-
-            {/* Services */}
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-white">خدماتنا</h3>
-              <ul className="space-y-2 text-white/80 font-medium">
-                <li>إدارة مشاريع</li>
-                <li>الإنشاءات الخرسانية</li>
-                <li>التشطيبات والديكور</li>
-                <li>بنية تحتية</li>
               </ul>
             </div>
 
