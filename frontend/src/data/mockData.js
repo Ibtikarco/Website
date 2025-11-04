@@ -84,8 +84,8 @@ export const projects = [
     image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/ga1cvtib_JPEG%20image-48C8-A16A-44-4%20copy.jpg',
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/ga1cvtib_JPEG%20image-48C8-A16A-44-4%20copy.jpg',
-      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/nprjoe0y_JPEG%20image-48C8-A16A-44-17%20copy.jpg',
-      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/yu24n0dj_JPEG%20image-48C8-A16A-44-23%20copy.jpg'
+      'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/2ua6nef3_JPEG%20image-48C8-A16A-44-17%20copy.jpg',
+      'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/hoitrlei_JPEG%20image-48C8-A16A-44-23%20copy.jpg'
     ],
     owner: 'أمانة المدينة المنورة',
     ownerLogo: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/l0by6zc7_logo%20%D8%A7%D9%94%D9%85%D8%A7%D9%86%D8%A9.png',
