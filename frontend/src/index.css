@@ -102,8 +102,8 @@ html {
 /* Swiper Slider Custom Styles for Project Modal */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #fff !important;
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  color: #3e738f !important;
+  background-color: #fff !important;
   width: 40px !important;
   height: 40px !important;
   border-radius: 50% !important;
@@ -115,11 +115,13 @@ html {
   top: 50% !important;
   transform: translateY(-50%) !important;
   margin-top: 0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.6) !important;
+  background-color: #5d9cc3 !important;
+  color: #fff !important;
 }
 
 .swiper-button-prev {
@@ -134,9 +136,13 @@ html {
 .swiper-button-prev::after {
   font-size: 16px !important;
   font-weight: bold !important;
-  color: #fff !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  color: #fff !important;
 }
 
 .swiper-pagination-bullet {
