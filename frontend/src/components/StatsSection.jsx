@@ -27,7 +27,7 @@ const StatsSection = () => {
         { number: '17', label: 'الطاقم الهندسي', target: 17 },
         { number: '19', label: 'المشرفين والمراقبين', target: 19 },
         { number: '13', label: 'الطاقم الإداري', target: 13 },
-        { number: '184', label: 'القوى العاملة الميدانية', target: 184 }
+        { number: '184', label: 'القوى العاملة الميدانية', target: 184, noWrap: true }
       ]
     },
     {
