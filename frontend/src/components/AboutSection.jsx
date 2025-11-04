@@ -23,17 +23,17 @@ const AboutSection = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
           {stats.map((stat, index) => {
             const Icon = iconMap[index];
             return (
               <div
                 key={stat.id}
-                className="bg-white border-4 border-[#3e738f] p-10 text-center transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl rounded-xl hover:bg-[#3e738f] group"
+                className="bg-white border-4 border-[#3e738f] p-8 text-center transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl rounded-xl hover:bg-[#3e738f] group"
               >
-                <Icon className="mx-auto mb-4 text-[#3e738f] group-hover:text-white transition-colors duration-300" size={48} />
-                <div className="text-5xl font-bold text-[#3e738f] group-hover:text-white transition-colors duration-300 mb-3">{stat.number}</div>
-                <div className="text-lg text-[#3e738f] group-hover:text-white transition-colors duration-300 font-semibold">{stat.label}</div>
+                <Icon className="mx-auto mb-3 text-[#3e738f] group-hover:text-white transition-colors duration-300" size={38} />
+                <div className="text-4xl font-bold text-[#3e738f] group-hover:text-white transition-colors duration-300 mb-2">{stat.number}</div>
+                <div className="text-base text-[#3e738f] group-hover:text-white transition-colors duration-300 font-semibold">{stat.label}</div>
               </div>
             );
           })}
