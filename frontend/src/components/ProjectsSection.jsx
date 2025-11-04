@@ -155,7 +155,10 @@ const ProjectsSection = ({ showAll = false }) => {
                 {selectedProject.images && selectedProject.images.length > 1 ? (
                   <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
-                    navigation
+                    navigation={{
+                      prevEl: '.custom-swiper-button-prev',
+                      nextEl: '.custom-swiper-button-next',
+                    }}
                     pagination={{ clickable: true }}
                     autoplay={{ delay: 4000, disableOnInteraction: false }}
                     loop={true}
