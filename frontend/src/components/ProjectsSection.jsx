@@ -259,7 +259,7 @@ const ProjectsSection = ({ showAll = false }) => {
                           <img 
                             src={selectedProject.supervisorLogo} 
                             alt={selectedProject.supervisor}
-                            className="h-16 w-auto object-contain"
+                            className="h-24 w-auto object-contain"
                           />
                         </div>
                       ) : (
