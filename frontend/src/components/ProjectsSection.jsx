@@ -248,6 +248,24 @@ const ProjectsSection = ({ showAll = false }) => {
                     )}
                   </div>
 
+                  {/* المشرف (إن وجد) */}
+                  {selectedProject.supervisor && (
+                    <div className="bg-[#F3F7FA] rounded-lg p-4">
+                      <p className="text-base font-bold text-[#3e738f] mb-3">المشرف</p>
+                      {selectedProject.supervisorLogo ? (
+                        <div className="flex items-center justify-start">
+                          <img 
+                            src={selectedProject.supervisorLogo} 
+                            alt={selectedProject.supervisor}
+                            className="h-16 w-auto object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <p className="text-[#696867] font-medium">{selectedProject.supervisor}</p>
+                      )}
+                    </div>
+                  )}
+
                   {/* الموقع */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
                     <p className="text-base font-bold text-[#3e738f] mb-3">الموقع</p>
