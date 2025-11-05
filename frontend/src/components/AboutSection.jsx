@@ -23,7 +23,7 @@ const AboutSection = () => {
             <div className="flex flex-col items-center justify-center gap-6">
               <div className="text-lg text-[#696867] leading-relaxed text-center">
                 <p className="text-lg leading-relaxed">
-                  <span className="text-xl font-semibold text-[#3e738f]">﴿هُوَ أَنشَأَكُم مِّنَ الْأَرْضِ وَاسْتَعْمَرَكُمْ فِيهَا﴾</span> انطلاقًا من هذا المبدأ، ومنذ عام 2013، نُسهم في إعمار المدينة المنورة
+                  <span className="text-xl font-semibold text-[#3e738f]">﴿هُوَ أَنشَأَكُم مِّنَ الْأَرْضِ وَاسْتَعْمَرَكُمْ فِيهَا﴾</span> انطلاقًا من هذا المبدأ، ومنذ عام 2000، نُسهم في إعمار المدينة المنورة
                   <br />
                   ببناءٍ قائم على الإحسان، تقوده كوادر سعودية بعلم وخبرة تضاهي كبرى الشركات العالمية.
                 </p>
