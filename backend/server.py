@@ -89,16 +89,21 @@ async def get_status_checks():
 def send_email_notification(contact_data: dict):
     """Send email notification when a contact form is submitted"""
     try:
-        # Email configuration - using Gmail SMTP as an example
-        # For production, use environment variables for credentials
-        sender_email = "noreply@ibtikarco.com"  # This will be the FROM address
-        receiver_email = "info@ibtikarco.com"
+        # Get SMTP configuration from environment variables
+        smtp_host = os.environ.get('SMTP_HOST', 'mail.ibtikarco.com')
+        smtp_port = int(os.environ.get('SMTP_PORT', '465'))
+        smtp_username = os.environ.get('SMTP_USERNAME', 'info@ibtikarco.com')
+        smtp_password = os.environ.get('SMTP_PASSWORD', '')
+        smtp_use_ssl = os.environ.get('SMTP_USE_SSL', 'True').lower() == 'true'
+        sender_email = os.environ.get('SENDER_EMAIL', 'info@ibtikarco.com')
+        receiver_email = os.environ.get('RECEIVER_EMAIL', 'info@ibtikarco.com')
         
         # Create message
         msg = MIMEMultipart('alternative')
         msg['Subject'] = 'رسالة جديدة من موقع ابتكار - New Message from Ibtikar Website'
         msg['From'] = sender_email
         msg['To'] = receiver_email
+        msg['Reply-To'] = contact_data['email']  # Allow direct reply to the sender
         
         # Create HTML email body
         html_body = f"""
@@ -131,7 +136,7 @@ def send_email_notification(contact_data: dict):
                         <a href="https://www.ibtikarco.com" style="color: #5d9cc3;">www.ibtikarco.com</a>
                     </p>
                     <p style="margin-top: 10px;">
-                        <a href="https://wa.me/966{contact_data['phone'].replace('+966', '').replace(' ', '')}" 
+                        <a href="https://wa.me/966{contact_data['phone'].replace('+966', '').replace(' ', '').replace('-', '')}" 
                            style="display: inline-block; padding: 10px 20px; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px; margin: 5px;">
                             💬 الرد عبر واتساب
                         </a>
@@ -149,21 +154,29 @@ def send_email_notification(contact_data: dict):
         # Attach HTML body
         msg.attach(MIMEText(html_body, 'html', 'utf-8'))
         
-        # For now, we'll use a simple SMTP configuration
-        # In production, you should use proper SMTP credentials from environment variables
+        # Send email using configured SMTP
         try:
-            # Try to send via local SMTP (if configured)
-            with smtplib.SMTP('localhost', 25) as server:
-                server.send_message(msg)
-                logging.info(f"Email sent successfully to {receiver_email}")
+            if smtp_use_ssl:
+                # Use SMTP_SSL for port 465
+                with smtplib.SMTP_SSL(smtp_host, smtp_port) as server:
+                    server.login(smtp_username, smtp_password)
+                    server.send_message(msg)
+                    logging.info(f"Email sent successfully to {receiver_email} via SSL")
+            else:
+                # Use STARTTLS for port 587
+                with smtplib.SMTP(smtp_host, smtp_port) as server:
+                    server.starttls()
+                    server.login(smtp_username, smtp_password)
+                    server.send_message(msg)
+                    logging.info(f"Email sent successfully to {receiver_email} via TLS")
+                    
         except Exception as smtp_error:
-            # If local SMTP fails, log the error but don't fail the request
-            logging.warning(f"Failed to send email via SMTP: {smtp_error}")
-            logging.info(f"Email content saved to database. Manual notification may be needed.")
+            logging.error(f"Failed to send email via SMTP: {smtp_error}")
+            raise  # Re-raise to let caller know email failed
             
     except Exception as e:
         logging.error(f"Error in send_email_notification: {e}")
-        # Don't raise exception - we still want to save to database even if email fails
+        raise  # Re-raise to let caller handle the error
 
 @api_router.post("/contact", response_model=ContactMessage)
 async def create_contact_message(input: ContactMessageCreate):
