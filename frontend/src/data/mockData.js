@@ -131,7 +131,13 @@ export const projects = [
     image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fbhjqeah_03_1.jpg',
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fbhjqeah_03_1.jpg'
-    ]
+    ],
+    owner: 'شركة وادي الريان للتطوير العقاري',
+    designOffice: 'رواق',
+    designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7phn97gz_Logo%20RwaqEng-01.png',
+    completion: '5%',
+    briefTitle: 'مبنى طبي من 8 أدوار وبدروم مخصص لعيادات جراحة اليوم الواحد',
+    brief: 'مشروع مبنى طبي مكوّن من 8 أدوار وبدروم مخصص لعيادات جراحة اليوم الواحد، مصمم وفق أعلى المعايير الحديثة لتلبية احتياجات القطاع الصحي.\n\nنطاق العمل\n\nتنفيذ أعمال البناء والتشطيب الكامل للمشروع بما يشمل الهيكل الإنشائي، التشطيبات الداخلية والخارجية، وأنظمة البنية التحتية والخدمات المساندة.'
   },
   {
     id: 4,
