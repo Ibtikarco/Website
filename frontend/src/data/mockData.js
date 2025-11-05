@@ -265,7 +265,8 @@ export const projects = [
     type: 'حكومي',
     image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/92o8hx4o_download.jpeg',
     images: [
-      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/92o8hx4o_download.jpeg'
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/92o8hx4o_download.jpeg',
+      'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/0assvhcj_%D8%A7%D9%94%D9%86%D8%B8%D9%85%D8%A9%20%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20.png'
     ],
     owner: 'جامعة طيبة',
     ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/d4cpn0z7_022.png',
