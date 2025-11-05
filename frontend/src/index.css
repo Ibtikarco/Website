@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
 
+@font-face {
+  font-family: 'GE Flow';
+  src: url('/fonts/GE-Flow-Regular-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
