@@ -274,6 +274,26 @@ export const projects = [
     completion: '100%',
     briefTitle: 'توريد كامل أنظمة الحماية وأقفال أبواب الجامعة (Mortise Lock)',
     brief: 'توريد كافة الأجهزة وأبواب التشغيل الآلي لجميع كليات جامعة طيبة، والمدينة الطبية، ومرافق الجامعة.\n\nتم تخصيص خط إنتاج للتصنيع لصالح جامعة طيبة في مصنع [Stanley Hardware] في الولايات المتحدة الأمريكية.'
+  },
+  {
+    id: 10,
+    title: 'فرع الهيئة العامة',
+    category: 'إداري',
+    location: 'مجمع حدائق سلطانة - المدينة المنورة',
+    area: '900 م²',
+    value: '2 مليون',
+    year: 2013,
+    status: 'مكتمل',
+    type: 'حكومي',
+    image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/zxaos1w7_moi.png',
+    images: [
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/zxaos1w7_moi.png'
+    ],
+    owner: 'وزارة الاستثمار',
+    ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/zxaos1w7_moi.png',
+    completion: '100%',
+    briefTitle: 'تنفيذ وتوريد أعمال التشطيبات لفرع الهيئة في المدينة المنورة',
+    brief: 'توريد وتنفيذ كافة الأعمال المعمارية والكهروميكانيكة والشبكات السلكية واللاسلكية للفرع.\n\nكما تم القيام بكافة أعمال التصاميم ورسومات الورشة.'
   }
 ];
 
