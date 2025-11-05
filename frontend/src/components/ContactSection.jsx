@@ -62,7 +62,7 @@ const ContactSection = () => {
           <div className="order-1 lg:order-2">
             <div className="w-full h-[650px] rounded-xl overflow-hidden shadow-2xl" style={{ outline: '4px solid #3e738f', outlineOffset: '0px' }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.692398910307!2d39.5886585!3d24.4899284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bd959e403af529%3A0x1460d80b0084d7a5!2zSWJ0aWthciBDb250cmFjdGluZyB8INin2KjYqtmD2KfYsSDZhNmE2YXZgtin2YjZhNin2Ko!5e1!3m2!1sen!2ssa!4v1762242622782!5m2!1sen!2ssa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.8131022618472!2d39.58865850000001!3d24.4899284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bd959e403af529%3A0x1460d80b0084d7a5!2zSWJ0aWthciBDb250cmFjdGluZyB8INin2KjYqtmD2KfYsSDZhNmE2YXZgtin2YjZhNin2Ko!5e0!3m2!1sen!2ssa!4v1762332743190!5m2!1sen!2ssa"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
