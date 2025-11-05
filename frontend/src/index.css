@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'GE Flow';
-  src: url('%PUBLIC_URL%/fonts/GE-Flow-Regular-Italic.otf') format('opentype');
+  src: url('./fonts/GE-Flow-Regular-Italic.otf') format('opentype');
   font-weight: normal;
   font-style: italic;
 }
