@@ -101,6 +101,9 @@ export const translations = {
     // Projects
     ourProjects: 'Our Projects',
     projectsDescription: 'We have contributed to the implementation of many private and government projects, residential, commercial and charitable buildings',
+    
+    // Qualification
+    qualificationTitle: 'Qualification and Classification',
     all: 'All',
     hotel: 'Hotel',
     medical: 'Medical',
