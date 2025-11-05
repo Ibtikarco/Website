@@ -1,0 +1,60 @@
+========================================
+IBTIKAR CONTRACTING WEBSITE - DOWNLOAD FILES
+========================================
+
+📦 FILE 1: Production Build (Ready to Deploy)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+File: ibtikar-production-build.zip
+Size: 681 KB
+Path: /app/ibtikar-production-build.zip
+
+Contents:
+- build/index.html (Main entry point)
+- build/static/css/ (Compiled stylesheets)
+- build/static/js/ (Compiled JavaScript)
+- build/static/media/ (Fonts and assets)
+- build/fonts/ (GE Flow custom fonts)
+- build/asset-manifest.json
+
+Deployment: Extract and upload to any web server
+
+
+📦 FILE 2: Full Source Code
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+File: ibtikar-source-code.zip
+Size: 1.7 MB
+Path: /app/ibtikar-source-code.zip
+
+Contents:
+Frontend:
+- frontend/src/ (All React components)
+- frontend/public/ (Public assets)
+- frontend/package.json
+- frontend/.env
+- Configuration files
+
+Backend:
+- backend/server.py (FastAPI)
+- backend/requirements.txt
+- backend/.env
+
+Development: Extract, install dependencies, and run locally
+
+
+📋 Quick Commands
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Download files:
+$ cp /app/ibtikar-production-build.zip ~/
+$ cp /app/ibtikar-source-code.zip ~/
+
+View file info:
+$ ls -lh /app/*.zip
+
+MD5 Checksums:
+Production Build: $(md5sum /app/ibtikar-production-build.zip | cut -d' ' -f1)
+Source Code: $(md5sum /app/ibtikar-source-code.zip | cut -d' ' -f1)
+
+
+✅ Build Date: November 5, 2025
+✅ Status: Production Ready
+✅ Tested: Yes
