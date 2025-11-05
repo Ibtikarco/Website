@@ -341,7 +341,7 @@ export const projects = [
     ],
     owner: 'مشروع خاص',
     designOffice: 'CLEAR',
-    designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7whwb166_PCc_fFWg_400x400.jpg',
+    designOfficeLogo: 'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/wvu3cab9_PCc_fFWg_400x400%20copy.png',
     completion: '100%',
     briefTitle: 'إنشاء عدة فلل سكنية | طراز حديث',
     brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية والأعمال الاليكتروميكانيكية.'
