@@ -166,7 +166,7 @@ export const projects = [
     id: 5,
     title: 'الوداد ريزدنس',
     category: 'سكني',
-    location: 'حي العهن',
+    location: 'حي العهن - المدينة المنورة',
     area: '1,000 م²',
     style: 'طراز يوناني حجازي',
     value: '12 مليون',
@@ -177,7 +177,12 @@ export const projects = [
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/y7wtrrp1_PHOTO-2025-07-21-15-25-53%203.jpg',
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fl8k1ruf_PHOTO-2025-07-21-15-32-21.jpg'
-    ]
+    ],
+    owner: 'رجل أعمال',
+    designOffice: 'مكتب حسام العبدالكريم',
+    completion: '100%',
+    briefTitle: 'إنشاء وتشطيب | طراز يوناني حجازي',
+    brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية وأعمال التشطيبات والأعمال الاليكتروميكانيكية.\n\nشمل توريد حجر تفوح مقدسي من فلسطين والألمنيوم من Schüco ألمانيا وخشب TechWood من جنوب أفريقيا.'
   },
   {
     id: 6,
