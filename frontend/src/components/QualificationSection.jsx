@@ -35,6 +35,21 @@ const QualificationSection = () => {
       id: 5,
       url: 'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/iz6uwe31_%D8%A7%D9%84%D8%AA%D8%A7%D9%94%D9%87%D9%8A%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%B5%D9%86%D9%8A%D9%81-05.png',
       alt: 'National Water Company'
+    },
+    {
+      id: 6,
+      url: 'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/egehsqxj_%D8%A7%D9%84%D8%AA%D8%A7%D9%94%D9%87%D9%8A%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%B5%D9%86%D9%8A%D9%81-06.png',
+      alt: 'MODON - Saudi Authority for Industrial Cities'
+    },
+    {
+      id: 7,
+      url: 'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/19qn6zlg_%D8%A7%D9%84%D8%AA%D8%A7%D9%94%D9%87%D9%8A%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%B5%D9%86%D9%8A%D9%81-07.png',
+      alt: 'TB Exchange'
+    },
+    {
+      id: 8,
+      url: 'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/n4k5jnr3_%D8%A7%D9%84%D8%AA%D8%A7%D9%94%D9%87%D9%8A%D9%84%20%D9%88%D8%A7%D9%84%D8%AA%D8%B5%D9%86%D9%8A%D9%81-08.png',
+      alt: 'Saudi Electricity Company'
     }
   ];
 
