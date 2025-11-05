@@ -1,0 +1,91 @@
+<analysis>
+The previous AI engineer meticulously progressed on the  website, transforming an MVP into a feature-rich application. The work primarily focused on enhancing the frontend with new sections and dynamic content, alongside minor backend adjustments for contact forms. The development was highly iterative, driven by continuous user feedback on design, styling, and data accuracy. Key achievements include the integration of an auto-playing Swiper image slider into the project details modal, comprehensive styling and repositioning of navigation arrows, and dynamic display of extensive project information (owner, investor, designer, supervisor with logos, detailed briefs). Multiple projects were added and updated with detailed information and image collections. A significant portion of the interaction involved refining UI elements to achieve pixel-perfect fidelity and addressing issues such as RTL text handling and arrow positioning, culminating in a robust and visually appealing project showcase.
+</analysis>
+
+<product_requirements>
+The overarching goal was to evolve the  React application into a pixel-perfect clone of , emphasizing dynamic content and refined aesthetics. Specific requirements included:
+
+-   **Projects Diversity Chart**: Custom HTML/CSS horizontal progress bars with RTL support, dynamic percentages, and hover tooltips.
+-   **Services Section**: Custom  image icons for services.
+-   **Ibtikar in Numbers**: A new section with an image carousel and count-up statistics grid.
+-   **About Section**: Redesigned statistics cards, updated text, and a styled Download Company Profile button.
+-   **Contact Section**: Two-column layout (form/map), precise Google Map integration, automatic email submission, and a floating WhatsApp button.
+-   **Header/Footer**: Functional  navigation, footer email link, and a redesigned horizontal footer layout.
+-   **Projects Page**: Homepage displays 3 projects from  with a View All Projects button leading to a new  page featuring all projects with filters.
+-   **Project Details Modal**: Redesigned with a large, slider-ready top image, structured 2-column detail blocks (labels, values, logos), detailed briefs with dynamic blue sub-headings, and a clear 'X' close button.
+-   **Dynamic Project Data**: Ability to add and update comprehensive data for individual projects including images, owner/investor/designer/supervisor details, location, area, size, classification, year, completion percentage, and detailed descriptions.
+-   **Accessibility**: Ensuring correct RTL/LTR display and text formatting across components.
+</product_requirements>
+
+<key_technical_concepts>
+-   **React**: Frontend UI development using functional components and hooks.
+-   **Tailwind CSS**: Utility-first CSS framework for responsive styling.
+-   **Swiper**: Lightweight JavaScript slider library for image carousels.
+-   **React Router DOM**: For client-side routing between pages.
+-   **FastAPI & Python **: Backend for contact form email submissions.
+-   **i18n**: Support for Arabic/English language and RTL/LTR text direction.
+</key_technical_concepts>
+
+<code_architecture>
+
+
+-   ****:
+    -   **Importance**: Core component for displaying project cards and managing the project details modal.
+    -   **Changes**:
+        -   Integrated **Swiper** for image slideshows within the modal, replacing a single image display.
+        -   Added  to the Swiper container to prevent RTL conflicts with navigation arrows.
+        -   Implemented dynamic display logic for project details: , , , and , showing relevant labels and logos based on available data.
+        -   Modified the project brief rendering to support dynamic blue sub-headings (e.g., نطاق العمل) with adjustable spacing ().
+        -   Incorporated custom SVG arrow icons for Swiper navigation and positioned them precisely.
+-   ****:
+    -   **Importance**: Global stylesheet for the application.
+    -   **Changes**:
+        -   Added custom styles for Swiper navigation (circular buttons, background colors, hover effects, icon colors) and pagination dots.
+        -   Defined styling for the custom SVG arrows (size, centering, colors, hover effects).
+-   ****:
+    -   **Importance**: Centralized source for static data, including project details.
+    -   **Changes**:
+        -   Expanded project objects to include new fields like  (array of URLs), , , , , , , and .
+        -   Updated and added extensive data for multiple projects: بوابة سمو, ملاذ, مركز جراحة اليوم الواحد, جادة الحكمة, الوداد ريزدنس, السلام بلازا, جامع الأبرار, مستشفى الملك فيصل التخصصي ومركز الأبحاث, أنظمة الحماية, فرع الهيئة العامة, الوقف العلمي, العزيزية كمباوند. This included project details, logos, and image arrays, with several iterations to correct or replace images.
+-   ****:
+    -   **Importance**: Stores localized text strings.
+    -   **Changes**: Corrected a spelling error in the Arabic description for services.
+-   ****:
+    -   **Importance**: Displays the company's services.
+    -   **Changes**: Corrected a spelling error in the Arabic description for services.
+-   ****:
+    -   **Importance**: FastAPI backend routes and logic.
+    -   **Changes**: Added email sending functionality for the  endpoint using , allowing automatic email notifications for form submissions. (This was from the initial state, no new changes in the trajectory).
+</code_architecture>
+
+<pending_tasks>
+-   Implement a new section called التأهيل والتصنيف (Qualification and Classification) before the Contact Us section. This new section should display 5 provided logos within a professional slider.
+</pending_tasks>
+
+<current_work>
+The  website is a responsive React application with a FastAPI backend, supporting Arabic/English, having undergone significant feature additions and refinements.
+
+**Key features and current state:**
+-   **Hero Section**: Features a video background with a 30% opaque overlay.
+-   **Header & Footer**: Fully functional navigation links using . The footer has an inline horizontal layout with company info, quick links, contact details, and social media.
+-   **About Section**: Displays a central Quranic verse and mission, with a transparent الملف التعريفي button.
+-   **Services Section**: Features custom, large image icons for each service category. A spelling error in the Arabic description has been fixed.
+-   **Ibtikar in Numbers**: A new section with a three-category image carousel and count-up statistics, updated with user-provided images and optimized text/number formatting.
+-   **Projects Section (Homepage)**: Displays the first three projects via  with a عرض جميع المشاريع button navigating to the full projects page.
+-   **Projects Page ()**: Displays the full  with all project cards.
+-   **Project Details Modal**: Highly customized modal for project details:
+    -   Features an **auto-playing Swiper image slider** (every 4 seconds) at the top, capable of displaying multiple images per project.
+    -   Slider navigation arrows are custom SVG icons, 16x16px, white, perfectly centered within 40x40px circular white buttons, with a dark blue background (rgba(62, 115, 143)) and light blue hover effect (rgba(93, 156, 195)). The arrows are positioned at the very edges of the image.
+    -   Dynamically displays project information (Owner, Investor, Design Office, Supervisor, Location, Area, Project Size, Classification, Year, Completion Percentage, Brief) in a structured 2-column grid.
+    -   Supports displaying **logos** for Owner, Investor, Design Office, and Supervisor.
+    -   Project Briefs now support **dynamic blue sub-headings** with reduced spacing () from the text below.
+-   **Contact Section**: Two-column layout with a contact form and a precise Google Map iframe. Form submissions trigger automatic email notifications via the backend.
+-   **WhatsApp Floating Button**: An animated WhatsApp icon is fixed at the bottom-left with a soft bounce animation.
+-   **Project Data**: Extensive data has been added and updated for بوابة سمو, ملاذ, مركز جراحة اليوم الواحد, جادة الحكمة, الوداد ريزدنس, السلام بلازا, جامع الأبرار, مستشفى الملك فيصل التخصصي ومركز الأبحاث, أنظمة الحماية, فرع الهيئة العامة, الوقف العلمي, and العزيزية كمباوند, including their respective images and logos.
+
+The most recent activity involved adding new project details and images for العزيزية كمباوند, with extensive back-and-forth on image management for various projects to ensure accuracy and user satisfaction.
+</current_work>
+
+<optional_next_step>
+Create a new section التأهيل والتصنيف before the Contact Us section to display the 5 provided logos in a slider.
+</optional_next_step>
