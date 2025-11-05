@@ -189,7 +189,7 @@ export const projects = [
     id: 6,
     title: 'السلام بلازا',
     category: 'فندقي',
-    location: 'دوار السلام',
+    location: 'دوار السلام - المدينة المنورة',
     area: '1,000 م²',
     floors: '10 طوابق',
     value: '16 مليون',
@@ -199,7 +199,13 @@ export const projects = [
     image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/jhzgtovp_Salam%20Hotel%20-%20CAM01%20-%2003.jpg',
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/jhzgtovp_Salam%20Hotel%20-%20CAM01%20-%2003.jpg'
-    ]
+    ],
+    owner: 'رجل أعمال',
+    designOffice: 'رواق',
+    designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7phn97gz_Logo%20RwaqEng-01.png',
+    completion: '100%',
+    briefTitle: 'إنشاء وتشطيب مبنى فندقي بارتفاع 10 طوابق',
+    brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية وأعمال التشطيبات والأعمال الاليكتروميكانيكية.'
   },
   {
     id: 7,
