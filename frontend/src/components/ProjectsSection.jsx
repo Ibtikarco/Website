@@ -230,19 +230,21 @@ const ProjectsSection = ({ showAll = false }) => {
                     )}
                   </div>
 
-                  {/* المستثمر */}
+                  {/* المستثمر أو المكتب المصمم */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <p className="text-base font-bold text-[#3e738f] mb-3">المستثمر</p>
-                    {selectedProject.investorLogo ? (
+                    <p className="text-base font-bold text-[#3e738f] mb-3">
+                      {selectedProject.designOffice ? 'المكتب المصمم' : 'المستثمر'}
+                    </p>
+                    {(selectedProject.designOfficeLogo || selectedProject.investorLogo) ? (
                       <div className="flex items-center justify-start">
                         <img 
-                          src={selectedProject.investorLogo} 
-                          alt={selectedProject.investor}
+                          src={selectedProject.designOfficeLogo || selectedProject.investorLogo} 
+                          alt={selectedProject.designOffice || selectedProject.investor}
                           className="h-16 w-auto object-contain"
                         />
                       </div>
                     ) : (
-                      <p className="text-[#696867] font-medium">{selectedProject.investor || 'غير محدد'}</p>
+                      <p className="text-[#696867] font-medium">{selectedProject.designOffice || selectedProject.investor || 'غير محدد'}</p>
                     )}
                   </div>
 
