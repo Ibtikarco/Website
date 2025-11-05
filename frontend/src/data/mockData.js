@@ -252,6 +252,28 @@ export const projects = [
     completion: '100%',
     briefTitle: 'تنفيذ وتوريد بعض أعمال التشطيبات لمدينة طبية سعة 300 سرير',
     brief: 'تنفيذ أعمال تشطيبات الدهان والرخام والسيراميك للمباني التالية:\n\nمبنى المستشفى الرئيسي، مركز العلاج الطبيعي، مركز العناية، فلل العوائل، فلل العزاب، مبنى الإدارة، مركز الترفيه، المسجد والمستودعات.'
+  },
+  {
+    id: 9,
+    title: 'أنظمة الحماية',
+    category: 'تعليمي',
+    location: 'جامعة طيبة - المدينة المنورة',
+    area: '2 مليون م²',
+    value: '6 مليون',
+    year: 2013,
+    status: 'مكتمل',
+    type: 'حكومي',
+    image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/d4cpn0z7_022.png',
+    images: [
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/d4cpn0z7_022.png'
+    ],
+    owner: 'جامعة طيبة',
+    ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/d4cpn0z7_022.png',
+    supervisor: 'Stanley Hardware',
+    supervisorLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/be13l59e_unnamed%20copy.png',
+    completion: '100%',
+    briefTitle: 'توريد كامل أنظمة الحماية وأقفال أبواب الجامعة (Mortise Lock)',
+    brief: 'توريد كافة الأجهزة وأبواب التشغيل الآلي لجميع كليات جامعة طيبة، والمدينة الطبية، ومرافق الجامعة.\n\nتم تخصيص خط إنتاج للتصنيع لصالح جامعة طيبة في مصنع [Stanley Hardware] في الولايات المتحدة الأمريكية.'
   }
 ];
 
