@@ -32,6 +32,9 @@ export const translations = {
     // Projects
     ourProjects: 'مشاريعنا',
     projectsDescription: 'ساهمنا في تنفيذ العديد من المشاريع الخاصة والحكومية والمشاريع والعمائر السكنية والتجارية والخيرية',
+    
+    // Qualification
+    qualificationTitle: 'التأهيل والتصنيف',
     all: 'الكل',
     hotel: 'فندقي',
     medical: 'طبي',
