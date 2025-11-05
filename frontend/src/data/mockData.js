@@ -4,7 +4,7 @@ export const companyInfo = {
   nameEn: 'Ibtikar Contracting',
   tagline: 'بناء بإحسان',
   taglineEn: 'Building with Excellence',
-  founded: 2013,
+  founded: 2000,
   location: 'المدينة المنورة',
   phone: '+966 569 700 733',
   email: 'info@ibtikarco.com',
