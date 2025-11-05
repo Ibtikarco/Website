@@ -272,7 +272,7 @@ export const projects = [
     owner: 'جامعة طيبة',
     ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/d4cpn0z7_022.png',
     supervisor: 'Stanley Hardware',
-    supervisorLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/be13l59e_unnamed%20copy.png',
+    supervisorLogo: 'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/bqb5uy41_unnamed%20copy%202.png',
     completion: '100%',
     briefTitle: 'توريد كامل أنظمة الحماية وأقفال أبواب الجامعة (Mortise Lock)',
     brief: 'توريد كافة الأجهزة وأبواب التشغيل الآلي لجميع كليات جامعة طيبة، والمدينة الطبية، ومرافق الجامعة.\n\nتم تخصيص خط إنتاج للتصنيع لصالح جامعة طيبة في مصنع [Stanley Hardware] في الولايات المتحدة الأمريكية.'
