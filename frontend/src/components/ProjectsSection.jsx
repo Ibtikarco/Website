@@ -295,7 +295,20 @@ const ProjectsSection = ({ showAll = false }) => {
                     {selectedProject.briefTitle && (
                       <h4 className="text-base font-bold text-[#5d9cc3] mb-3">{selectedProject.briefTitle}</h4>
                     )}
-                    <p className="text-[#696867] leading-relaxed whitespace-pre-line">{selectedProject.brief}</p>
+                    <div className="text-[#696867] leading-relaxed">
+                      {selectedProject.brief.split('\n').map((line, index) => {
+                        // Check if line is a subtitle (matches specific patterns like "نطاق العمل")
+                        const isSubtitle = line.trim() && !line.includes('يشمل') && !line.includes('تنفيذ') && !line.includes('مشروع') && line.length < 50 && line.length > 5;
+                        
+                        if (line.trim() === '') {
+                          return <br key={index} />;
+                        } else if (isSubtitle && index > 0) {
+                          return <h5 key={index} className="text-base font-bold text-[#5d9cc3] mt-4 mb-2">{line}</h5>;
+                        } else {
+                          return <p key={index} className="mb-2">{line}</p>;
+                        }
+                      })}
+                    </div>
                   </div>
                 )}
 
