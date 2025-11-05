@@ -37,7 +37,7 @@ const Footer = () => {
             
             {/* Company Info */}
             <div className="flex items-center gap-3">
-              <h3 className="text-2xl font-bold text-white">{companyInfo.nameAr}</h3>
+              <h3 className="text-2xl font-bold text-white" style={{ fontFamily: "'GE Flow', 'Cairo', sans-serif" }}>{companyInfo.nameAr}</h3>
               <span className="text-white/40 hidden lg:inline">|</span>
               <p className="text-white/80 text-base hidden lg:block">
                 {companyInfo.tagline}
