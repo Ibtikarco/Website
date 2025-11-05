@@ -67,7 +67,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
           <div className="mb-6">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight" style={{ fontFamily: language === 'ar' ? "'GE Flow', 'Cairo', sans-serif" : "inherit" }}>
               {language === 'ar' ? companyInfo.nameAr : companyInfo.nameEn}
             </h1>
             <div className="h-1.5 w-32 bg-[#5d9cc3] mb-6"></div>
