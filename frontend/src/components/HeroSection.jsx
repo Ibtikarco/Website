@@ -78,7 +78,7 @@ const HeroSection = () => {
           </h2>
           
           <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
-            {language === 'ar' ? companyInfo.about : 'Ibtikar Contracting provides construction and project management services since 2013, focusing on excellence and quality in every project.'}
+            {language === 'ar' ? companyInfo.about : 'Ibtikar Contracting provides construction and project management services since 2000, focusing on excellence and quality in every project.'}
           </p>
 
           <div className="flex flex-wrap gap-4">
