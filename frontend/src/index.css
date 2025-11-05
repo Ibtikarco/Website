@@ -161,3 +161,44 @@ html {
   width: 24px !important;
   border-radius: 5px !important;
 }
+
+/* Qualification Section Slider Custom Styles */
+.qualification-logos-swiper {
+  position: relative;
+  padding: 0 60px;
+}
+
+.qualification-arrow {
+  position: absolute;
+  color: #fff;
+  background-color: rgba(62, 115, 143, 1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.qualification-swiper-button-prev {
+  left: 0;
+}
+
+.qualification-swiper-button-next {
+  right: 0;
+}
+
+.qualification-arrow:hover {
+  background-color: rgba(93, 156, 195, 1);
+}
+
+.qualification-arrow svg {
+  width: 16px;
+  height: 16px;
+}
