@@ -24,6 +24,7 @@ const Home = () => {
         <ServicesSection />
         <StatsSection />
         <ProjectsSection showAll={false} />
+        <QualificationSection />
         <ContactSection />
       </main>
       <Footer />
