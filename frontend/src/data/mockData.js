@@ -296,6 +296,28 @@ export const projects = [
     completion: '100%',
     briefTitle: 'تنفيذ وتوريد أعمال التشطيبات لفرع الهيئة في المدينة المنورة',
     brief: 'توريد وتنفيذ كافة الأعمال المعمارية والكهروميكانيكة والشبكات السلكية واللاسلكية للفرع.\n\nكما تم القيام بكافة أعمال التصاميم ورسومات الورشة.'
+  },
+  {
+    id: 11,
+    title: 'الوقف العلمي',
+    category: 'خيري',
+    location: 'قباء - المدينة المنورة',
+    area: '1,500 م²',
+    floors: '7 طوابق',
+    value: '4 مليون',
+    year: 2018,
+    status: 'مكتمل',
+    type: 'حكومي',
+    image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/x6bllkeb_kau_logo_f.png',
+    images: [
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/x6bllkeb_kau_logo_f.png'
+    ],
+    owner: 'جامعة الملك عبدالعزيز',
+    ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/x6bllkeb_kau_logo_f.png',
+    designOffice: 'حكيم للاستشارات',
+    completion: '100%',
+    briefTitle: 'إنشاء وتشطيب مبنى بارتفاع 7 طوابق',
+    brief: 'مبنى بارتفاع سبعة طوابق يحتوي على بدروم ومواقف سيارات وبقية الخدمات.\n\nيشمل نطاق العمل على تنفيذ وتوريد كافة الأعمال الإنشائية والمعمارية والكهروميكانيكية، وأنظمة السلامة وأعمال العزل المائي والحراري.'
   }
 ];
 
