@@ -210,18 +210,24 @@ export const projects = [
   {
     id: 7,
     title: 'جامع الأبرار',
-    category: 'خيري',
-    location: 'حي شوران',
+    category: 'ديني',
+    location: 'حي شوران - المدينة المنورة',
     area: '2,500 م²',
     capacity: '660 مصلي',
     value: '6 مليون',
     year: 2017,
     status: 'مكتمل',
     type: 'أوقاف',
-    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/e43tdpfp_%D8%AC%D8%A7%D9%85%D8%B9%20%D8%A7%D9%84%D8%A7%D9%94%D8%A8%D8%B1%D8%A7%D8%B1.png',
+    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/vlzylhmh_PHOTO-2025-04-14-15-12-55%202.jpg',
     images: [
-      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/e43tdpfp_%D8%AC%D8%A7%D9%85%D8%B9%20%D8%A7%D9%84%D8%A7%D9%94%D8%A8%D8%B1%D8%A7%D8%B1.png'
-    ]
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/vlzylhmh_PHOTO-2025-04-14-15-12-55%202.jpg'
+    ],
+    owner: 'وزارة الشؤون الإسلامية',
+    ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/08b02n0u_MOIA-logo.png',
+    designOffice: 'أحد للاستشارات الهندسية',
+    completion: '100%',
+    briefTitle: 'إنشاء وتشطيب جامع يتسع لـ 660 مصلي',
+    brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية والأعمال الاليكتروميكانيكية إنشاء وتشطيب جامع الأبرار، ومبنى خاص بسكن المؤذن وسكن الإمام، ومبنى لدورات المياه والمواضيء.\n\nيتسع المسجد لـ 660 مصلي، ويشمل على منارتين ارتفاعهما 25 متر.'
   },
   {
     id: 8,
