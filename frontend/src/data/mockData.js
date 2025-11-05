@@ -243,7 +243,8 @@ export const projects = [
     image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/bppjoppp_IMG_1110.jpg',
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/bppjoppp_IMG_1110.jpg',
-      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/7n1qjhp1_IMG_1105%202.jpg',
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/skwi8cgm_DJI_0439.jpg',
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/0bz4l2l3_Image%2014-05-1447%20AH%20at%2010.35%E2%80%AFAM.png',
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fwb4i79b_IMG_1106.jpg'
     ],
     owner: 'مستشفى الملك فيصل التخصصي ومركز الأبحاث',
