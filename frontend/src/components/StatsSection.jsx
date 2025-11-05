@@ -35,10 +35,10 @@ const StatsSection = () => {
       title: 'الإنجازات والمشاريع',
       image: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/jbrx0nbc_dji_fly_20250904_084918_0159_1756970821719_photo.jpg',
       stats: [
-        { number: '50+', label: 'مشروع منجز', target: 50, suffix: '+' },
+        { number: '175+', label: 'مشروع منجز', target: 175, suffix: '+' },
         { number: '6', label: 'مشاريع حالية', target: 6 },
         { number: '120,000 م²', label: 'مساحات تنفيذ', target: 120000, suffix: ' م²', useComma: true, noWrap: true, smallFont: true },
-        { number: '12', label: 'سنة خبرة', target: 12 }
+        { number: '25', label: 'سنة خبرة', target: 25 }
       ]
     }
   ];
