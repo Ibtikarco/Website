@@ -63,7 +63,7 @@ export const services = [
 
 // Statistics
 export const stats = [
-  { id: 1, number: '23+', label: 'سنة خبرة', labelEn: 'Years Experience' },
+  { id: 1, number: '25+', label: 'سنة خبرة', labelEn: 'Years Experience' },
   { id: 2, number: '175+', label: 'مشروع منجز', labelEn: 'Completed Projects' },
   { id: 3, number: '95%', label: 'رضا العملاء', labelEn: 'Client Satisfaction' }
 ];
