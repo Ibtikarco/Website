@@ -143,7 +143,7 @@ export const projects = [
     id: 4,
     title: 'جادة الحكمة',
     category: 'إداري',
-    location: 'شارع خالد بن الوليد',
+    location: 'شارع خالد بن الوليد - المدينة المنورة',
     area: '15,000 م²',
     description: 'كومباوند أعمال متكامل',
     value: '135 مليون',
@@ -154,7 +154,13 @@ export const projects = [
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/95gwas11_PHOTO-2025-08-11-11-39-33.jpg',
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/gb4y9yxk_PHOTO-2025-08-11-11-39-33%202.jpg'
-    ]
+    ],
+    owner: 'رجل أعمال',
+    designOffice: 'رواق',
+    designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7phn97gz_Logo%20RwaqEng-01.png',
+    completion: '5%',
+    briefTitle: 'كومباوند أعمال متكامل',
+    brief: 'كومباوند أعمال متكامل بمساحة 15,000 م² يضم مباني من 3 أدوار مع بدروم، تشمل مساحات مكتبية، وعيادة، وحضانة، ونادٍ رياضي، ومطاعم، ومغسلة سيارات، وسوبرماركت.\n\nنطاق العمل:\n\nتنفيذ أعمال البناء والتشطيب الكامل بما يشمل الهياكل الإنشائية، التشطيبات الداخلية والخارجية، وأنظمة الخدمات والمرافق لضمان بيئة عمل وحياة متكاملة.'
   },
   {
     id: 5,
