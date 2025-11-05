@@ -105,11 +105,17 @@ export const projects = [
     value: '64 مليون',
     year: 2023,
     status: 'قيد التنفيذ',
-    type: 'أوقاف',
+    type: 'استثماري',
     image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/q8skbrdt_%D9%85%D9%84%D8%A7%D8%B0-02.jpg',
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/q8skbrdt_%D9%85%D9%84%D8%A7%D8%B0-02.jpg'
-    ]
+    ],
+    owner: 'شركة وادي الريان للتطوير العقاري',
+    investor: 'رواق',
+    investorLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7phn97gz_Logo%20RwaqEng-01.png',
+    completion: '2%',
+    briefTitle: 'إنشاء وتشطيب مجمع من 8 أدوار متعدد الاستخدام طبي تجاري إداري فندق',
+    brief: 'يشمل نطاق العمل على إنشاء مبنى من بدرومين دورين تجارية وستة أدوار متكررة بمجموع عشرة أدوار.\n\nوتوريد كافة الأعمال الإنشائية والمعمارية والكهروميكانيكية، وأنظمة سلامة وأعمال العزل المائي والحراري، وتنفيذ التشطيبات الخارجية.'
   },
   {
     id: 3,
