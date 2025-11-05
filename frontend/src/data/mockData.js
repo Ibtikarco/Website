@@ -243,7 +243,8 @@ export const projects = [
     image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/rtv3g6is_DJI_0439.jpg',
     images: [
       'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/rtv3g6is_DJI_0439.jpg',
-      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/h4veugph_IMG_1110.jpg'
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/h4veugph_IMG_1110.jpg',
+      'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/07qp61tj_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89%20%D8%A7%D9%84%D9%85%D9%84%D9%83.png'
     ],
     owner: 'مستشفى الملك فيصل التخصصي ومركز الأبحاث',
     ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/rih082n7_logo.png',
