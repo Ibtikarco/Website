@@ -180,6 +180,7 @@ export const projects = [
     ],
     owner: 'رجل أعمال',
     designOffice: 'مكتب حسام العبدالكريم',
+    designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/2ws6urvf_Logo%20H.A.Kai.png',
     completion: '100%',
     briefTitle: 'إنشاء وتشطيب | طراز يوناني حجازي',
     brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية وأعمال التشطيبات والأعمال الاليكتروميكانيكية.\n\nشمل توريد حجر تفوح مقدسي من فلسطين والألمنيوم من Schüco ألمانيا وخشب TechWood من جنوب أفريقيا.'
