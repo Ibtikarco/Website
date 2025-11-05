@@ -268,6 +268,24 @@ const ProjectsSection = ({ showAll = false }) => {
                     </div>
                   )}
 
+                  {/* المورد (إن وجد) */}
+                  {selectedProject.supplier && (
+                    <div className="bg-[#F3F7FA] rounded-lg p-4">
+                      <p className="text-base font-bold text-[#3e738f] mb-3">المورد</p>
+                      {selectedProject.supplierLogo ? (
+                        <div className="flex items-center justify-start">
+                          <img 
+                            src={selectedProject.supplierLogo} 
+                            alt={selectedProject.supplier}
+                            className="h-24 w-auto object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <p className="text-[#696867] font-medium">{selectedProject.supplier}</p>
+                      )}
+                    </div>
+                  )}
+
                   {/* الموقع */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
                     <p className="text-base font-bold text-[#3e738f] mb-3">الموقع</p>
