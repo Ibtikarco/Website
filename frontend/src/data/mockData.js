@@ -308,9 +308,11 @@ export const projects = [
     year: 2018,
     status: 'مكتمل',
     type: 'حكومي',
-    image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/x6bllkeb_kau_logo_f.png',
+    image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/8zdafno8_01.jpg',
     images: [
-      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/x6bllkeb_kau_logo_f.png'
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/8zdafno8_01.jpg',
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/gjju3l98_02.jpg',
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/zayt7y8g_03.jpg'
     ],
     owner: 'جامعة الملك عبدالعزيز',
     ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/x6bllkeb_kau_logo_f.png',
