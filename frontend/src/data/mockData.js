@@ -260,7 +260,7 @@ export const projects = [
     location: 'جامعة طيبة - المدينة المنورة',
     area: '2 مليون م²',
     value: '6 مليون',
-    year: 2000,
+    year: 2013,
     status: 'مكتمل',
     type: 'حكومي',
     image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/92o8hx4o_download.jpeg',
