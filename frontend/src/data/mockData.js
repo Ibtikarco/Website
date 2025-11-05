@@ -285,9 +285,11 @@ export const projects = [
     year: 2013,
     status: 'مكتمل',
     type: 'حكومي',
-    image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/zxaos1w7_moi.png',
+    image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/riz76no5_%D8%A7%D9%84%D9%87%D9%8A%D9%8A%D9%94%D8%A9-01.jpg',
     images: [
-      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/zxaos1w7_moi.png'
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/riz76no5_%D8%A7%D9%84%D9%87%D9%8A%D9%8A%D9%94%D8%A9-01.jpg',
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/pfzxbyl3_%D8%A7%D9%84%D9%87%D9%8A%D9%8A%D9%94%D8%A9-02.jpg',
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/l623xebl_%D8%A7%D9%84%D9%87%D9%8A%D9%8A%D9%94%D8%A9-03.jpg'
     ],
     owner: 'وزارة الاستثمار',
     ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/zxaos1w7_moi.png',
