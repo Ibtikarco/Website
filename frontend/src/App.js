@@ -8,6 +8,7 @@ import AboutSection from './components/AboutSection';
 import ServicesSection from './components/ServicesSection';
 import StatsSection from './components/StatsSection';
 import ProjectsSection from './components/ProjectsSection';
+import QualificationSection from './components/QualificationSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
