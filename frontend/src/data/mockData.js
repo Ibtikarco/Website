@@ -282,7 +282,7 @@ export const projects = [
     location: 'مجمع حدائق سلطانة - المدينة المنورة',
     area: '900 م²',
     value: '2 مليون',
-    year: 2013,
+    year: 2000,
     status: 'مكتمل',
     type: 'حكومي',
     image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/riz76no5_%D8%A7%D9%84%D9%87%D9%8A%D9%8A%D9%94%D8%A9-01.jpg',
