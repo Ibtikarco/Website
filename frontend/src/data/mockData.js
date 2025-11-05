@@ -320,6 +320,27 @@ export const projects = [
     completion: '100%',
     briefTitle: 'إنشاء وتشطيب مبنى بارتفاع 7 طوابق',
     brief: 'مبنى بارتفاع سبعة طوابق يحتوي على بدروم ومواقف سيارات وبقية الخدمات.\n\nيشمل نطاق العمل على تنفيذ وتوريد كافة الأعمال الإنشائية والمعمارية والكهروميكانيكية، وأنظمة السلامة وأعمال العزل المائي والحراري.'
+  },
+  {
+    id: 12,
+    title: 'العزيزية كمباوند',
+    category: 'سكني',
+    location: 'حي الدفاع - المدينة المنورة',
+    area: '1,500 م²',
+    value: '4 مليون',
+    year: 2020,
+    status: 'مكتمل',
+    type: 'تطوير عقاري',
+    image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7whwb166_PCc_fFWg_400x400.jpg',
+    images: [
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7whwb166_PCc_fFWg_400x400.jpg'
+    ],
+    owner: 'مشروع خاص',
+    designOffice: 'CLEAR',
+    designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7whwb166_PCc_fFWg_400x400.jpg',
+    completion: '100%',
+    briefTitle: 'إنشاء عدة فلل سكنية | طراز حديث',
+    brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية والأعمال الاليكتروميكانيكية.'
   }
 ];
 
