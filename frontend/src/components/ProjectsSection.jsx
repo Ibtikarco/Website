@@ -303,7 +303,7 @@ const ProjectsSection = ({ showAll = false }) => {
                         if (line.trim() === '') {
                           return <br key={index} />;
                         } else if (isSubtitle && index > 0) {
-                          return <h5 key={index} className="text-base font-bold text-[#5d9cc3] mt-4 mb-2">{line}</h5>;
+                          return <h5 key={index} className="text-base font-bold text-[#5d9cc3] mt-4 mb-1">{line}</h5>;
                         } else {
                           return <p key={index} className="mb-2">{line}</p>;
                         }
