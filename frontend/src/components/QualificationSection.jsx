@@ -61,6 +61,7 @@ const QualificationSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-[#3E738F] mb-4">
             {t.qualificationTitle}
           </h2>
+          <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto"></div>
         </div>
 
         {/* Logos Slider */}
