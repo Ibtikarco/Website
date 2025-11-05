@@ -233,19 +233,26 @@ export const projects = [
     id: 8,
     title: 'مستشفى الملك فيصل',
     category: 'طبي',
-    location: 'حمراء الأسد',
+    location: 'حمراء الأسد - المدينة المنورة',
     area: '230 ألف م²',
     capacity: '300 سرير',
     value: '12 مليون',
     year: 2016,
     status: 'مكتمل',
     type: 'حكومي',
-    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/bhdpf94e_DJI_0439.jpg',
+    image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/bppjoppp_IMG_1110.jpg',
     images: [
-      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/bhdpf94e_DJI_0439.jpg',
-      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/c7lcbo0q_Untitled-2%20copy.jpg',
-      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/bppjoppp_IMG_1110.jpg'
-    ]
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/bppjoppp_IMG_1110.jpg',
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/7n1qjhp1_IMG_1105%202.jpg',
+      'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fwb4i79b_IMG_1106.jpg'
+    ],
+    owner: 'مستشفى الملك فيصل التخصصي ومركز الأبحاث',
+    ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/rih082n7_logo.png',
+    supervisor: 'Hill International',
+    supervisorLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/3swlq8bq_Hill_logoOnly-print-pms194.png',
+    completion: '100%',
+    briefTitle: 'تنفيذ وتوريد بعض أعمال التشطيبات لمدينة طبية سعة 300 سرير',
+    brief: 'تنفيذ أعمال تشطيبات الدهان والرخام والسيراميك للمباني التالية:\n\nمبنى المستشفى الرئيسي، مركز العلاج الطبيعي، مركز العناية، فلل العوائل، فلل العزاب، مبنى الإدارة، مركز الترفيه، المسجد والمستودعات.'
   }
 ];
 
