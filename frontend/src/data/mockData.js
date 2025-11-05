@@ -270,7 +270,7 @@ export const projects = [
       'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/0assvhcj_%D8%A7%D9%94%D9%86%D8%B8%D9%85%D8%A9%20%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20.png'
     ],
     owner: 'جامعة طيبة',
-    ownerLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/d4cpn0z7_022.png',
+    ownerLogo: 'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/hy20dx7f_unnamed%20copy%202.png',
     supervisor: 'Stanley Hardware',
     supervisorLogo: 'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/bqb5uy41_unnamed%20copy%202.png',
     completion: '100%',
