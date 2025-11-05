@@ -331,9 +331,11 @@ export const projects = [
     year: 2020,
     status: 'مكتمل',
     type: 'تطوير عقاري',
-    image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7whwb166_PCc_fFWg_400x400.jpg',
+    image: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/454r21jr_%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2%D9%8A%D8%A9%20%D9%83%D9%85%D8%A8%D8%A7%D9%88%D9%86%D8%AF-01.jpg',
     images: [
-      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7whwb166_PCc_fFWg_400x400.jpg'
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/454r21jr_%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2%D9%8A%D8%A9%20%D9%83%D9%85%D8%A8%D8%A7%D9%88%D9%86%D8%AF-01.jpg',
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/xmvfedt7_%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2%D9%8A%D8%A9%20%D9%83%D9%85%D8%A8%D8%A7%D9%88%D9%86%D8%AF-02.jpg',
+      'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/2yi1d75a_%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2%D9%8A%D8%A9%20%D9%83%D9%85%D8%A8%D8%A7%D9%88%D9%86%D8%AF-03.jpg'
     ],
     owner: 'مشروع خاص',
     designOffice: 'CLEAR',
