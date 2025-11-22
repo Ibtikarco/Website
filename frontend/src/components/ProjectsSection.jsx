@@ -257,7 +257,7 @@ const ProjectsSection = ({ showAll = false }) => {
                   {/* المشرف (إن وجد) */}
                   {selectedProject.supervisor && (
                     <div className="bg-[#F3F7FA] rounded-lg p-4">
-                      <p className="text-base font-bold text-[#3e738f] mb-3">المشرف</p>
+                      <p className="text-base font-bold text-[#3e738f] mb-3">{t.supervisor}</p>
                       {selectedProject.supervisorLogo ? (
                         <div className="flex items-center justify-start">
                           <img 
