@@ -333,7 +333,7 @@ const ProjectsSection = ({ showAll = false }) => {
                 {/* Project Brief/Description */}
                 {selectedProject.brief && (
                   <div className="mt-6 p-6 bg-gradient-to-r from-[#F3F7FA] to-white rounded-lg border-r-4 border-[#5d9cc3]">
-                    <h3 className="text-lg font-bold text-[#3e738f] mb-3">نبذة عن المشروع</h3>
+                    <h3 className="text-lg font-bold text-[#3e738f] mb-3">{t.projectBrief}</h3>
                     {selectedProject.briefTitle && (
                       <h4 className="text-base font-bold text-[#5d9cc3] mb-3">{selectedProject.briefTitle}</h4>
                     )}
