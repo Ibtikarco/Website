@@ -292,38 +292,38 @@ const ProjectsSection = ({ showAll = false }) => {
 
                   {/* الموقع */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <p className="text-base font-bold text-[#3e738f] mb-3">الموقع</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">{t.location}</p>
                     <p className="text-[#696867] font-medium">{selectedProject.location}</p>
                   </div>
 
                   {/* المساحة */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <p className="text-base font-bold text-[#3e738f] mb-3">المساحة</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">{t.area}</p>
                     <p className="text-[#696867] font-medium">{selectedProject.area}</p>
                   </div>
 
                   {/* حجم المشروع */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <p className="text-base font-bold text-[#3e738f] mb-3">حجم المشروع</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">{t.projectSize}</p>
                     <p className="text-[#696867] font-medium">{selectedProject.value}</p>
                   </div>
 
                   {/* التصنيف */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <p className="text-base font-bold text-[#3e738f] mb-3">التصنيف</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">{t.classification}</p>
                     <p className="text-[#696867] font-medium">{selectedProject.category} - {selectedProject.type}</p>
                   </div>
 
                   {/* سنة التعاقد */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <p className="text-base font-bold text-[#3e738f] mb-3">سنة التعاقد</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">{t.contractYear}</p>
                     <p className="text-[#696867] font-medium">{selectedProject.year}</p>
                   </div>
 
                   {/* نسبة الإنجاز */}
                   {selectedProject.completion && (
                     <div className="bg-[#F3F7FA] rounded-lg p-4">
-                      <p className="text-base font-bold text-[#3e738f] mb-3">نسبة الإنجاز</p>
+                      <p className="text-base font-bold text-[#3e738f] mb-3">{t.completionRate}</p>
                       <p className="text-[#696867] font-medium">{selectedProject.completion}</p>
                     </div>
                   )}
