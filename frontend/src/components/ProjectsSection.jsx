@@ -5,6 +5,8 @@ import ProjectsChart from './ProjectsChart';
 import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -13,14 +15,16 @@ const ProjectsSection = ({ showAll = false }) => {
   const [filter, setFilter] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
   const navigate = useNavigate();
+  const { language } = useLanguage();
+  const t = translations[language];
 
   const categories = [
-    { id: 'all', label: 'الكل' },
-    { id: 'فندقي', label: 'فندقي' },
-    { id: 'طبي', label: 'طبي' },
-    { id: 'سكني', label: 'سكني' },
-    { id: 'استثماري', label: 'استثماري' },
-    { id: 'خيري', label: 'خيري' }
+    { id: 'all', label: t.allProjects },
+    { id: 'فندقي', label: t.hotel },
+    { id: 'طبي', label: t.medical },
+    { id: 'سكني', label: t.residential },
+    { id: 'استثماري', label: t.investment },
+    { id: 'خيري', label: t.charitable }
   ];
 
   const filteredProjects = filter === 'all' 
