@@ -142,7 +142,7 @@ const ProjectsSection = ({ showAll = false }) => {
             <div 
               className="bg-white max-w-6xl w-full my-8 rounded-2xl shadow-2xl transform scale-100 transition-all duration-300 max-h-[90vh] overflow-y-auto relative"
               onClick={(e) => e.stopPropagation()}
-              dir="rtl"
+              dir={language === 'ar' ? 'rtl' : 'ltr'}
             >
               {/* Close Button - Fixed position, stays visible during scroll */}
               <button
