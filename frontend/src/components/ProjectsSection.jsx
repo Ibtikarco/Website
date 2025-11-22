@@ -275,7 +275,7 @@ const ProjectsSection = ({ showAll = false }) => {
                   {/* المورد (إن وجد) */}
                   {selectedProject.supplier && (
                     <div className="bg-[#F3F7FA] rounded-lg p-4">
-                      <p className="text-base font-bold text-[#3e738f] mb-3">المورد</p>
+                      <p className="text-base font-bold text-[#3e738f] mb-3">{t.supplier}</p>
                       {selectedProject.supplierLogo ? (
                         <div className="flex items-center justify-start">
                           <img 
