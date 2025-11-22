@@ -220,7 +220,7 @@ const ProjectsSection = ({ showAll = false }) => {
                   
                   {/* المالك */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
-                    <p className="text-base font-bold text-[#3e738f] mb-3">المالك</p>
+                    <p className="text-base font-bold text-[#3e738f] mb-3">{t.owner}</p>
                     {selectedProject.ownerLogo ? (
                       <div className="flex items-center justify-start">
                         <img 
@@ -230,7 +230,7 @@ const ProjectsSection = ({ showAll = false }) => {
                         />
                       </div>
                     ) : (
-                      <p className="text-[#696867] font-medium">{selectedProject.owner || 'غير محدد'}</p>
+                      <p className="text-[#696867] font-medium">{selectedProject.owner || (language === 'ar' ? 'غير محدد' : 'Not specified')}</p>
                     )}
                   </div>
 
@@ -238,7 +238,7 @@ const ProjectsSection = ({ showAll = false }) => {
                   {(selectedProject.investor || selectedProject.designOffice) && (
                     <div className="bg-[#F3F7FA] rounded-lg p-4">
                       <p className="text-base font-bold text-[#3e738f] mb-3">
-                        {selectedProject.designOffice ? 'المكتب المصمم' : 'المستثمر'}
+                        {selectedProject.designOffice ? t.designOffice : t.investor}
                       </p>
                       {(selectedProject.designOfficeLogo || selectedProject.investorLogo) ? (
                         <div className="flex items-center justify-start">
