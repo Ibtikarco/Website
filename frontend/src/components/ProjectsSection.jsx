@@ -124,8 +124,8 @@ const ProjectsSection = ({ showAll = false }) => {
                 onClick={() => navigate('/projects')}
                 className="group bg-[#5d9cc3] hover:bg-[#3e738f] text-white px-8 py-4 font-bold text-lg transition-all duration-300 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 flex items-center gap-3"
               >
-                <span>عرض جميع المشاريع</span>
-                <ArrowLeft size={24} className="transform rotate-180 group-hover:translate-x-2 transition-transform" />
+                <span>{t.viewAllProjects}</span>
+                <ArrowLeft size={24} className={`group-hover:translate-x-2 transition-transform ${language === 'ar' ? 'transform rotate-180' : ''}`} />
               </button>
             </div>
           )}
