@@ -35,14 +35,14 @@ const ProjectsSection = ({ showAll = false }) => {
   const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
 
   return (
-    <section id="projects" className="py-20 bg-white" dir="rtl">
+    <section id="projects" className="py-20 bg-white" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">مشاريعنا</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">{t.ourProjects}</h2>
           <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto mb-6"></div>
           <p className="text-lg text-[#696867] max-w-3xl mx-auto leading-relaxed">
-            ساهمنا في تنفيذ العديد من المشاريع الخاصة والحكومية والمشاريع والعمائر السكنية والتجارية والخيرية
+            {t.projectsDescription}
           </p>
         </div>
 
