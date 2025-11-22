@@ -149,7 +149,7 @@ const ProjectsSection = ({ showAll = false }) => {
                 onClick={() => setSelectedProject(null)}
                 className="sticky top-4 left-4 float-left bg-white/95 backdrop-blur-sm text-[#3e738f] w-12 h-12 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300 rounded-full shadow-2xl font-bold text-3xl z-50 border-2 border-white hover:border-red-500 ml-4 mb-[-48px]"
                 style={{ lineHeight: '1' }}
-                aria-label="إغلاق"
+                aria-label={t.close}
               >
                 <span className="block" style={{ marginTop: '-2px' }}>×</span>
               </button>
