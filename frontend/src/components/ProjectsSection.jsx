@@ -230,7 +230,7 @@ const ProjectsSection = ({ showAll = false }) => {
                         />
                       </div>
                     ) : (
-                      <p className="text-[#696867] font-medium">{selectedProject.owner || (language === 'ar' ? 'غير محدد' : 'Not specified')}</p>
+                      <p className="text-[#696867] font-medium">{language === 'ar' ? selectedProject.owner : (selectedProject.ownerEn || selectedProject.owner || (language === 'ar' ? 'غير محدد' : 'Not specified'))}</p>
                     )}
                   </div>
 
@@ -249,7 +249,7 @@ const ProjectsSection = ({ showAll = false }) => {
                           />
                         </div>
                       ) : (
-                        <p className="text-[#696867] font-medium">{selectedProject.designOffice || selectedProject.investor}</p>
+                        <p className="text-[#696867] font-medium">{language === 'ar' ? (selectedProject.designOffice || selectedProject.investor) : (selectedProject.designOfficeEn || selectedProject.investorEn || selectedProject.designOffice || selectedProject.investor)}</p>
                       )}
                     </div>
                   )}
@@ -267,7 +267,7 @@ const ProjectsSection = ({ showAll = false }) => {
                           />
                         </div>
                       ) : (
-                        <p className="text-[#696867] font-medium">{selectedProject.supervisor}</p>
+                        <p className="text-[#696867] font-medium">{language === 'ar' ? selectedProject.supervisor : (selectedProject.supervisorEn || selectedProject.supervisor)}</p>
                       )}
                     </div>
                   )}
@@ -285,7 +285,7 @@ const ProjectsSection = ({ showAll = false }) => {
                           />
                         </div>
                       ) : (
-                        <p className="text-[#696867] font-medium">{selectedProject.supplier}</p>
+                        <p className="text-[#696867] font-medium">{language === 'ar' ? selectedProject.supplier : (selectedProject.supplierEn || selectedProject.supplier)}</p>
                       )}
                     </div>
                   )}
@@ -293,25 +293,25 @@ const ProjectsSection = ({ showAll = false }) => {
                   {/* الموقع */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
                     <p className="text-base font-bold text-[#3e738f] mb-3">{t.location}</p>
-                    <p className="text-[#696867] font-medium">{selectedProject.location}</p>
+                    <p className="text-[#696867] font-medium">{language === 'ar' ? selectedProject.location : (selectedProject.locationEn || selectedProject.location)}</p>
                   </div>
 
                   {/* المساحة */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
                     <p className="text-base font-bold text-[#3e738f] mb-3">{t.area}</p>
-                    <p className="text-[#696867] font-medium">{selectedProject.area}</p>
+                    <p className="text-[#696867] font-medium">{language === 'ar' ? selectedProject.area : (selectedProject.areaEn || selectedProject.area)}</p>
                   </div>
 
                   {/* حجم المشروع */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
                     <p className="text-base font-bold text-[#3e738f] mb-3">{t.projectSize}</p>
-                    <p className="text-[#696867] font-medium">{selectedProject.value}</p>
+                    <p className="text-[#696867] font-medium">{language === 'ar' ? selectedProject.value : (selectedProject.valueEn || selectedProject.value)}</p>
                   </div>
 
                   {/* التصنيف */}
                   <div className="bg-[#F3F7FA] rounded-lg p-4">
                     <p className="text-base font-bold text-[#3e738f] mb-3">{t.classification}</p>
-                    <p className="text-[#696867] font-medium">{selectedProject.category} - {selectedProject.type}</p>
+                    <p className="text-[#696867] font-medium">{language === 'ar' ? selectedProject.category : (selectedProject.categoryEn || selectedProject.category)} - {language === 'ar' ? selectedProject.type : (selectedProject.typeEn || selectedProject.type)}</p>
                   </div>
 
                   {/* سنة التعاقد */}
