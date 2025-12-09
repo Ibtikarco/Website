@@ -44,6 +44,7 @@ export const services = [
     title: 'إدارة مشاريع',
     titleEn: 'Project Management',
     description: 'إدارة احترافية للمشاريع من البداية حتى التسليم',
+    descriptionEn: 'Professional project management from start to delivery',
     icon: 'clipboard'
   },
   {
@@ -51,6 +52,7 @@ export const services = [
     title: 'الإنشاءات الخرسانية',
     titleEn: 'Concrete Construction',
     description: 'تنفيذ الأعمال الإنشائية بأعلى معايير الجودة',
+    descriptionEn: 'Execution of construction works with the highest quality standards',
     icon: 'building'
   },
   {
@@ -58,6 +60,7 @@ export const services = [
     title: 'التشطيبات والديكور',
     titleEn: 'Finishing & Decor',
     description: 'تشطيبات داخلية وخارجية بأفضل المواد',
+    descriptionEn: 'Interior and exterior finishes with the best materials',
     icon: 'paintbrush'
   },
   {
@@ -65,6 +68,7 @@ export const services = [
     title: 'بنية تحتية',
     titleEn: 'Infrastructure',
     description: 'أعمال البنية التحتية والطرق',
+    descriptionEn: 'Infrastructure and road works',
     icon: 'road'
   }
 ];
