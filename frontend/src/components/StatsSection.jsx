@@ -142,12 +142,12 @@ const StatsSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-white to-gray-50" dir="rtl">
+    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-white to-gray-50" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">
-            أرقام ابتكار
+            {language === 'ar' ? 'أرقام ابتكار' : 'Ibtikar Numbers'}
           </h2>
           <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto"></div>
         </div>
