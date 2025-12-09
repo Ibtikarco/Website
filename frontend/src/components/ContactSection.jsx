@@ -32,12 +32,16 @@ const ContactSection = () => {
       if (response.status === 200) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', phone: '', message: '' });
-        alert('شكراً على تواصلك! تم إرسال رسالتك بنجاح إلى بريدنا الإلكتروني. سنعود إليك قريباً.');
+        alert(language === 'ar' 
+          ? 'شكراً على تواصلك! تم إرسال رسالتك بنجاح إلى بريدنا الإلكتروني. سنعود إليك قريباً.' 
+          : 'Thank you for contacting us! Your message has been sent successfully to our email. We will get back to you soon.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
-      alert('عذراً، حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة عبر الهاتف.');
+      alert(language === 'ar' 
+        ? 'عذراً، حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة عبر الهاتف.' 
+        : 'Sorry, an error occurred while sending the message. Please try again or contact us directly by phone.');
     } finally {
       setIsSubmitting(false);
     }
