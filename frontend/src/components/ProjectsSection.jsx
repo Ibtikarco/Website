@@ -99,19 +99,19 @@ const ProjectsSection = ({ showAll = false }) => {
               
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-[#3e738f] mb-2 group-hover:text-[#5d9cc3] transition-colors">
-                  {project.title}
+                  {language === 'ar' ? project.title : (project.titleEn || project.title)}
                 </h3>
                 <div className="flex items-center gap-2 text-[#696867] mb-2">
                   <MapPin size={16} className="text-[#5d9cc3]" />
-                  <span className="text-sm">{project.location}</span>
+                  <span className="text-sm">{language === 'ar' ? project.location : (project.locationEn || project.location)}</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#696867] mb-3">
                   <Calendar size={16} className="text-[#5d9cc3]" />
                   <span className="text-sm">{project.year}</span>
                 </div>
                 <div className="flex items-center justify-between pt-3 border-t-2 border-gray-100">
-                  <span className="text-sm text-[#696867] font-medium">{project.category}</span>
-                  <span className="text-lg font-bold text-[#5d9cc3]">{project.value}</span>
+                  <span className="text-sm text-[#696867] font-medium">{language === 'ar' ? project.category : (project.categoryEn || project.category)}</span>
+                  <span className="text-lg font-bold text-[#5d9cc3]">{language === 'ar' ? project.value : (project.valueEn || project.value)}</span>
                 </div>
               </div>
             </div>
