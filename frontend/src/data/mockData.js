@@ -12,20 +12,28 @@ export const companyInfo = {
   
   // Mission & Vision
   mission: '• تعزيز مهاراتنا وخدماتنا في قطاع إدارة المشاريع والإنشاءات\n• الالتزام بالتميز والتمسك بأعلى معايير الجودة والبناء بإحسان',
+  missionEn: '• Enhance our skills and services in project management and construction sector\n• Commitment to excellence and adherence to the highest quality standards and building with excellence',
   vision: 'أن نكون الخيار الأول لدى العملاء في تقديم خدمات البناء وإدارة المشاريع',
+  visionEn: 'To be the first choice for clients in providing construction and project management services',
   
   // About
   about: 'تقدم ابتكار للمقاولات خدمات التشييد والبناء وإدارة المشاريع الإنشائية منذ عام 2000م؛ حيث تم تأسيسها لتلبية الطلب المتزايد في المدينة المنورة على البناء المتميز وبأفضل أساليب البناء الحديث. ومنذ ذلك الوقت تم تركيز الجهود في إنشاء العديد من المشاريع ذات الجودة والكفاءة العالية من خلال فريق هندسي وفني وإداري متكامل.',
+  aboutEn: 'Ibtikar Contracting provides construction and project management services since 2000, established to meet the growing demand in Madinah for distinguished construction using the best modern building methods. Since then, efforts have been focused on creating many high-quality and efficient projects through an integrated engineering, technical and administrative team.',
   
   description: 'اكتسبت ابتكار للمقاولات خبرتها على مدى السنين من خلال إنشاء العديد من المشاريع الخاصة والحكومية والمشاريع والعمائر السكنية والتجارية والخيرية والعديد من المشاريع الأخرى؛ ومن خلال تبني نقل المعرفة عن طريق توظيف الكفاءات الإدارية والفنية بشكل دوري.',
+  descriptionEn: 'Ibtikar Contracting has gained its experience over the years through implementing many private and government projects, residential, commercial and charitable buildings, and many other projects; through adopting knowledge transfer by periodically hiring administrative and technical competencies.',
   
   slogan: 'بالابتكار ... نصنع الفرق، و بالالتزام بالتميز ... نبني مشاريعكم بإحسان، لنقدم لكم المعنى الحقيقي للبناء بإحسان',
+  sloganEn: 'With innovation... we make a difference, and with commitment to excellence... we build your projects with perfection, to deliver the true meaning of building with excellence',
   
   ceo: {
     name: 'م. ماجِدْ بن محمَّد بن تِنْباك',
+    nameEn: 'Eng. Majid bin Mohammed bin Tinbak',
     title: 'المؤسس والرئيس التنفيذي',
+    titleEn: 'Founder & CEO',
     experience: 25,
-    description: 'العمل لمدة 25 سنة في إدارة المشاريع في مشاريع شركة أرامكو السعودية وشركة سابك والشركة السعودية للكهرباء بقيمة مشاريع 4 مليار ريال'
+    description: 'العمل لمدة 25 سنة في إدارة المشاريع في مشاريع شركة أرامكو السعودية وشركة سابك والشركة السعودية للكهرباء بقيمة مشاريع 4 مليار ريال',
+    descriptionEn: 'Worked for 25 years in project management for Saudi Aramco, SABIC and Saudi Electricity Company projects worth 4 billion SAR'
   }
 };
 
