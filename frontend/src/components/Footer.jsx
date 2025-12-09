@@ -41,26 +41,26 @@ const Footer = () => {
             
             {/* Company Info */}
             <div className="flex items-center gap-3">
-              <h3 className="text-2xl font-bold text-white" style={{ fontFamily: "'GE Flow', 'Cairo', sans-serif" }}>{companyInfo.nameAr}</h3>
+              <h3 className="text-2xl font-bold text-white" style={{ fontFamily: "'GE Flow', 'Cairo', sans-serif" }}>{language === 'ar' ? companyInfo.nameAr : companyInfo.nameEn}</h3>
               <span className="text-white/40 hidden lg:inline">|</span>
               <p className="text-white/80 text-base hidden lg:block">
-                {companyInfo.tagline}
+                {language === 'ar' ? companyInfo.tagline : companyInfo.taglineEn}
               </p>
             </div>
 
             {/* Quick Links */}
             <div className="flex items-center gap-6">
               <button onClick={() => handleNavigation('about')} className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
-                من نحن
+                {t.aboutUs}
               </button>
               <button onClick={() => handleNavigation('services')} className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
-                خدماتنا
+                {t.ourServices}
               </button>
               <button onClick={() => handleNavigation('projects')} className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
-                مشاريعنا
+                {t.ourProjects}
               </button>
               <button onClick={() => handleNavigation('contact')} className="text-white/90 hover:text-[#5d9cc3] transition-colors font-medium">
-                اتصل بنا
+                {t.contactUsTitle}
               </button>
             </div>
 
@@ -68,7 +68,7 @@ const Footer = () => {
             <div className="flex items-center gap-6 text-white/90 text-sm">
               <a href="https://maps.app.goo.gl/XGogec1T7K3ud2Dd8" target="_blank" rel="noopener noreferrer" className="hover:text-[#5d9cc3] transition-colors font-medium flex items-center gap-1">
                 <MapPin size={16} className="text-[#5d9cc3]" />
-                {companyInfo.location}
+                {language === 'ar' ? companyInfo.location : 'Madinah'}
               </a>
               <a href="http://wa.me/966569700733" target="_blank" rel="noopener noreferrer" className="hover:text-[#5d9cc3] transition-colors font-medium flex items-center gap-1" dir="ltr">
                 <Phone size={16} className="text-[#5d9cc3]" />
