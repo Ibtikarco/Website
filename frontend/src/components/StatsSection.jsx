@@ -170,9 +170,9 @@ const StatsSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   
                   {/* Category Title on Image */}
-                  <div className="absolute bottom-8 right-8 text-white">
+                  <div className={`absolute bottom-8 ${language === 'ar' ? 'right-8' : 'left-8'} text-white`}>
                     <h3 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "'Cairo', sans-serif" }}>
-                      {slides[currentSlide].title}
+                      {language === 'ar' ? slides[currentSlide].title : slides[currentSlide].titleEn}
                     </h3>
                   </div>
                 </div>
