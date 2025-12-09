@@ -38,12 +38,12 @@ const ProjectsChart = () => {
             className="flex items-center gap-5 p-3 rounded-lg hover:bg-gray-50 transition-all duration-300 group cursor-pointer"
           >
             {/* Category Name - Right Side */}
-            <div className="w-32 text-right flex-shrink-0">
+            <div className={`w-32 ${language === 'ar' ? 'text-right' : 'text-left'} flex-shrink-0`}>
               <span 
                 className="text-sm font-bold text-[#3e738f] leading-tight block group-hover:text-[#5d9cc3] transition-colors duration-300"
                 style={{ fontFamily: "'Cairo', sans-serif" }}
               >
-                {item.name}
+                {language === 'ar' ? item.name : item.nameEn}
               </span>
             </div>
 
