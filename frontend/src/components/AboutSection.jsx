@@ -28,7 +28,7 @@ const AboutSection = () => {
             <div className="flex flex-col items-center justify-center gap-6">
               <div className="text-lg text-[#696867] leading-relaxed text-center">
                 <p className="text-lg leading-relaxed">
-                  <span className="text-xl font-semibold text-[#3e738f]">﴿هُوَ أَنشَأَكُم مِّنَ الْأَرْضِ وَاسْتَعْمَرَكُمْ فِيهَا﴾</span>
+                  <span className="text-xl font-semibold text-[#3e738f]" dir="rtl">﴿هُوَ أَنشَأَكُم مِّنَ الْأَرْضِ وَاسْتَعْمَرَكُمْ فِيهَا﴾</span>
                   {' '}
                   {language === 'ar' ? (
                     <>
