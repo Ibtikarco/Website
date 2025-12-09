@@ -281,23 +281,35 @@ export const projects = [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/jhzgtovp_Salam%20Hotel%20-%20CAM01%20-%2003.jpg'
     ],
     owner: 'رجل أعمال',
+    ownerEn: 'Businessman',
     designOffice: 'رواق',
+    designOfficeEn: 'Rawaq',
     designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7phn97gz_Logo%20RwaqEng-01.png',
     completion: '100%',
     briefTitle: 'إنشاء وتشطيب مبنى فندقي بارتفاع 10 طوابق',
-    brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية وأعمال التشطيبات والأعمال الاليكتروميكانيكية.'
+    briefTitleEn: 'Construction and Finishing of 10-Story Hotel Building',
+    brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية وأعمال التشطيبات والأعمال الاليكتروميكانيكية.',
+    briefEn: 'Scope of work included general site works, structural works, finishing works and electromechanical works.'
   },
   {
     id: 7,
     title: 'جامع الأبرار',
+    titleEn: 'Al-Abrar Mosque',
     category: 'ديني',
+    categoryEn: 'Religious',
     location: 'حي شوران - المدينة المنورة',
+    locationEn: 'Shouran District - Madinah',
     area: '2,500 م²',
+    areaEn: '2,500 m²',
     capacity: '660 مصلي',
+    capacityEn: '660 Worshippers',
     value: '6 مليون',
+    valueEn: '6 Million',
     year: 2017,
     status: 'مكتمل',
+    statusEn: 'Completed',
     type: 'أوقاف',
+    typeEn: 'Endowment',
     image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/e43tdpfp_%D8%AC%D8%A7%D9%85%D8%B9%20%D8%A7%D9%84%D8%A7%D9%94%D8%A8%D8%B1%D8%A7%D8%B1.png',
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/e43tdpfp_%D8%AC%D8%A7%D9%85%D8%B9%20%D8%A7%D9%84%D8%A7%D9%94%D8%A8%D8%B1%D8%A7%D8%B1.png'
