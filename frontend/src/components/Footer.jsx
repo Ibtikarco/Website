@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { companyInfo } from '../data/mockData';
 import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Footer = () => {
   const [showCookies, setShowCookies] = useState(true);
