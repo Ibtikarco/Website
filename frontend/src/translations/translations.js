@@ -171,6 +171,18 @@ export const translations = {
     completed: 'Completed',
     underConstruction: 'Under Construction',
     
+    // Stats/Numbers
+    ibtikarInNumbers: 'Ibtikar in Numbers',
+    workforce: 'Workforce',
+    workers: 'Workers',
+    engineers: 'Engineers',
+    technicians: 'Technicians',
+    achievements: 'Achievements and Projects',
+    completedProject: 'Completed Projects',
+    currentProjects: 'Current Projects',
+    executionAreas: 'Execution Areas',
+    yearsOfExperience: 'Years of Experience',
+    
     // Contact
     contactUsTitle: 'Contact Us',
     contactDescription: 'We are always happy to communicate with you and answer your inquiries',
