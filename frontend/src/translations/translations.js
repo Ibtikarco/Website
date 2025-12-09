@@ -15,6 +15,7 @@ export const translations = {
     
     // About
     aboutUs: 'من نحن',
+    aboutTitle: 'من نحن',
     ourVision: 'رؤيتنا',
     ourMission: 'مهمتنا',
     yearsExperience: 'سنة خبرة',
@@ -22,6 +23,7 @@ export const translations = {
     employees: 'موظف',
     clientSatisfaction: 'رضا العملاء',
     downloadProfile: 'تحميل الملف التعريفي',
+    downloadCompanyProfile: 'تحميل الملف التعريفي',
     
     // Services
     ourServices: 'خدماتنا',
