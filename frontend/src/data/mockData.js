@@ -260,14 +260,22 @@ export const projects = [
   {
     id: 6,
     title: 'السلام بلازا',
+    titleEn: 'Al-Salam Plaza',
     category: 'فندقي',
+    categoryEn: 'Hotel',
     location: 'دوار السلام - المدينة المنورة',
+    locationEn: 'Al-Salam Roundabout - Madinah',
     area: '1,000 م²',
+    areaEn: '1,000 m²',
     floors: '10 طوابق',
+    floorsEn: '10 Floors',
     value: '16 مليون',
+    valueEn: '16 Million',
     year: 2016,
     status: 'مكتمل',
+    statusEn: 'Completed',
     type: 'خاص',
+    typeEn: 'Private',
     image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/jhzgtovp_Salam%20Hotel%20-%20CAM01%20-%2003.jpg',
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/jhzgtovp_Salam%20Hotel%20-%20CAM01%20-%2003.jpg'
