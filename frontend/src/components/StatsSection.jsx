@@ -234,7 +234,7 @@ const StatsSection = () => {
                           className={`text-base md:text-lg text-[#696867] font-semibold leading-relaxed ${stat.noWrap ? 'whitespace-nowrap' : ''}`}
                           style={{ fontFamily: "'Cairo', sans-serif" }}
                         >
-                          {stat.label}
+                          {language === 'ar' ? stat.label : stat.labelEn}
                         </div>
                       </div>
                     </div>
