@@ -177,11 +177,15 @@ export const projects = [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fbhjqeah_03_1.jpg'
     ],
     owner: 'شركة وادي الريان للتطوير العقاري',
+    ownerEn: 'Wadi Al-Rayyan Real Estate Development Company',
     designOffice: 'رواق',
+    designOfficeEn: 'Rawaq',
     designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7phn97gz_Logo%20RwaqEng-01.png',
     completion: '5%',
     briefTitle: 'مبنى طبي من 8 أدوار وبدروم مخصص لعيادات جراحة اليوم الواحد',
-    brief: 'مشروع مبنى طبي مكوّن من 8 أدوار وبدروم مخصص لعيادات جراحة اليوم الواحد، مصمم وفق أعلى المعايير الحديثة لتلبية احتياجات القطاع الصحي.\n\nنطاق العمل\n\nتنفيذ أعمال البناء والتشطيب الكامل للمشروع بما يشمل الهيكل الإنشائي، التشطيبات الداخلية والخارجية، وأنظمة البنية التحتية والخدمات المساندة.'
+    briefTitleEn: 'Medical Building with 8 Floors and Basement for One-Day Surgery Clinics',
+    brief: 'مشروع مبنى طبي مكوّن من 8 أدوار وبدروم مخصص لعيادات جراحة اليوم الواحد، مصمم وفق أعلى المعايير الحديثة لتلبية احتياجات القطاع الصحي.\n\nنطاق العمل\n\nتنفيذ أعمال البناء والتشطيب الكامل للمشروع بما يشمل الهيكل الإنشائي، التشطيبات الداخلية والخارجية، وأنظمة البنية التحتية والخدمات المساندة.',
+    briefEn: 'A medical building project consisting of 8 floors and a basement dedicated to one-day surgery clinics, designed according to the highest modern standards to meet healthcare sector needs.\n\nScope of Work\n\nExecution of complete construction and finishing works including structural framework, interior and exterior finishes, and infrastructure systems and support services.'
   },
   {
     id: 4,
