@@ -488,11 +488,15 @@ export const projects = [
       'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/2yi1d75a_%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2%D9%8A%D8%A9%20%D9%83%D9%85%D8%A8%D8%A7%D9%88%D9%86%D8%AF-03.jpg'
     ],
     owner: 'مشروع خاص',
+    ownerEn: 'Private Project',
     designOffice: 'CLEAR',
+    designOfficeEn: 'CLEAR',
     designOfficeLogo: 'https://customer-assets.emergentagent.com/job_architect-hub-6/artifacts/wvu3cab9_PCc_fFWg_400x400%20copy.png',
     completion: '100%',
     briefTitle: 'إنشاء عدة فلل سكنية | طراز حديث',
-    brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية والأعمال الاليكتروميكانيكية.'
+    briefTitleEn: 'Construction of Several Residential Villas | Modern Style',
+    brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية والأعمال الاليكتروميكانيكية.',
+    briefEn: 'Scope of work included general site works, structural works and electromechanical works.'
   }
 ];
 
