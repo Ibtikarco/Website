@@ -122,14 +122,22 @@ export const projects = [
   {
     id: 2,
     title: 'مشروع ملاذ',
+    titleEn: 'Malath Project',
     category: 'استثماري',
+    categoryEn: 'Investment',
     location: 'شارع الأمير مقرن بن عبدالعزيز',
+    locationEn: 'Prince Muqrin bin Abdulaziz Street',
     area: '8,000 م²',
+    areaEn: '8,000 m²',
     floors: '8 أدوار',
+    floorsEn: '8 Floors',
     value: '64 مليون',
+    valueEn: '64 Million',
     year: 2023,
     status: 'قيد التنفيذ',
+    statusEn: 'Under Construction',
     type: 'استثماري',
+    typeEn: 'Investment',
     image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/q8skbrdt_%D9%85%D9%84%D8%A7%D8%B0-02.jpg',
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/q8skbrdt_%D9%85%D9%84%D8%A7%D8%B0-02.jpg'
