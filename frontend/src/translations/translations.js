@@ -125,6 +125,7 @@ export const translations = {
     
     // About
     aboutUs: 'About Us',
+    aboutTitle: 'About Us',
     ourVision: 'Our Vision',
     ourMission: 'Our Mission',
     yearsExperience: 'Years Experience',
@@ -132,6 +133,7 @@ export const translations = {
     employees: 'Employees',
     clientSatisfaction: 'Client Satisfaction',
     downloadProfile: 'Download Company Profile',
+    downloadCompanyProfile: 'Download Company Profile',
     
     // Services
     ourServices: 'Our Services',
