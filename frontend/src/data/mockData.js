@@ -85,14 +85,22 @@ export const projects = [
   {
     id: 1,
     title: 'بوابة سمو',
+    titleEn: 'Sumo Gate',
     category: 'فندقي تجاري',
+    categoryEn: 'Hotel Commercial',
     location: 'المنطقة المركزية - شمال المسجد النبوي الشريف',
+    locationEn: 'Central Area - North of the Prophet\'s Mosque',
     area: '21 ألف م2 بعمق 12 متر',
+    areaEn: '21,000 m² with 12m depth',
     depth: '12 متر',
+    depthEn: '12 meters',
     value: '13 مليون',
+    valueEn: '13 Million',
     year: 2022,
     status: 'مكتمل',
+    statusEn: 'Completed',
     type: 'استثمار حكومي',
+    typeEn: 'Government Investment',
     image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/ga1cvtib_JPEG%20image-48C8-A16A-44-4%20copy.jpg',
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/ga1cvtib_JPEG%20image-48C8-A16A-44-4%20copy.jpg',
@@ -100,12 +108,16 @@ export const projects = [
       'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/hoitrlei_JPEG%20image-48C8-A16A-44-23%20copy.jpg'
     ],
     owner: 'أمانة المدينة المنورة',
+    ownerEn: 'Madinah Municipality',
     ownerLogo: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/l0by6zc7_logo%20%D8%A7%D9%94%D9%85%D8%A7%D9%86%D8%A9.png',
     investor: 'وزارة الإسكان',
+    investorEn: 'Ministry of Housing',
     investorLogo: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/jitofkrn_1661406-538654455%20copy.png',
     completion: '100%',
     briefTitle: 'تنفيذ وتوريد أعمال حفر وسند وتدعيم جوانب الحفر',
-    brief: 'تنفيذ أعمال حفر عمل سند لجوانب الحفر يشمل الدراسة الفنية لعمل السند والمواد المستخدمة والقطاعات مع عمل التوريدات المطلوبة من معدات وقطاعات كمرات معدنيه وألواح خشبية.\n\nيشمل أيضًا توريد وتركيب وتنفيذ أنكر لتثبيت وشد سند الجوانب حسب الدراسة الفنية المعتمدة وتشمل الرأس وجدائل والحفر والجروت واختبارات مراقبة الجودة.'
+    briefTitleEn: 'Execution and Supply of Excavation, Shoring and Reinforcement Works',
+    brief: 'تنفيذ أعمال حفر عمل سند لجوانب الحفر يشمل الدراسة الفنية لعمل السند والمواد المستخدمة والقطاعات مع عمل التوريدات المطلوبة من معدات وقطاعات كمرات معدنيه وألواح خشبية.\n\nيشمل أيضًا توريد وتركيب وتنفيذ أنكر لتثبيت وشد سند الجوانب حسب الدراسة الفنية المعتمدة وتشمل الرأس وجدائل والحفر والجروت واختبارات مراقبة الجودة.',
+    briefEn: 'Execution of excavation and shoring works including technical study for shoring, materials used and sections, along with supply of required equipment, steel beam sections and wooden panels.\n\nAlso includes supply, installation and execution of anchors to fix and tighten side shoring according to approved technical study, including heads, strands, drilling, grout and quality control tests.'
   },
   {
     id: 2,
