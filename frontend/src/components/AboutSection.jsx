@@ -109,9 +109,9 @@ const AboutSection = () => {
                   rel="noopener noreferrer"
                   className="inline-block hover:text-white/90 transition-colors duration-300"
                 >
-                  <h3 className="text-2xl font-bold mb-2">{companyInfo.ceo.name}</h3>
+                  <h3 className="text-2xl font-bold mb-2">{language === 'ar' ? companyInfo.ceo.name : companyInfo.ceo.nameEn}</h3>
                 </a>
-                <p className="text-white/90 mb-4 text-lg">{companyInfo.ceo.title}</p>
+                <p className="text-white/90 mb-4 text-lg">{language === 'ar' ? companyInfo.ceo.title : companyInfo.ceo.titleEn}</p>
                 <p className="text-white leading-relaxed text-lg mb-4">
                   {language === 'ar' ? companyInfo.slogan : companyInfo.sloganEn}
                 </p>
