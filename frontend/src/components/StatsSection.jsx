@@ -1,44 +1,49 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const StatsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [animatedNumbers, setAnimatedNumbers] = useState({});
   const sectionRef = useRef(null);
+  const { language } = useLanguage();
 
   const slides = [
     {
       id: 1,
       title: 'الأصول والمعدات',
+      titleEn: 'Assets & Equipment',
       image: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/gow0t5we_JPEG%20image-48C8-A16A-44-4%20copy.jpg',
       stats: [
-        { number: '12', label: 'المعدات الثقيلة', target: 12 },
-        { number: '32', label: 'معدات النقل', target: 32 },
-        { number: '7', label: 'معدات الاختبارات', target: 7 },
-        { number: '4', label: 'أجهزة المساحة', target: 4 }
+        { number: '12', label: 'المعدات الثقيلة', labelEn: 'Heavy Equipment', target: 12 },
+        { number: '32', label: 'معدات النقل', labelEn: 'Transport Equipment', target: 32 },
+        { number: '7', label: 'معدات الاختبارات', labelEn: 'Testing Equipment', target: 7 },
+        { number: '4', label: 'أجهزة المساحة', labelEn: 'Surveying Devices', target: 4 }
       ]
     },
     {
       id: 2,
       title: 'القوى العاملة',
+      titleEn: 'Workforce',
       image: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/x1yn9t5f_IMG_7119-2%20copy.jpg',
       stats: [
-        { number: '17', label: 'الطاقم الهندسي', target: 17 },
-        { number: '19', label: 'المشرفين والمراقبين', target: 19 },
-        { number: '13', label: 'الطاقم الإداري', target: 13 },
-        { number: '184', label: 'القوى العاملة الميدانية', target: 184, noWrap: true }
+        { number: '17', label: 'الطاقم الهندسي', labelEn: 'Engineering Team', target: 17 },
+        { number: '19', label: 'المشرفين والمراقبين', labelEn: 'Supervisors & Controllers', target: 19 },
+        { number: '13', label: 'الطاقم الإداري', labelEn: 'Administrative Staff', target: 13 },
+        { number: '184', label: 'القوى العاملة الميدانية', labelEn: 'Field Workforce', target: 184, noWrap: true }
       ]
     },
     {
       id: 3,
       title: 'الإنجازات والمشاريع',
+      titleEn: 'Achievements & Projects',
       image: 'https://customer-assets.emergentagent.com/job_arab-constuct/artifacts/jbrx0nbc_dji_fly_20250904_084918_0159_1756970821719_photo.jpg',
       stats: [
-        { number: '175+', label: 'مشروع منجز', target: 175, suffix: '+' },
-        { number: '6', label: 'مشاريع حالية', target: 6 },
-        { number: '120,000 م²', label: 'مساحات تنفيذ', target: 120000, suffix: ' م²', useComma: true, noWrap: true, smallFont: true },
-        { number: '25', label: 'سنة خبرة', target: 25 }
+        { number: '175+', label: 'مشروع منجز', labelEn: 'Completed Projects', target: 175, suffix: '+' },
+        { number: '6', label: 'مشاريع حالية', labelEn: 'Current Projects', target: 6 },
+        { number: '120,000 م²', label: 'مساحات تنفيذ', labelEn: 'Execution Areas', target: 120000, suffix: language === 'ar' ? ' م²' : ' m²', useComma: true, noWrap: true, smallFont: true },
+        { number: '25', label: 'سنة خبرة', labelEn: 'Years Experience', target: 25 }
       ]
     }
   ];
