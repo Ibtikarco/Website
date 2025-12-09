@@ -59,9 +59,9 @@ const ServicesSection = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-[#3e738f] mb-3 group-hover:text-[#5d9cc3] transition-colors">
-                  {service.title}
+                  {language === 'ar' ? service.title : service.titleEn}
                 </h3>
-                <p className="text-[#696867] leading-relaxed">{service.description}</p>
+                <p className="text-[#696867] leading-relaxed">{language === 'ar' ? service.description : service.descriptionEn}</p>
               </div>
             );
           })}
