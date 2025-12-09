@@ -113,10 +113,10 @@ const AboutSection = () => {
                 </a>
                 <p className="text-white/90 mb-4 text-lg">{companyInfo.ceo.title}</p>
                 <p className="text-white leading-relaxed text-lg mb-4">
-                  {companyInfo.slogan}
+                  {language === 'ar' ? companyInfo.slogan : companyInfo.sloganEn}
                 </p>
                 <p className="text-sm text-white/80 leading-relaxed">
-                  من خلال فريق عمل محترف من أصحاب الخبرة في مجال المشاريع والمقاولات لنضع مصلحة العميل في المرتبة الأولى
+                  {language === 'ar' ? companyInfo.ceo.description : companyInfo.ceo.descriptionEn}
                 </p>
               </div>
             </div>
