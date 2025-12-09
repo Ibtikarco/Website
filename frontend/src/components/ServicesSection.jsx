@@ -1,8 +1,13 @@
 import React from 'react';
 import { services } from '../data/mockData';
 import { ClipboardList, Building2, Paintbrush, Construction } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const ServicesSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+  
   const iconMap = {
     clipboard: 'custom-management', // Custom icon for project management
     building: 'custom-concrete', // Custom icon for concrete construction
@@ -18,14 +23,14 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-gray-50 to-white" dir="rtl">
+    <section id="services" className="py-20 bg-gradient-to-b from-gray-50 to-white" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">خدماتنا</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">{t.ourServices}</h2>
           <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto mb-6"></div>
           <p className="text-lg text-[#696867] max-w-3xl mx-auto leading-relaxed">
-            نحرص على تركيز اهتمامنا على كل تفاصيل المشروع بداية من أعمال المساحة وتحديد المناسيب حتى الانتهاء من التنفيذ وتسليم المشروع للعميل
+            {t.servicesDescription}
           </p>
         </div>
 
