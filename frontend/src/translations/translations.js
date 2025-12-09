@@ -69,6 +69,18 @@ export const translations = {
     completed: 'مكتمل',
     underConstruction: 'قيد التنفيذ',
     
+    // Stats/Numbers
+    ibtikarInNumbers: 'ابتكار في أرقام',
+    workforce: 'القوى العاملة',
+    workers: 'عامل',
+    engineers: 'مهندس',
+    technicians: 'فني',
+    achievements: 'الإنجازات والمشاريع',
+    completedProject: 'مشروع منجز',
+    currentProjects: 'مشاريع حالية',
+    executionAreas: 'مساحات تنفيذ',
+    yearsOfExperience: 'سنة خبرة',
+    
     // Contact
     contactUsTitle: 'اتصل بنا',
     contactDescription: 'نسعد دائماً للتواصل معكم والإجابة على استفساراتكم',
