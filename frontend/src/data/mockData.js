@@ -247,11 +247,15 @@ export const projects = [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fl8k1ruf_PHOTO-2025-07-21-15-32-21.jpg'
     ],
     owner: 'رجل أعمال',
+    ownerEn: 'Businessman',
     designOffice: 'مكتب حسام العبدالكريم',
+    designOfficeEn: 'Hossam Al-Abdelkarim Office',
     designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/2ws6urvf_Logo%20H.A.Kai.png',
     completion: '100%',
     briefTitle: 'إنشاء وتشطيب | طراز يوناني حجازي',
-    brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية وأعمال التشطيبات والأعمال الاليكتروميكانيكية.\n\nشمل توريد حجر تفوح مقدسي من فلسطين والألمنيوم من Schüco ألمانيا وخشب TechWood من جنوب أفريقيا.'
+    briefTitleEn: 'Construction and Finishing | Greek-Hijazi Style',
+    brief: 'شمل نطاق العمل أعمال الموقع العام والأعمال الإنشائية وأعمال التشطيبات والأعمال الاليكتروميكانيكية.\n\nشمل توريد حجر تفوح مقدسي من فلسطين والألمنيوم من Schüco ألمانيا وخشب TechWood من جنوب أفريقيا.',
+    briefEn: 'Scope of work included general site works, structural works, finishing works and electromechanical works.\n\nIncluded supply of Tuffah Jerusalem stone from Palestine, aluminum from Schüco Germany and TechWood from South Africa.'
   },
   {
     id: 6,
