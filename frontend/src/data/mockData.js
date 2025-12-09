@@ -156,14 +156,22 @@ export const projects = [
   {
     id: 3,
     title: 'مركز جراحة اليوم الواحد',
+    titleEn: 'One-Day Surgery Center',
     category: 'طبي',
+    categoryEn: 'Medical',
     location: 'شارع الأمير نايف بن عبدالعزيز',
+    locationEn: 'Prince Naif bin Abdulaziz Street',
     area: '1,000 م²',
+    areaEn: '1,000 m²',
     floors: '8 أدوار + بدروم',
+    floorsEn: '8 Floors + Basement',
     value: '24 مليون',
+    valueEn: '24 Million',
     year: 2025,
     status: 'قيد التنفيذ',
+    statusEn: 'Under Construction',
     type: 'استثماري',
+    typeEn: 'Investment',
     image: 'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fbhjqeah_03_1.jpg',
     images: [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/fbhjqeah_03_1.jpg'
