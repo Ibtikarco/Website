@@ -133,9 +133,15 @@ export const translations = {
     
     // Services
     ourServices: 'Our Services',
-    servicesDescription: 'We focus on every detail of the project from surveying and determining elevations to completion of execution and project delivery to the client',
+    servicesDescription: 'We focus our attention on every detail of the project, starting from surveying and leveling until completion and delivery to the client',
     integratedServices: 'Integrated Construction Services',
-    integratedServicesDesc: 'Integrated work team of skilled labor and modern construction equipment with ensuring safety in the first place',
+    integratedServicesDesc: 'A complete team of skilled workers and modern construction equipment with ensuring safety in the first place',
+    service1: 'Design and Engineering Plans',
+    service2: 'Construction and Execution',
+    service3: 'Maintenance and Operation',
+    service4: 'Project Management',
+    service5: 'Engineering Consulting',
+    service6: 'Finishing Works',
     
     // Projects
     ourProjects: 'Our Projects',
