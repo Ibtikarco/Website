@@ -143,11 +143,15 @@ export const projects = [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/q8skbrdt_%D9%85%D9%84%D8%A7%D8%B0-02.jpg'
     ],
     owner: 'شركة وادي الريان للتطوير العقاري',
+    ownerEn: 'Wadi Al-Rayyan Real Estate Development Company',
     designOffice: 'رواق',
+    designOfficeEn: 'Rawaq',
     designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7phn97gz_Logo%20RwaqEng-01.png',
     completion: '2%',
     briefTitle: 'إنشاء وتشطيب مجمع من 8 أدوار متعدد الاستخدام طبي تجاري إداري فندق',
-    brief: 'يشمل نطاق العمل على إنشاء مبنى من بدرومين دورين تجارية وستة أدوار متكررة بمجموع عشرة أدوار.\n\nوتوريد كافة الأعمال الإنشائية والمعمارية والكهروميكانيكية، وأنظمة سلامة وأعمال العزل المائي والحراري، وتنفيذ التشطيبات الخارجية.'
+    briefTitleEn: 'Construction and Finishing of 8-Story Multi-Use Medical, Commercial, Administrative and Hotel Complex',
+    brief: 'يشمل نطاق العمل على إنشاء مبنى من بدرومين دورين تجارية وستة أدوار متكررة بمجموع عشرة أدوار.\n\nوتوريد كافة الأعمال الإنشائية والمعمارية والكهروميكانيكية، وأنظمة سلامة وأعمال العزل المائي والحراري، وتنفيذ التشطيبات الخارجية.',
+    briefEn: 'The scope of work includes constructing a building with two basements, two commercial floors, and six repeated floors for a total of ten floors.\n\nSupply of all structural, architectural and electromechanical works, safety systems, waterproofing and thermal insulation works, and execution of external finishes.'
   },
   {
     id: 3,
