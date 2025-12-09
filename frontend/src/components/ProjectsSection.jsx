@@ -213,7 +213,7 @@ const ProjectsSection = ({ showAll = false }) => {
               {/* Project Details Section */}
               <div className="p-8">
                 {/* Project Title */}
-                <h2 className="text-3xl font-bold text-[#3e738f] mb-6 text-center">{selectedProject.title}</h2>
+                <h2 className="text-3xl font-bold text-[#3e738f] mb-6 text-center">{language === 'ar' ? selectedProject.title : (selectedProject.titleEn || selectedProject.title)}</h2>
 
                 {/* Information Grid */}
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
