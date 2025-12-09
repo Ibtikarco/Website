@@ -1,14 +1,17 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const ProjectsChart = () => {
+  const { language } = useLanguage();
+  
   // Project categories with their percentages
   const projectData = [
-    { name: 'سكني', percentage: 40, color: '#3e738f' },
-    { name: 'فنادق', percentage: 20, color: '#5d9cc3' },
-    { name: 'حكومي', percentage: 15, color: '#4a8bb3' },
-    { name: 'معارض تجارية', percentage: 15, color: '#6fa8c9' },
-    { name: 'استخدام متعدد', percentage: 5, color: '#8cb9d4' },
-    { name: 'مكاتب إدارية', percentage: 5, color: '#a9c9df' }
+    { name: 'سكني', nameEn: 'Residential', percentage: 40, color: '#3e738f' },
+    { name: 'فنادق', nameEn: 'Hotels', percentage: 20, color: '#5d9cc3' },
+    { name: 'حكومي', nameEn: 'Government', percentage: 15, color: '#4a8bb3' },
+    { name: 'معارض تجارية', nameEn: 'Commercial Showrooms', percentage: 15, color: '#6fa8c9' },
+    { name: 'استخدام متعدد', nameEn: 'Multi-Use', percentage: 5, color: '#8cb9d4' },
+    { name: 'مكاتب إدارية', nameEn: 'Administrative Offices', percentage: 5, color: '#a9c9df' }
   ];
 
   return (
@@ -17,14 +20,14 @@ const ProjectsChart = () => {
       style={{
         padding: '36px 32px'
       }}
-      dir="rtl"
+      dir={language === 'ar' ? 'rtl' : 'ltr'}
     >
       {/* Card Title */}
       <h3 
         className="text-2xl md:text-3xl font-bold text-[#3e738f] mb-8 text-center"
         style={{ fontFamily: "'Cairo', sans-serif" }}
       >
-        تنوع المشاريع
+        {language === 'ar' ? 'تنوع المشاريع' : 'Project Diversity'}
       </h3>
 
       {/* Progress Bars List */}
