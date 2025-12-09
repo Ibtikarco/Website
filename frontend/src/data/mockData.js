@@ -212,11 +212,15 @@ export const projects = [
       'https://customer-assets.emergentagent.com/job_ibtikarco-portal/artifacts/gb4y9yxk_PHOTO-2025-08-11-11-39-33%202.jpg'
     ],
     owner: 'رجل أعمال',
+    ownerEn: 'Businessman',
     designOffice: 'رواق',
+    designOfficeEn: 'Rawaq',
     designOfficeLogo: 'https://customer-assets.emergentagent.com/job_mena-contractor/artifacts/7phn97gz_Logo%20RwaqEng-01.png',
     completion: '5%',
     briefTitle: 'كومباوند أعمال متكامل',
-    brief: 'كومباوند أعمال متكامل بمساحة 15,000 م² يضم مباني من 3 أدوار مع بدروم، تشمل مساحات مكتبية، وعيادة، وحضانة، ونادٍ رياضي، ومطاعم، ومغسلة سيارات، وسوبرماركت.\n\nنطاق العمل:\n\nتنفيذ أعمال البناء والتشطيب الكامل بما يشمل الهياكل الإنشائية، التشطيبات الداخلية والخارجية، وأنظمة الخدمات والمرافق لضمان بيئة عمل وحياة متكاملة.'
+    briefTitleEn: 'Integrated Business Compound',
+    brief: 'كومباوند أعمال متكامل بمساحة 15,000 م² يضم مباني من 3 أدوار مع بدروم، تشمل مساحات مكتبية، وعيادة، وحضانة، ونادٍ رياضي، ومطاعم، ومغسلة سيارات، وسوبرماركت.\n\nنطاق العمل:\n\nتنفيذ أعمال البناء والتشطيب الكامل بما يشمل الهياكل الإنشائية، التشطيبات الداخلية والخارجية، وأنظمة الخدمات والمرافق لضمان بيئة عمل وحياة متكاملة.',
+    briefEn: 'Integrated business compound covering 15,000 m² with 3-story buildings plus basement, including office spaces, clinic, nursery, sports club, restaurants, car wash, and supermarket.\n\nScope of Work:\n\nExecution of complete construction and finishing works including structural frameworks, interior and exterior finishes, and service and facility systems to ensure an integrated work and life environment.'
   },
   {
     id: 5,
