@@ -59,7 +59,7 @@ const AboutSection = () => {
               >
                 <Icon className="mx-auto mb-3 text-[#3e738f] group-hover:text-white transition-colors duration-300" size={38} />
                 <div className="text-4xl font-bold text-[#3e738f] group-hover:text-white transition-colors duration-300 mb-2">{stat.number}</div>
-                <div className="text-base text-[#3e738f] group-hover:text-white transition-colors duration-300 font-semibold">{stat.label}</div>
+                <div className="text-base text-[#3e738f] group-hover:text-white transition-colors duration-300 font-semibold">{language === 'ar' ? stat.label : stat.labelEn}</div>
               </div>
             );
           })}
