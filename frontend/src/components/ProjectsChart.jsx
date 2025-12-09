@@ -71,7 +71,7 @@ const ProjectsChart = () => {
               {/* Tooltip on hover */}
               <div className="absolute left-0 -top-8 bg-[#3e738f] text-white px-3 py-1 rounded text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap"
                    style={{ fontFamily: "'Cairo', sans-serif" }}>
-                {item.name}: {item.percentage}%
+                {language === 'ar' ? item.name : item.nameEn}: {item.percentage}%
               </div>
             </div>
 
