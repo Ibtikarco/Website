@@ -1,8 +1,13 @@
 import React from 'react';
 import { companyInfo, stats } from '../data/mockData';
 import { Building2, Users, Award, TrendingUp } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const AboutSection = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+  
   const iconMap = {
     0: Building2,
     1: TrendingUp,
@@ -11,11 +16,11 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-white" dir="rtl">
+    <section id="about" className="py-20 bg-white" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">من نحن</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3e738f] mb-4">{t.aboutTitle}</h2>
           <div className="w-24 h-1.5 bg-[#5d9cc3] mx-auto mb-6"></div>
           
           {/* New Content with Profile Button */}
