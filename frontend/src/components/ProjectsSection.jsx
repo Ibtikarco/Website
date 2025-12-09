@@ -335,10 +335,10 @@ const ProjectsSection = ({ showAll = false }) => {
                   <div className="mt-6 p-6 bg-gradient-to-r from-[#F3F7FA] to-white rounded-lg border-r-4 border-[#5d9cc3]">
                     <h3 className="text-lg font-bold text-[#3e738f] mb-3">{t.projectBrief}</h3>
                     {selectedProject.briefTitle && (
-                      <h4 className="text-base font-bold text-[#5d9cc3] mb-3">{selectedProject.briefTitle}</h4>
+                      <h4 className="text-base font-bold text-[#5d9cc3] mb-3">{language === 'ar' ? selectedProject.briefTitle : (selectedProject.briefTitleEn || selectedProject.briefTitle)}</h4>
                     )}
                     <div className="text-[#696867] leading-relaxed">
-                      {selectedProject.brief.split('\n').map((line, index) => {
+                      {(language === 'ar' ? selectedProject.brief : (selectedProject.briefEn || selectedProject.brief)).split('\n').map((line, index) => {
                         // Check if line is a subtitle (matches specific patterns like "نطاق العمل")
                         const isSubtitle = line.trim() && !line.includes('يشمل') && !line.includes('تنفيذ') && !line.includes('مشروع') && line.length < 50 && line.length > 5;
                         
